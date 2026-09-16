@@ -82,12 +82,26 @@ Source URL: {story.get("link", "")}
         },
         method="POST"
     )
+    
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                result = json.loads(
+                    response.read().decode("utf-8")
+                )
+            break
 
-    try:
-        with urllib.request.urlopen(request, timeout=60) as response:
-            result = json.loads(
-                response.read().decode("utf-8")
-            )
+        except urllib.error.HTTPError as e:
+            if e.code == 503 and attempt < 4:
+                wait_time = 5 * (2 ** attempt)
+                print(f"Gemini busy. Retrying in {wait_time} seconds...")
+                import time
+                time.sleep(wait_time)
+            else:
+                body = e.read().decode("utf-8", errors="replace")
+                raise RuntimeError(
+                    f"Gemini API HTTP {e.code}: {body[:1000]}"
+                )
 
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")
