@@ -80,7 +80,12 @@ Source URL: {story.get("link", "")}
 
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
-    stories = json.load(f)
+    data = json.load(f)
+
+if isinstance(data, dict):
+    stories = data.get("stories", [])
+else:
+    stories = data
 
 drafts = []
 
