@@ -12,30 +12,34 @@ if not API_KEY:
     raise RuntimeError("GEMINI_API_KEY secret is missing")
 
 MODEL = "gemini-2.5-flash"
-API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={API_KEY}"
+
+API_URL = (
+    f"https://generativelanguage.googleapis.com/v1beta/"
+    f"models/{MODEL}:generateContent"
+)
 
 
 def ask_gemini(story):
+
     prompt = f"""
-You are the writing editor for a professional US Facebook Page.
+You are a professional US Facebook Page editor.
 
-Write ONE natural Facebook post based ONLY on the information supplied below.
+Create ONE natural Facebook post using ONLY the information provided.
 
-IMPORTANT RULES:
+Rules:
 - Do not invent facts.
 - Do not invent quotes.
 - Do not invent dates or numbers.
 - Do not present rumors as confirmed facts.
-- If something is unconfirmed, clearly say so.
-- Do not use sensational or misleading clickbait.
-- Write like a real human social-media editor, not like an AI.
-- Keep it engaging but factual.
-- Target a US Facebook audience.
-- Include the original source link.
-- Do not use hashtags unless they genuinely help.
+- Clearly identify unconfirmed information.
+- Do not use misleading clickbait.
+- Sound like a real human Facebook editor.
+- Keep it engaging and concise.
+- Target a US audience.
+- Include the original source URL.
 - Return ONLY valid JSON.
 
-Return this exact structure:
+Return exactly:
 
 {{
   "headline": "...",
@@ -44,9 +48,13 @@ Return this exact structure:
 }}
 
 STORY:
+
 Title: {story.get("title", "")}
+
 Description: {story.get("description", "")}
-Published: {story.get("pubDate", "")}
+
+Published: {story.get("published", "")}
+
 Source URL: {story.get("link", "")}
 """
 
@@ -54,27 +62,46 @@ Source URL: {story.get("link", "")}
         "contents": [
             {
                 "parts": [
-                    {"text": prompt}
+                    {
+                        "text": prompt
+                    }
                 ]
             }
-        ]
+        ],
+        "generationConfig": {
+            "responseMimeType": "application/json"
+        }
     }
 
     request = urllib.request.Request(
         API_URL,
         data=json.dumps(data).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "x-goog-api-key": API_KEY
+        },
+        method="POST"
     )
 
-    with urllib.request.urlopen(request, timeout=60) as response:
-        result = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            result = json.loads(
+                response.read().decode("utf-8")
+            )
+
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"Gemini API HTTP {e.code}: {body[:1000]}"
+        )
+
+    if "candidates" not in result:
+        raise RuntimeError(
+            "Gemini returned no candidates: "
+            + json.dumps(result)[:1000]
+        )
 
     text = result["candidates"][0]["content"]["parts"][0]["text"].strip()
-
-    # Remove markdown code fences if Gemini adds them
-    if text.startswith("```"):
-        text = text.replace("```json", "").replace("```", "").strip()
 
     return json.loads(text)
 
@@ -89,23 +116,29 @@ else:
 
 drafts = []
 
-# Start with only 5 stories to keep the free API usage small.
-for story in stories[:5]:
-    try:
-        draft = ask_gemini(story)
+# Start with only 2 stories for testing
+for story in stories[:2]:
 
-        draft["original_title"] = story.get("title", "")
-        draft["original_url"] = story.get("link", "")
+    draft = ask_gemini(story)
 
-        drafts.append(draft)
+    draft["original_title"] = story.get("title", "")
+    draft["original_url"] = story.get("link", "")
 
-        print("Created:", story.get("title", ""))
+    drafts.append(draft)
 
-    except Exception as e:
-        print("Skipped story:", story.get("title", ""))
-        print("Error:", e)
+    print("Created:", story.get("title", ""))
+
+
+if not drafts:
+    raise RuntimeError("No Facebook drafts were generated.")
+
 
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(drafts, f, indent=2, ensure_ascii=False)
+    json.dump(
+        drafts,
+        f,
+        indent=2,
+        ensure_ascii=False
+    )
 
 print(f"Created {len(drafts)} Facebook drafts.")
