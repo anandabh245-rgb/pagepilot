@@ -1,43 +1,13 @@
 import json
-import urllib.request
+from googlenewsdecoder import gnewsdecoder
 
 INPUT_FILE = "data/stories.json"
 OUTPUT_FILE = "data/resolved_urls.json"
 
-
-def resolve_url(url):
-    try:
-        request = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": "Mozilla/5.0"
-            }
-        )
-
-        with urllib.request.urlopen(
-            request,
-            timeout=20
-        ) as response:
-
-            return response.geturl()
-
-    except Exception as error:
-        print("Could not resolve:", url)
-        print("Reason:", error)
-        return url
-
-
-with open(
-    INPUT_FILE,
-    "r",
-    encoding="utf-8"
-) as file:
-
+with open(INPUT_FILE, "r", encoding="utf-8") as file:
     data = json.load(file)
 
-
 stories = data.get("stories", [])
-
 
 results = []
 
@@ -47,18 +17,32 @@ for story in stories[:5]:
 
     print()
     print("Resolving:")
-    print(google_url)
+    print(story.get("title", ""))
 
-    final_url = resolve_url(google_url)
+    try:
+        result = gnewsdecoder(
+            google_url,
+            interval=1
+        )
+
+        if result.get("status"):
+            original_url = result["decoded_url"]
+            print("Original URL:")
+            print(original_url)
+        else:
+            original_url = google_url
+            print("Could not decode:")
+            print(result.get("message", "Unknown error"))
+
+    except Exception as error:
+        original_url = google_url
+        print("Decoder error:", error)
 
     results.append({
         "title": story.get("title", ""),
         "google_news_url": google_url,
-        "resolved_url": final_url
+        "original_url": original_url
     })
-
-    print("Result:")
-    print(final_url)
 
 
 with open(
@@ -74,10 +58,8 @@ with open(
         ensure_ascii=False
     )
 
-
 print()
 print("================================")
-print("URL RESOLUTION COMPLETE")
+print("URL DECODING COMPLETE")
 print("Saved to:", OUTPUT_FILE)
-print("Stories tested:", len(results))
 print("================================")
