@@ -23,31 +23,47 @@ API_URL = (
 def ask_gemini(story):
 
     prompt = f"""
-You are a professional US Facebook Page editor.
+You are the senior social-media editor for a professional US entertainment and news Facebook Page.
 
-Create ONE natural Facebook post using ONLY the information provided.
+Your job is to transform the supplied news story into an ORIGINAL Facebook post that feels written by a real human editor.
 
-Rules:
-- Do not invent facts.
-- Do not invent quotes.
-- Do not invent dates or numbers.
-- Do not present rumors as confirmed facts.
-- Clearly identify unconfirmed information.
+IMPORTANT:
+- Use ONLY facts contained in the supplied story.
+- Never invent facts, quotes, reactions, numbers, dates, names, or details.
+- Do not exaggerate.
 - Do not use misleading clickbait.
-- Sound like a real human Facebook editor.
-- Keep it engaging and concise.
-- Target a US audience.
-- Return ONLY valid JSON.
+- Do not state rumors or allegations as confirmed facts.
+- Do not pretend you witnessed the event.
+- Do not copy sentences from the source.
+- Do not begin with generic phrases such as "Big news!", "Breaking news!", or "Exciting news!"
+- Avoid corporate or robotic language.
+- Do not say "Check out the details below."
+- Do not tell readers to "read the article" unless it naturally fits.
+- The post should provide useful information by itself.
+- Write for a US Facebook audience.
+- Use a conversational but professional tone.
+- Make the opening sentence interesting without being sensational.
+- Keep the post around 60–120 words.
+- Use short paragraphs for mobile reading.
+- Emojis are optional and should be used sparingly.
+- End naturally. A simple question is allowed only when it genuinely fits the story.
+- Do not add hashtags unless they are clearly useful.
+- Preserve uncertainty when the source itself is uncertain.
 
-Return exactly:
+The result must contain:
+1. A natural headline.
+2. A polished Facebook post.
+3. The source URL.
+
+Return ONLY valid JSON in exactly this format:
 
 {{
   "headline": "...",
   "post": "...",
-  "source": "..."
+  "source": "{story.get("link", "")}"
 }}
 
-STORY:
+NEWS STORY:
 
 Title: {story.get("title", "")}
 
