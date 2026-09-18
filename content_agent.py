@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import urllib.request
 import urllib.error
 
@@ -36,7 +37,6 @@ Rules:
 - Sound like a real human Facebook editor.
 - Keep it engaging and concise.
 - Target a US audience.
-- Include the original source URL.
 - Return ONLY valid JSON.
 
 Return exactly:
@@ -82,32 +82,55 @@ Source URL: {story.get("link", "")}
         },
         method="POST"
     )
-    
+
+    result = None
+
     for attempt in range(5):
+
         try:
-            with urllib.request.urlopen(request, timeout=60) as response:
+            with urllib.request.urlopen(
+                request,
+                timeout=60
+            ) as response:
+
                 result = json.loads(
                     response.read().decode("utf-8")
                 )
+
             break
 
         except urllib.error.HTTPError as e:
-            if e.code == 503 and attempt < 4:
+
+            if e.code in (408, 429, 500, 502, 503, 504) and attempt < 4:
+
                 wait_time = 5 * (2 ** attempt)
-                print(f"Gemini busy. Retrying in {wait_time} seconds...")
-                import time
-                time.sleep(wait_time)
-            else:
-                body = e.read().decode("utf-8", errors="replace")
-                raise RuntimeError(
-                    f"Gemini API HTTP {e.code}: {body[:1000]}"
+
+                print(
+                    f"Gemini temporarily unavailable "
+                    f"(HTTP {e.code}). "
+                    f"Retrying in {wait_time} seconds..."
                 )
 
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="replace")
+                time.sleep(wait_time)
+
+            else:
+
+                body = e.read().decode(
+                    "utf-8",
+                    errors="replace"
+                )
+
+                raise RuntimeError(
+                    f"Gemini API HTTP {e.code}: "
+                    f"{body[:1000]}"
+                )
+
+
+    if result is None:
         raise RuntimeError(
-            f"Gemini API HTTP {e.code}: {body[:1000]}"
+            "Gemini request failed after all retries."
         )
+
 
     if "candidates" not in result:
         raise RuntimeError(
@@ -115,39 +138,71 @@ Source URL: {story.get("link", "")}
             + json.dumps(result)[:1000]
         )
 
-    text = result["candidates"][0]["content"]["parts"][0]["text"].strip()
+
+    text = (
+        result["candidates"][0]
+        ["content"]
+        ["parts"][0]
+        ["text"]
+        .strip()
+    )
+
 
     return json.loads(text)
 
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
+
     data = json.load(f)
 
+
 if isinstance(data, dict):
+
     stories = data.get("stories", [])
+
 else:
+
     stories = data
+
 
 drafts = []
 
-# Start with only 2 stories for testing
+
 for story in stories[:2]:
 
     draft = ask_gemini(story)
 
-    draft["original_title"] = story.get("title", "")
-    draft["original_url"] = story.get("link", "")
+    draft["original_title"] = story.get(
+        "title",
+        ""
+    )
+
+    draft["original_url"] = story.get(
+        "link",
+        ""
+    )
 
     drafts.append(draft)
 
-    print("Created:", story.get("title", ""))
+    print(
+        "Created:",
+        story.get("title", "")
+    )
 
 
 if not drafts:
-    raise RuntimeError("No Facebook drafts were generated.")
+
+    raise RuntimeError(
+        "No Facebook drafts were generated."
+    )
 
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+with open(
+    OUTPUT_FILE,
+    "w",
+    encoding="utf-8"
+) as f:
+
     json.dump(
         drafts,
         f,
@@ -155,4 +210,7 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         ensure_ascii=False
     )
 
-print(f"Created {len(drafts)} Facebook drafts.")
+
+print(
+    f"Created {len(drafts)} Facebook drafts."
+)
