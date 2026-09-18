@@ -22,12 +22,13 @@ jobs:
       - name: Collect news
         run: python news_agent.py
 
-      - name: Generate Facebook drafts
+            - name: Generate Facebook drafts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python content_agent.py
-        - name: Test original article URLs
-  run: python resolve_urls.py
+
+      - name: Test original article URLs
+        run: python resolve_urls.py
 
       - name: Save results
         run: |
