@@ -26,7 +26,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python content_agent.py
-
+        
+       - name: Install URL decoder
+        run: pip install googlenewsdecoder
+        
       - name: Test original article URLs
         run: python resolve_urls.py
 
