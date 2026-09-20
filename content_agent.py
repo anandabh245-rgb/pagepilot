@@ -50,18 +50,18 @@ IMPORTANT:
 - Do not add hashtags unless they are clearly useful.
 - Preserve uncertainty when the source itself is uncertain.
 
-The result must contain:
-1. A natural headline.
-2. A polished Facebook post.
-3. The source URL.
+Return ONLY valid JSON.
 
-Return ONLY valid JSON in exactly this format:
-
+The JSON must contain exactly these three fields:
 {{
   "headline": "...",
   "post": "...",
-  "source": "{story.get("link", "")}"
+  "source": "..."
 }}
+
+Do not use markdown.
+Do not use code fences.
+Do not add explanations before or after the JSON.
 
 NEWS STORY:
 
@@ -89,21 +89,20 @@ Source URL: {story.get("link", "")}
         }
     }
 
-    request = urllib.request.Request(
-        API_URL,
-        data=json.dumps(data).encode("utf-8"),
-        headers={
-            "Content-Type": "application/json",
-            "x-goog-api-key": API_KEY
-        },
-        method="POST"
-    )
-
-    result = None
-
     for attempt in range(5):
 
+        request = urllib.request.Request(
+            API_URL,
+            data=json.dumps(data).encode("utf-8"),
+            headers={
+                "Content-Type": "application/json",
+                "x-goog-api-key": API_KEY
+            },
+            method="POST"
+        )
+
         try:
+
             with urllib.request.urlopen(
                 request,
                 timeout=60
@@ -113,11 +112,52 @@ Source URL: {story.get("link", "")}
                     response.read().decode("utf-8")
                 )
 
-            break
+            if "candidates" not in result:
+                raise RuntimeError(
+                    "Gemini returned no candidates: "
+                    + json.dumps(result)[:1000]
+                )
+
+            text = (
+                result["candidates"][0]
+                ["content"]
+                ["parts"][0]
+                ["text"]
+                .strip()
+            )
+
+            try:
+
+                return json.loads(text)
+
+            except json.JSONDecodeError:
+
+                print(
+                    f"Gemini returned invalid JSON "
+                    f"on attempt {attempt + 1}. "
+                    f"Retrying..."
+                )
+
+                if attempt < 4:
+                    time.sleep(3 * (attempt + 1))
+                    continue
+
+                raise RuntimeError(
+                    "Gemini returned invalid JSON after "
+                    "all retries. Response was:\n"
+                    + text[:2000]
+                )
 
         except urllib.error.HTTPError as e:
 
-            if e.code in (408, 429, 500, 502, 503, 504) and attempt < 4:
+            if e.code in (
+                408,
+                429,
+                500,
+                502,
+                503,
+                504
+            ) and attempt < 4:
 
                 wait_time = 5 * (2 ** attempt)
 
@@ -141,33 +181,32 @@ Source URL: {story.get("link", "")}
                     f"{body[:1000]}"
                 )
 
+        except urllib.error.URLError as e:
 
-    if result is None:
-        raise RuntimeError(
-            "Gemini request failed after all retries."
-        )
+            if attempt < 4:
 
+                wait_time = 5 * (2 ** attempt)
 
-    if "candidates" not in result:
-        raise RuntimeError(
-            "Gemini returned no candidates: "
-            + json.dumps(result)[:1000]
-        )
+                print(
+                    f"Network error: {e}. "
+                    f"Retrying in {wait_time} seconds..."
+                )
 
+                time.sleep(wait_time)
 
-    text = (
-        result["candidates"][0]
-        ["content"]
-        ["parts"][0]
-        ["text"]
-        .strip()
-    )
+            else:
+
+                raise RuntimeError(
+                    f"Gemini network error after "
+                    f"all retries: {e}"
+                )
 
 
-    return json.loads(text)
-
-
-with open(INPUT_FILE, "r", encoding="utf-8") as f:
+with open(
+    INPUT_FILE,
+    "r",
+    encoding="utf-8"
+) as f:
 
     data = json.load(f)
 
