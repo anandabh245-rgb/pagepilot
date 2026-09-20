@@ -33,6 +33,9 @@ jobs:
       - name: Test original article URLs
         run: python resolve_urls.py
 
+      - name: Create final posts
+        run: python finalize_posts.py
+
       - name: Save results
         run: |
           git config user.name "PagePilot Bot"
