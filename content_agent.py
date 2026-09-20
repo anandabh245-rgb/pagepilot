@@ -184,7 +184,7 @@ else:
 drafts = []
 
 
-for story in stories[:2]:
+for story in stories[:7]:
 
     draft = ask_gemini(story)
 
