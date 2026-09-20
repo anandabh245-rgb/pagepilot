@@ -11,7 +11,7 @@ stories = data.get("stories", [])
 
 results = []
 
-for story in stories[:5]:
+for story in stories[:7]:
 
     google_url = story.get("link", "")
 
@@ -27,16 +27,28 @@ for story in stories[:5]:
 
         if result.get("status"):
             original_url = result["decoded_url"]
+
             print("Original URL:")
             print(original_url)
+
         else:
             original_url = google_url
+
             print("Could not decode:")
-            print(result.get("message", "Unknown error"))
+            print(
+                result.get(
+                    "message",
+                    "Unknown error"
+                )
+            )
 
     except Exception as error:
         original_url = google_url
-        print("Decoder error:", error)
+
+        print(
+            "Decoder error:",
+            error
+        )
 
     results.append({
         "title": story.get("title", ""),
@@ -58,8 +70,10 @@ with open(
         ensure_ascii=False
     )
 
+
 print()
 print("================================")
 print("URL DECODING COMPLETE")
+print("Resolved stories:", len(results))
 print("Saved to:", OUTPUT_FILE)
 print("================================")
