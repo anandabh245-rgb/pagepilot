@@ -47,15 +47,7 @@ def get_feed(url):
                 item.findtext("description", "")
             )
 
-                        link = item.findtext("link", "")
-
-            source_element = item.find("source")
-            publisher = ""
-
-            if source_element is not None:
-                publisher = clean_text(
-                    source_element.text or ""
-                )
+            link = item.findtext("link", "")
 
             pub_date = item.findtext(
                 "pubDate",
@@ -63,12 +55,11 @@ def get_feed(url):
             )
 
             if title:
-                   stories.append({
+                stories.append({
                     "title": title,
                     "description": description,
                     "link": link,
-                    "published": pub_date,
-                    "publisher": publisher
+                    "published": pub_date
                 })
 
         return stories
