@@ -1,104 +1,78 @@
-import json
-import os
-import sys
-import urllib.parse
-import urllib.request
+import json, os, sys, urllib.error, urllib.parse, urllib.request
+from datetime import datetime, timezone
 
-FINAL_POSTS = "data/final_posts.json"
-
+FINAL = "data/final_posts.json"
+LOG = "data/posted.json"
 PAGE_ID = os.environ.get("FACEBOOK_PAGE_ID")
-PAGE_ACCESS_TOKEN = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN")
-GRAPH_VERSION = os.environ.get("META_GRAPH_VERSION", "v23.0")
+TOKEN = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN")
+VER = os.environ.get("META_GRAPH_VERSION", "v25.0")
+DRY = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
+MAX_POSTS = int(os.environ.get("MAX_POSTS", "2"))
 
 
-def publish_to_facebook(post):
-    if not PAGE_ID:
-        raise RuntimeError("FACEBOOK_PAGE_ID secret is missing")
-
-    if not PAGE_ACCESS_TOKEN:
-        raise RuntimeError("FACEBOOK_PAGE_ACCESS_TOKEN secret is missing")
-
-    message = post.get("post", "").strip()
-    source_url = post.get("source_url", "").strip()
-
-    if not message:
-        raise RuntimeError("The selected post has no text")
-
-    data = {
-        "message": message,
-        "access_token": PAGE_ACCESS_TOKEN,
-    }
-
-    # Add the original article link when available.
-    if source_url:
-        data["link"] = source_url
-
-    url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/feed"
-
-    encoded = urllib.parse.urlencode(data).encode("utf-8")
-
-    request = urllib.request.Request(
-        url,
-        data=encoded,
-        method="POST",
-        headers={
-            "User-Agent": "PagePilot/1.0"
-        },
-    )
-
+def load(path, default):
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            result = json.loads(response.read().decode("utf-8"))
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
 
-        print("================================")
-        print("FACEBOOK PUBLISH SUCCESS")
-        print("================================")
-        print(json.dumps(result, indent=2))
-        print("================================")
 
-        return result
+def key(p):
+    return (p.get("source_url") or p.get("headline") or "").strip()
 
-    except urllib.error.HTTPError as error:
-        body = error.read().decode("utf-8", errors="replace")
 
-        print("================================")
-        print("FACEBOOK PUBLISH FAILED")
-        print("================================")
-        print("HTTP status:", error.code)
-        print(body)
-        print("================================")
-
+def publish(p):
+    data = {"message": p["post"].strip(), "access_token": TOKEN}
+    if p.get("source_url"):
+        data["link"] = p["source_url"].strip()
+    req = urllib.request.Request(
+        f"https://graph.facebook.com/{VER}/{PAGE_ID}/feed",
+        data=urllib.parse.urlencode(data).encode(),
+        method="POST", headers={"User-Agent": "PagePilot/1.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        print("FAILED", e.code, e.read().decode(errors="replace"))
         raise
 
 
 def main():
-    print("================================")
-    print("       PAGEPILOT PUBLISHER")
-    print("================================")
-
-    if not os.path.exists(FINAL_POSTS):
-        raise RuntimeError(f"Missing {FINAL_POSTS}")
-
-    with open(FINAL_POSTS, "r", encoding="utf-8") as file:
-        posts = json.load(file)
-
-    if not isinstance(posts, list) or not posts:
-        raise RuntimeError("No posts found in data/final_posts.json")
-
-    # Publish the first generated post.
-    post = posts[0]
-
-    print("Headline:", post.get("headline", ""))
-    print("Source:", post.get("source", ""))
-    print()
-
-    publish_to_facebook(post)
+    print("Mode:", "DRY RUN (nothing posted)" if DRY else "LIVE")
+    print("Page ID secret:", "yes" if PAGE_ID else "NO")
+    print("Token secret:", "yes" if TOKEN else "NO")
+    if not DRY and not (PAGE_ID and TOKEN):
+        raise RuntimeError("Facebook secrets missing")
+    posts = load(FINAL, [])
+    log = load(LOG, [])
+    done = {e.get("key") for e in log if isinstance(e, dict)}
+    todo = [p for p in posts if key(p) and key(p) not in done
+            and 40 <= len((p.get("post") or "").strip()) <= 2000]
+    print("New posts:", len(todo), "| limit:", MAX_POSTS)
+    fails = 0
+    for p in todo[:MAX_POSTS]:
+        print("\n---", p.get("headline", ""), "\n" + p["post"].strip())
+        if DRY:
+            print("[dry run] not posted")
+            continue
+        try:
+            res = publish(p)
+            print("POSTED", res.get("id"))
+            log.append({"key": key(p), "headline": p.get("headline", ""),
+                        "facebook_id": res.get("id"),
+                        "posted_at": datetime.now(timezone.utc).isoformat()})
+            with open(LOG, "w", encoding="utf-8") as f:
+                json.dump(log, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            fails += 1
+            print("ERROR:", e)
+    return 1 if fails else 0
 
 
 if __name__ == "__main__":
     try:
-        main()
-    except Exception as error:
-        print()
-        print("ERROR:", error)
+        sys.exit(main())
+    except Exception as e:
+        print("ERROR:", e)
         sys.exit(1)
