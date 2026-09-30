@@ -1,271 +1,90 @@
-import json
-import os
-import time
-import urllib.request
-import urllib.error
+import json, os, time, urllib.error, urllib.request
 
 INPUT_FILE = "data/stories.json"
 OUTPUT_FILE = "data/drafts.json"
-
 API_KEY = os.environ.get("GEMINI_API_KEY")
-
 if not API_KEY:
     raise RuntimeError("GEMINI_API_KEY secret is missing")
 
 MODEL = "gemini-3.5-flash-lite"
+API_URL = ("https://generativelanguage.googleapis.com/v1beta/models/"
+           + MODEL + ":generateContent")
 
-API_URL = (
-    f"https://generativelanguage.googleapis.com/v1beta/"
-    f"models/{MODEL}:generateContent"
-)
+RULES = """You edit a popular US entertainment Facebook Page covering Hollywood celebrity news, movies and TV.
+Turn the story below into an ORIGINAL Facebook post.
+
+FACTS
+- Use ONLY facts found in the story. Never invent quotes, numbers, dates, names or reactions.
+- Rumors or reports stay "reportedly" or "according to". Never present allegations as confirmed.
+- Do not copy sentences from the source.
+
+STYLE
+- First line is a short hook (under 12 words) that names the star, show or movie. Create curiosity without misleading clickbait. Never start with "Breaking news" or "Big news".
+- Frame the story around the stars, shows or films involved, where the story supports it.
+- 50 to 90 words in 2 or 3 short paragraphs. Plain, friendly language, like telling a friend who loves entertainment.
+- At most 1 or 2 emojis.
+- End with ONE clear question that invites opinions, predictions or favorites.
+- Put exactly 3 relevant hashtags on the final line.
+
+Return ONLY valid JSON with exactly these fields, no markdown and no code fences:
+{"headline": "...", "post": "...", "source": "..."}
+"""
 
 
 def ask_gemini(story):
-
-    prompt = f"""
-You are the senior social-media editor for a professional US entertainment and news Facebook Page.
-
-Your job is to transform the supplied news story into an ORIGINAL Facebook post that feels written by a real human editor.
-
-IMPORTANT:
-- Use ONLY facts contained in the supplied story.
-- Never invent facts, quotes, reactions, numbers, dates, names, or details.
-- Do not exaggerate.
-- Do not use misleading clickbait.
-- Do not state rumors or allegations as confirmed facts.
-- Do not pretend you witnessed the event.
-- Do not copy sentences from the source.
-- Do not begin with generic phrases such as "Big news!", "Breaking news!", or "Exciting news!"
-- Avoid corporate or robotic language.
-- Do not say "Check out the details below."
-- Do not tell readers to "read the article" unless it naturally fits.
-- The post should provide useful information by itself.
-- Write for a US Facebook audience.
-- Use a conversational but professional tone.
-- Make the opening sentence interesting without being sensational.
-- Keep the post around 60–120 words.
-- Use short paragraphs for mobile reading.
-- Emojis are optional and should be used sparingly.
-- End naturally. A simple question is allowed only when it genuinely fits the story.
-- Do not add hashtags unless they are clearly useful.
-- Preserve uncertainty when the source itself is uncertain.
-
-Return ONLY valid JSON.
-
-The JSON must contain exactly these three fields:
-{{
-  "headline": "...",
-  "post": "...",
-  "source": "..."
-}}
-
-Do not use markdown.
-Do not use code fences.
-Do not add explanations before or after the JSON.
-
-NEWS STORY:
-
-Title: {story.get("title", "")}
-
-Description: {story.get("description", "")}
-
-Published: {story.get("published", "")}
-
-Source URL: {story.get("link", "")}
-"""
-
-    data = {
-        "contents": [
-            {
-                "parts": [
-                    {
-                        "text": prompt
-                    }
-                ]
-            }
-        ],
-        "generationConfig": {
-            "responseMimeType": "application/json"
-        }
-    }
+    prompt = (RULES + "\nNEWS STORY:\nTitle: " + story.get("title", "")
+              + "\nDescription: " + story.get("description", "")
+              + "\nPublished: " + story.get("published", "")
+              + "\nSource URL: " + story.get("link", "") + "\n")
+    body = json.dumps({
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"responseMimeType": "application/json"},
+    }).encode("utf-8")
 
     for attempt in range(5):
-
-        request = urllib.request.Request(
-            API_URL,
-            data=json.dumps(data).encode("utf-8"),
-            headers={
-                "Content-Type": "application/json",
-                "x-goog-api-key": API_KEY
-            },
-            method="POST"
-        )
-
+        req = urllib.request.Request(
+            API_URL, data=body, method="POST",
+            headers={"Content-Type": "application/json",
+                     "x-goog-api-key": API_KEY})
         try:
-
-            with urllib.request.urlopen(
-                request,
-                timeout=60
-            ) as response:
-
-                result = json.loads(
-                    response.read().decode("utf-8")
-                )
-
-            if "candidates" not in result:
-                raise RuntimeError(
-                    "Gemini returned no candidates: "
-                    + json.dumps(result)[:1000]
-                )
-
-            text = (
-                result["candidates"][0]
-                ["content"]
-                ["parts"][0]
-                ["text"]
-                .strip()
-            )
-
-            try:
-
-                return json.loads(text)
-
-            except json.JSONDecodeError:
-
-                print(
-                    f"Gemini returned invalid JSON "
-                    f"on attempt {attempt + 1}. "
-                    f"Retrying..."
-                )
-
-                if attempt < 4:
-                    time.sleep(3 * (attempt + 1))
-                    continue
-
-                raise RuntimeError(
-                    "Gemini returned invalid JSON after "
-                    "all retries. Response was:\n"
-                    + text[:2000]
-                )
-
+            with urllib.request.urlopen(req, timeout=60) as r:
+                result = json.loads(r.read().decode("utf-8"))
+            text = result["candidates"][0]["content"]["parts"][0]["text"].strip()
+            return json.loads(text)
         except urllib.error.HTTPError as e:
-
-            if e.code in (
-                408,
-                429,
-                500,
-                502,
-                503,
-                504
-            ) and attempt < 4:
-
-                wait_time = 5 * (2 ** attempt)
-
-                print(
-                    f"Gemini temporarily unavailable "
-                    f"(HTTP {e.code}). "
-                    f"Retrying in {wait_time} seconds..."
-                )
-
-                time.sleep(wait_time)
-
-            else:
-
-                body = e.read().decode(
-                    "utf-8",
-                    errors="replace"
-                )
-
-                raise RuntimeError(
-                    f"Gemini API HTTP {e.code}: "
-                    f"{body[:1000]}"
-                )
-
-        except urllib.error.URLError as e:
-
+            if e.code in (408, 429, 500, 502, 503, 504) and attempt < 4:
+                time.sleep(5 * 2 ** attempt)
+                continue
+            raise RuntimeError("Gemini HTTP %s: %s" % (
+                e.code, e.read().decode(errors="replace")[:500]))
+        except (urllib.error.URLError, KeyError, IndexError,
+                json.JSONDecodeError) as e:
             if attempt < 4:
-
-                wait_time = 5 * (2 ** attempt)
-
-                print(
-                    f"Network error: {e}. "
-                    f"Retrying in {wait_time} seconds..."
-                )
-
-                time.sleep(wait_time)
-
-            else:
-
-                raise RuntimeError(
-                    f"Gemini network error after "
-                    f"all retries: {e}"
-                )
+                print("Retrying after error:", e)
+                time.sleep(3 * (attempt + 1))
+                continue
+            raise RuntimeError("Gemini failed after retries: %s" % e)
 
 
-with open(
-    INPUT_FILE,
-    "r",
-    encoding="utf-8"
-) as f:
-
+with open(INPUT_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)
-
-
-if isinstance(data, dict):
-
-    stories = data.get("stories", [])
-
-else:
-
-    stories = data
-
+stories = data.get("stories", []) if isinstance(data, dict) else data
 
 drafts = []
-
-
 for story in stories[:7]:
-
-    draft = ask_gemini(story)
-
-    draft["original_title"] = story.get(
-        "title",
-        ""
-    )
-
-    draft["original_url"] = story.get(
-        "link",
-        ""
-    )
-
+    try:
+        draft = ask_gemini(story)
+    except Exception as e:
+        print("Skipped:", story.get("title", ""), e)
+        continue
+    draft["original_title"] = story.get("title", "")
+    draft["original_url"] = story.get("link", "")
     drafts.append(draft)
-
-    print(
-        "Created:",
-        story.get("title", "")
-    )
-
+    print("Created:", story.get("title", ""))
 
 if not drafts:
+    raise RuntimeError("No Facebook drafts were generated.")
 
-    raise RuntimeError(
-        "No Facebook drafts were generated."
-    )
-
-
-with open(
-    OUTPUT_FILE,
-    "w",
-    encoding="utf-8"
-) as f:
-
-    json.dump(
-        drafts,
-        f,
-        indent=2,
-        ensure_ascii=False
-    )
-
-
-print(
-    f"Created {len(drafts)} Facebook drafts."
-)
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(drafts, f, indent=2, ensure_ascii=False)
+print("Created %d Facebook drafts." % len(drafts))
