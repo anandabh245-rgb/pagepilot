@@ -1,8 +1,8 @@
 import hashlib
+import re
 from PIL import Image, ImageDraw, ImageFont
 
 PAGE_NAME = "MUST WATCH"
-TAGLINE = "ENTERTAINMENT NEWS"
 SIZE = 1080
 FONTS = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
@@ -14,6 +14,16 @@ PALETTES = [
     ((10, 30, 40), (30, 140, 170), (255, 220, 130)),
     ((35, 15, 30), (220, 120, 40), (255, 235, 160)),
     ((15, 15, 15), (190, 150, 40), (255, 255, 255)),
+]
+CATEGORIES = [
+    ("TV NEWS", ["season", "series", "episode", "show", "netflix", "hbo",
+                 "tv", "streaming", "reality", "cast", "premiere", "finale"]),
+    ("MOVIE NEWS", ["movie", "film", "trailer", "box office", "oscar",
+                    "sequel", "director", "cinema"]),
+    ("MUSIC NEWS", ["album", "singer", "tour", "concert", "song", "band",
+                    "grammy"]),
+    ("CELEBRITY NEWS", ["star", "stars", "actor", "actress", "celebrity",
+                        "couple", "wedding", "baby", "dating", "split"]),
 ]
 
 
@@ -29,16 +39,28 @@ def font(size):
         return ImageFont.load_default()
 
 
-def wrap(draw, text, fnt, max_w):
-    lines, cur = [], ""
-    for word in text.split():
-        trial = (cur + " " + word).strip()
-        if draw.textlength(trial, font=fnt) <= max_w:
-            cur = trial
+def category(text):
+    low = text.lower()
+    tokens = set(re.findall(r"[a-z]+", low))
+    for name, words in CATEGORIES:
+        for w in words:
+            if w in tokens or (" " in w and w in low):
+                return name
+    return "ENTERTAINMENT"
+
+
+def layout(draw, words, fnt, max_w):
+    space = draw.textlength(" ", font=fnt)
+    lines, cur, cur_w = [], [], 0
+    for i, w in enumerate(words):
+        ww = draw.textlength(w, font=fnt)
+        add = ww if not cur else space + ww
+        if cur and cur_w + add > max_w:
+            lines.append(cur)
+            cur, cur_w = [(i, w)], ww
         else:
-            if cur:
-                lines.append(cur)
-            cur = word
+            cur.append((i, w))
+            cur_w += add
     if cur:
         lines.append(cur)
     return lines
@@ -57,21 +79,43 @@ def make_card(headline, path):
         color = tuple(int(top[i] + (bottom[i] - top[i]) * t) for i in range(3))
         draw.line([(0, y), (SIZE, y)], fill=color)
 
-    draw.text((80, 80), PAGE_NAME, font=font(46), fill=accent)
-    draw.rectangle([80, 150, 280, 160], fill=accent)
+    overlay = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    od.ellipse([560, -280, 1320, 480], fill=accent + (45,))
+    od.ellipse([-320, 680, 420, 1420], fill=(255, 255, 255, 20))
+    img = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+    draw = ImageDraw.Draw(img)
 
-    max_w, max_h = SIZE - 160, 640
-    for size in range(120, 44, -6):
+    draw.rectangle([28, 28, SIZE - 28, SIZE - 28], outline=accent, width=3)
+    draw.text((80, 80), PAGE_NAME, font=font(46), fill=accent)
+
+    chip = category(text)
+    chip_font = font(32)
+    chip_w = int(draw.textlength(chip, font=chip_font)) + 48
+    x1 = SIZE - 80
+    x0 = x1 - chip_w
+    draw.rounded_rectangle([x0, 72, x1, 136], radius=32, fill=accent)
+    draw.text((x0 + 24, 86), chip, font=chip_font, fill=top)
+
+    words = text.split()
+    max_w, max_h = SIZE - 160, 700
+    for size in range(108, 47, -6):
         fnt = font(size)
-        lines = wrap(draw, text, fnt, max_w)
-        line_h = int(size * 1.25)
+        lines = layout(draw, words, fnt, max_w)
+        line_h = int(size * 1.22)
         if len(lines) * line_h <= max_h:
             break
-    y = 220 + (max_h - len(lines) * line_h) // 2
+    space = draw.textlength(" ", font=fnt)
+    y = 190 + (max_h - len(lines) * line_h) // 2
     for line in lines:
-        draw.text((80, y), line, font=fnt, fill=(255, 255, 255))
+        x = 80
+        for i, w in line:
+            draw.text((x, y), w, font=fnt,
+                      fill=accent if i < 2 else (255, 255, 255))
+            x += draw.textlength(w, font=fnt) + space
         y += line_h
 
-    draw.text((80, 960), TAGLINE, font=font(36), fill=accent)
+    draw.text((80, 955), "FOLLOW " + PAGE_NAME + " FOR MORE",
+              font=font(34), fill=accent)
     img.save(path, "PNG")
     return path
