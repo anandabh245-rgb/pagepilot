@@ -3,7 +3,7 @@ import urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 
 try:
-    from card_maker import make_card
+    from card_art import make_card
 except Exception as e:
     print("Cards disabled:", e)
     make_card = None
