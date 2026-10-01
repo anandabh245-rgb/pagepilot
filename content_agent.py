@@ -26,6 +26,16 @@ STYLE
 - End with ONE clear question that invites opinions, predictions or favorites.
 - Put exactly 3 relevant hashtags on the final line.
 
+EXAMPLE of the energy we want (invented, never reuse its facts):
+Headline: Fans are NOT ready for this casting news 👀
+Post: Fans of the hit drama just got a surprise: a fan-favorite star is reportedly returning for the next season.
+
+The report says filming starts this fall, though the studio hasn't confirmed details yet.
+
+Who would you love to see come back?
+
+#TVNews #Hollywood #Drama
+
 Return ONLY valid JSON with exactly these fields, no markdown and no code fences:
 {"headline": "...", "post": "...", "source": "..."}
 """
@@ -79,6 +89,8 @@ for story in stories[:7]:
         continue
     draft["original_title"] = story.get("title", "")
     draft["original_url"] = story.get("link", "")
+    if draft.get("post", "").count("#") < 3:
+        draft["post"] = draft["post"].rstrip() + "\n\n#Entertainment #Hollywood #PopCulture"
     drafts.append(draft)
     print("Created:", story.get("title", ""))
 
