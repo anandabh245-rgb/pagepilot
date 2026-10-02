@@ -39,6 +39,7 @@ Who would you love to see come back?
 HEADLINE FIELD
 - "headline" is NOT the news title. It is a punchy 4 to 8 word reaction line for a graphic card, like "Fans are NOT ready for this" or "This changes everything for the show". It must stay truthful to the story and never invent facts.
 
+HEADLINE FIELD
 Return ONLY valid JSON with exactly these fields, no markdown and no code fences:
 {"headline": "...", "post": "...", "source": "..."}
 """
