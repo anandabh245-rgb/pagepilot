@@ -6,7 +6,7 @@ on:
         description: "Type true to really post. Default is a safe dry run."
         default: "false"
   schedule:
-    - cron: "0 13,15,17,19,21,23 * * *"
+    - cron: "0 1,13,16,19,22 * * *"
 permissions:
   contents: write
 concurrency:
