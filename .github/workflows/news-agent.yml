@@ -28,7 +28,7 @@ jobs:
         run: python content_agent.py
 
       - name: Install URL decoder
-        run: pip install googlenewsdecoder
+        run: pip install googlenewsdecoder "selectolax<1.0"
 
       - name: Test original article URLs
         run: python resolve_urls.py
