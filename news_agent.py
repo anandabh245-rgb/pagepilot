@@ -7,10 +7,11 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 RSS_FEEDS = [
-    "https://news.google.com/rss/search?q=US+celebrity+entertainment&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=Hollywood+celebrity&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=US+nature+wildlife&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=US+weather+natural+disaster&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=celebrity+news+when:2d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=Hollywood+news+when:2d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=TV+show+news+when:2d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=movie+news+when:2d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=reality+TV+news+when:2d&hl=en-US&gl=US&ceid=US:en",
 ]
 
 OUTPUT_FILE = "data/stories.json"
@@ -95,6 +96,14 @@ def main():
         all_stories.extend(get_feed(feed))
 
     all_stories = remove_duplicates(all_stories)
+
+    posted = set()
+    try:
+        with open("data/posted.json", "r", encoding="utf-8") as f:
+            posted = {e.get("key") for e in json.load(f) if isinstance(e, dict)}
+    except Exception:
+        pass
+    all_stories = [s for s in all_stories if s["link"] not in posted]
 
     # Keep the newest/first 30 stories.
     all_stories = all_stories[:30]
