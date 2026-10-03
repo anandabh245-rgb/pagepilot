@@ -105,6 +105,22 @@ def main():
         pass
     all_stories = [s for s in all_stories if s["link"] not in posted]
 
+    import re
+    SKIP = ["shooting", " shot ", "killed", "murder", "suspect", "vandal",
+            "crash", "gaza", "israel", "palestine", "trump", "biden",
+            "quiz", "test your", "nuggets", "readers choose"]
+    seen_topics, unique = set(), []
+    for s in all_stories:
+        t = s["title"].lower()
+        if any(w in t for w in SKIP):
+            continue
+        topic = " ".join(re.findall(r"[a-z]+", t)[:2])
+        if topic in seen_topics:
+            continue
+        seen_topics.add(topic)
+        unique.append(s)
+    all_stories = unique
+
     # Keep the newest/first 30 stories.
     all_stories = all_stories[:30]
 
