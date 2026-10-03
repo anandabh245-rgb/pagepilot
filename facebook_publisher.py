@@ -61,8 +61,10 @@ def publish(p, card_path):
     if card_path:
         try:
             caption = text
-            if p.get("source"):
-                caption += "\n\nSource: " + p["source"].strip()
+            host = urllib.parse.urlparse(p.get("source_url", "")).netloc
+            host = host.replace("www.", "")
+            if host and "google." not in host:
+                caption += "\n\nSource: " + host
             with open(card_path, "rb") as f:
                 img = f.read()
             return call(PAGE_ID + "/photos",
