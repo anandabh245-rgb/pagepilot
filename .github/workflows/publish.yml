@@ -22,6 +22,7 @@ jobs:
       - run: pip install pillow
       - name: Publish posts
         env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.live == 'false' && 'true' || 'false' }}
