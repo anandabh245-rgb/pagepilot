@@ -1,6 +1,8 @@
-import json, os, sys, uuid
+import base64, io, json, os, sys
 import urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
+
+from PIL import Image
 
 try:
     from card_art import make_card
@@ -10,12 +12,10 @@ except Exception as e:
 
 FINAL = "data/final_posts.json"
 LOG = "data/posted.json"
-PAGE_ID = os.environ.get("FACEBOOK_PAGE_ID")
-TOKEN = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN")
-VER = os.environ.get("META_GRAPH_VERSION", "v25.0")
+WEBHOOK = os.environ.get("MAKE_WEBHOOK_URL", "").strip()
 DRY = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
-MAX_POSTS = int(os.environ.get("MAX_POSTS", "2"))
-CARD_DIR = "data/preview" if DRY else "cards"
+MAX_POSTS = int(os.environ.get("MAX_POSTS", "1"))
+CARD_DIR = "data/preview"
 
 
 def load(path, default):
@@ -30,61 +30,48 @@ def key(p):
     return (p.get("source_url") or p.get("headline") or "").strip()
 
 
-def call(path, fields, files=None):
-    url = "https://graph.facebook.com/%s/%s" % (VER, path)
-    headers = {"User-Agent": "PagePilot/1.0"}
-    if files:
-        boundary = uuid.uuid4().hex
-        body = b""
-        for k, v in fields.items():
-            body += ('--%s\r\nContent-Disposition: form-data; name="%s"\r\n\r\n%s\r\n'
-                     % (boundary, k, v)).encode()
-        for k, (name, data, ctype) in files.items():
-            body += ('--%s\r\nContent-Disposition: form-data; name="%s"; '
-                     'filename="%s"\r\nContent-Type: %s\r\n\r\n'
-                     % (boundary, k, name, ctype)).encode() + data + b"\r\n"
-        body += ("--%s--\r\n" % boundary).encode()
-        headers["Content-Type"] = "multipart/form-data; boundary=" + boundary
-    else:
-        body = urllib.parse.urlencode(fields).encode()
-    req = urllib.request.Request(url, data=body, method="POST", headers=headers)
+def make_caption(p):
+    text = p["post"].strip()
+    host = urllib.parse.urlparse(p.get("source_url", "")).netloc
+    host = host.replace("www.", "")
+    if host and "google." not in host:
+        text += "\n\nSource: " + host
+    return text
+
+
+def jpeg_b64(card_path):
+    img = Image.open(card_path).convert("RGB")
+    buf = io.BytesIO()
+    img.save(buf, "JPEG", quality=88, optimize=True)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
+
+
+def send_to_make(p, card_path):
+    payload = {
+        "fileName": "card.jpg",
+        "caption": make_caption(p),
+        "image_base64": jpeg_b64(card_path),
+    }
+    req = urllib.request.Request(
+        WEBHOOK, data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json",
+                 "User-Agent": "PagePilot/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
-            return json.loads(r.read().decode())
+            return r.status, r.read().decode(errors="replace")[:200]
     except urllib.error.HTTPError as e:
-        print("FAILED", e.code, e.read().decode(errors="replace"))
+        print("SEND FAILED", e.code, e.read().decode(errors="replace")[:300])
         raise
 
 
-def publish(p, card_path):
-    text = p["post"].strip()
-    if card_path:
-        try:
-            caption = text
-            host = urllib.parse.urlparse(p.get("source_url", "")).netloc
-            host = host.replace("www.", "")
-            if host and "google." not in host:
-                caption += "\n\nSource: " + host
-            with open(card_path, "rb") as f:
-                img = f.read()
-            return call(PAGE_ID + "/photos",
-                        {"caption": caption, "access_token": TOKEN},
-                        {"source": ("card.png", img, "image/png")})
-        except Exception as e:
-            print("Photo post failed, falling back to text:", e)
-    fields = {"message": text, "access_token": TOKEN}
-    if p.get("source_url"):
-        fields["link"] = p["source_url"].strip()
-    return call(PAGE_ID + "/feed", fields)
-
-
 def main():
-    print("Mode:", "DRY RUN (nothing posted)" if DRY else "LIVE")
-    print("Page ID secret:", "yes" if PAGE_ID else "NO")
-    print("Token secret:", "yes" if TOKEN else "NO")
+    print("Mode:", "DRY RUN (nothing sent)" if DRY else "LIVE")
+    print("Make webhook secret:", "yes" if WEBHOOK else "NO")
     print("Cards:", "on" if make_card else "off")
-    if not DRY and not (PAGE_ID and TOKEN):
-        raise RuntimeError("Facebook secrets missing")
+    if not DRY and not WEBHOOK:
+        raise RuntimeError("MAKE_WEBHOOK_URL secret is missing")
+    if not DRY and not make_card:
+        raise RuntimeError("Cards are off, refusing to post")
     posts = load(FINAL, [])
     log = load(LOG, [])
     done = {e.get("key") for e in log if isinstance(e, dict)}
@@ -93,7 +80,7 @@ def main():
     print("New posts:", len(todo), "| limit:", MAX_POSTS)
     fails = 0
     for i, p in enumerate(todo[:MAX_POSTS]):
-        print("\n---", p.get("headline", ""), "\n" + p["post"].strip())
+        print("\n---", p.get("headline", ""), "\n" + make_caption(p))
         card_path = None
         if make_card:
             try:
@@ -104,14 +91,17 @@ def main():
             except Exception as e:
                 print("Card failed:", e)
         if DRY:
-            print("[dry run] not posted")
+            print("[dry run] not sent")
+            continue
+        if not card_path:
+            fails += 1
+            print("ERROR: no card, skipping this post")
             continue
         try:
-            res = publish(p, card_path)
-            fb_id = res.get("post_id") or res.get("id")
-            print("POSTED", fb_id)
+            status, body = send_to_make(p, card_path)
+            print("SENT to Make:", status, body)
             log.append({"key": key(p), "headline": p.get("headline", ""),
-                        "facebook_id": fb_id,
+                        "sent_via": "make",
                         "posted_at": datetime.now(timezone.utc).isoformat()})
             with open(LOG, "w", encoding="utf-8") as f:
                 json.dump(log, f, indent=2, ensure_ascii=False)
