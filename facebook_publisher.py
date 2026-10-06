@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from PIL import Image
 
 try:
-    from card_art import make_card
+    from card_deck import make_card
 except Exception as e:
     print("Cards disabled:", e)
     make_card = None
