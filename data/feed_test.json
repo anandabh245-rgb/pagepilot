@@ -1,0 +1,152 @@
+{
+  "tested_at": "2026-10-06T20:47:57.470703+00:00",
+  "feeds": {
+    "variety": {
+      "url": "https://variety.com/feed/",
+      "feed_status": 200,
+      "items": 10,
+      "avg_description_words": 56,
+      "avg_full_content_words_in_feed": 0,
+      "article_samples": [
+        {
+          "title": "Donald Trump Praises Newly Merged Paramount-Warner Bros.: ‘They’re Terrific People, and It",
+          "link": "https://variety.com/2026/tv/news/trump-praises-paramount-warner-bros-skydance-merger-terrific-people-1236903643/",
+          "page_status": 200,
+          "page_words": 420
+        },
+        {
+          "title": "Jessica Chastain Stands By Criticizing Apple for Delaying ‘The Savant’ After Charlie Kirk’",
+          "link": "https://variety.com/2026/tv/news/jessica-chastain-the-savant-delayed-release-apple-mistake-1236903631/",
+          "page_status": 200,
+          "page_words": 479
+        }
+      ]
+    },
+    "hollywoodreporter": {
+      "url": "https://www.hollywoodreporter.com/feed/",
+      "feed_status": 200,
+      "items": 10,
+      "avg_description_words": 24,
+      "avg_full_content_words_in_feed": 0,
+      "article_samples": [
+        {
+          "title": "Saoirse Ronan Responds to Rumors That Husband Jack Lowden Will Be the Next James Bond",
+          "link": "https://www.hollywoodreporter.com/movies/movie-news/saoirse-ronan-responds-rumors-jack-lowden-james-bond-1236723864/",
+          "page_status": 200,
+          "page_words": 767
+        },
+        {
+          "title": "Elemis’ Coveted Cleansing Balm Gets Deepest Discount Ever for October Prime Day",
+          "link": "https://www.hollywoodreporter.com/lifestyle/shopping/elemis-sale-amazon-prime-big-deal-days-october-2026-promo-1236723620/",
+          "page_status": 200,
+          "page_words": 827
+        }
+      ]
+    },
+    "deadline": {
+      "url": "https://deadline.com/feed/",
+      "feed_status": 200,
+      "items": 12,
+      "avg_description_words": 56,
+      "avg_full_content_words_in_feed": 0,
+      "article_samples": [
+        {
+          "title": "Skydance CEOs Pressed On Layoffs & Donald Trump Interference As They Outline Future At Tow",
+          "link": "https://deadline.com/2026/10/skydance-merger-town-hall-donald-trump-layoffs-1237148139/",
+          "page_status": 200,
+          "page_words": 2422
+        },
+        {
+          "title": "Focus Features Takes Global On Ice Cube & Tommy Lee Jones Movie ‘Outside Man’ From Brian H",
+          "link": "https://deadline.com/2026/10/ice-cube-tommy-lee-jones-outside-man-focus-features-1237148230/",
+          "page_status": 200,
+          "page_words": 1860
+        }
+      ]
+    },
+    "eonline": {
+      "url": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
+      "feed_status": 200,
+      "items": 30,
+      "avg_description_words": 33,
+      "avg_full_content_words_in_feed": 0,
+      "article_samples": [
+        {
+          "title": "Raven-Symoné Regrets \"Hastily Done\" Breast Reduction Surgery as a Teen",
+          "link": "https://www.eonline.com/news/1436804/raven-symone-regrets-getting-breast-reduction-surgery-before-puberty?cmpid=rss-syndicate-genericrss-us-top_stories",
+          "page_status": 200,
+          "page_words": 2671
+        },
+        {
+          "title": "EltaMD & Supergoop! Are on Sale—Which SPF Is Right for You?",
+          "link": "https://www.eonline.com/news/1436753/eltamd-supergoop-are-on-sale-which-spf-is-right-for-you?cmpid=rss-syndicate-genericrss-us-top_stories",
+          "page_status": 200,
+          "page_words": 530
+        }
+      ]
+    },
+    "rollingstone": {
+      "url": "https://www.rollingstone.com/feed/",
+      "feed_status": 200,
+      "items": 10,
+      "avg_description_words": 20,
+      "avg_full_content_words_in_feed": 0,
+      "article_samples": [
+        {
+          "title": "Here’s How to Save On Streaming Services During October Prime Day",
+          "link": "https://www.rollingstone.com/product-recommendations/streaming/best-streaming-deals-discounts-prime-day-2026-1235581568/",
+          "page_status": 200,
+          "page_words": 806
+        },
+        {
+          "title": "Actually, Going to Concerts Alone Is a Top-Tier Human Experience",
+          "link": "https://www.rollingstone.com/music/music-features/going-to-concerts-alone-good-1235638046/",
+          "page_status": 200,
+          "page_words": 889
+        }
+      ]
+    },
+    "pagesix": {
+      "url": "https://pagesix.com/feed/",
+      "feed_status": 200,
+      "items": 9,
+      "avg_description_words": 13,
+      "avg_full_content_words_in_feed": 13,
+      "article_samples": [
+        {
+          "title": "Keri Russell’s daughter Willa, 13, makes a fashionable splash at Louis Vuitton fashion sho",
+          "link": "https://pagesix.com/2026/10/06/style/keri-russells-daughter-willa-13-makes-a-fashionable-splash-at-louis-vuitton-fashion-show/",
+          "page_status": 200,
+          "page_words": 525
+        },
+        {
+          "title": "We found Bethenny Frankel’s favorites on sale starting under $5 for October Prime Day",
+          "link": "https://pagesix.com/style/amazon-prime-big-deal-days-bethenny-frankel-favorites-october-2026/",
+          "page_status": 200,
+          "page_words": 1681
+        }
+      ]
+    },
+    "tmz": {
+      "url": "https://www.tmz.com/rss.xml",
+      "feed_status": 200,
+      "items": 20,
+      "avg_description_words": 44,
+      "avg_full_content_words_in_feed": 0,
+      "article_samples": [
+        {
+          "title": "American Airlines Alleged Masturbator Caught On Video Touching Herself",
+          "link": "https://www.tmz.com/2026/10/06/american-airlines-masturbator-caught-on-video/",
+          "page_status": 200,
+          "page_words": 905
+        },
+        {
+          "title": "Diddy Ordered to Pay NBCUniversal Nearly $500K in Attorneys' Fees",
+          "link": "https://www.tmz.com/2026/10/06/diddy-to-pay-nbc-universal-attorneys-fees-lawsuit/",
+          "page_status": 200,
+          "page_words": 765
+        }
+      ]
+    }
+  }
+}
