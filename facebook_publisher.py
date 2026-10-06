@@ -1,4 +1,4 @@
-import base64, io, json, os, sys
+import json, os, subprocess, sys, time
 import urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 
@@ -16,6 +16,11 @@ WEBHOOK = os.environ.get("MAKE_WEBHOOK_URL", "").strip()
 DRY = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "1"))
 CARD_DIR = "data/preview"
+OUTBOX = "data/outbox"
+REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
+BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
+GIT = ["git", "-c", "user.name=PagePilot Bot",
+       "-c", "user.email=pagepilot@users.noreply.github.com"]
 
 
 def load(path, default):
@@ -39,18 +44,29 @@ def make_caption(p):
     return text
 
 
-def jpeg_b64(card_path):
-    img = Image.open(card_path).convert("RGB")
-    buf = io.BytesIO()
-    img.save(buf, "JPEG", quality=88, optimize=True)
-    return base64.b64encode(buf.getvalue()).decode("ascii")
+def host_card(card_png):
+    """Save the card as a JPEG in the repo and push it so Make can download it."""
+    os.makedirs(OUTBOX, exist_ok=True)
+    name = "card_%s.jpg" % datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    path = os.path.join(OUTBOX, name)
+    Image.open(card_png).convert("RGB").save(path, "JPEG", quality=88,
+                                             optimize=True)
+    old = sorted(f for f in os.listdir(OUTBOX) if f.endswith(".jpg"))[:-10]
+    subprocess.run(GIT + ["add", path], check=True)
+    for f in old:
+        subprocess.run(GIT + ["rm", "-q", "--ignore-unmatch",
+                              os.path.join(OUTBOX, f)], check=False)
+    subprocess.run(GIT + ["commit", "-m", "Add card for Make"], check=True)
+    subprocess.run(GIT + ["pull", "--rebase", "--autostash"], check=True)
+    subprocess.run(GIT + ["push", "origin", "HEAD"], check=True)
+    time.sleep(10)
+    return "https://raw.githubusercontent.com/%s/%s/%s" % (REPO, BRANCH, path)
 
 
-def send_to_make(p, card_path):
+def send_to_make(p, image_url):
     payload = {
-        "fileName": "card.jpg",
+        "image_url": image_url,
         "caption": make_caption(p),
-        "image_base64": jpeg_b64(card_path),
     }
     req = urllib.request.Request(
         WEBHOOK, data=json.dumps(payload).encode("utf-8"), method="POST",
@@ -98,7 +114,9 @@ def main():
             print("ERROR: no card, skipping this post")
             continue
         try:
-            status, body = send_to_make(p, card_path)
+            image_url = host_card(card_path)
+            print("Card hosted at:", image_url)
+            status, body = send_to_make(p, image_url)
             print("SENT to Make:", status, body)
             log.append({"key": key(p), "headline": p.get("headline", ""),
                         "sent_via": "make",
