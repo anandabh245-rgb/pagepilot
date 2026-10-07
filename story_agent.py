@@ -210,7 +210,7 @@ def main():
         s["words"] = len(s["text"].split())
         print(s["source"], "|", s["words"], "words |", s["title"][:60])
     usable = [s for s in stories if s["words"] >= 25
-              and not RISKY.search(s["title"] + " " + s["text"][:1500])
+              and not RISKY.search(s["title"] + " " + s["text"])
               and not PROMO.search(s["text"][:3000])]
 
     story_pool = sorted(
