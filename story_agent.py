@@ -20,6 +20,12 @@ WANT_STORIES = 2
 SENSITIVE = re.compile(
     r"\b(dies|died|death|dead|funeral|suicide|overdose|killed|murder\w*|"
     r"shooting|cancer|tragic|tragedy|passed away|abuse|assault)\b", re.I)
+RISKY = re.compile(
+    r"\b(rape\w*|sexual(ly)? (assault\w*|abus\w*|misconduct)|molest\w*|"
+    r"trafficking|child abuse|pedophil\w*)\b", re.I)
+PROMO = re.compile(
+    r"(prime day|big deal days|promo code|% off|affiliate)", re.I)
+USED = set()
 BOILER = re.compile(
     r"(sign up|subscribe|newsletter|advertisement|all rights reserved|\u00a9|"
     r"click here|follow us|read more|read on|related:|privacy policy|"
@@ -31,9 +37,12 @@ FACTS = (
     "arrests or rumors say \"alleged\", \"reportedly\" or \"according to\", and "
     "never state guilt as fact. Do not copy sentences from the source.\n")
 HEADLINE = (
-    "HEADLINE: a punchy 4 to 8 word reaction line for a graphic card, for "
-    "example \"Fans are NOT ready for this\". It must be truthful and only "
-    "promise what the story delivers.\n")
+    "HEADLINE: a punchy 4 to 8 word line for a graphic card. It must name the "
+    "main person, show or movie and tease the news, for example \"Costner and "
+    "Grimes: the silence\" or \"Apple brings Dolby Atmos to F1\" (never reuse "
+    "these exact words). It must be truthful: do not claim what fans or "
+    "people think, feel or are doing unless the source says so, and never "
+    "start with \"Fans are\" or \"Wait until\".\n")
 JSON_RULE = ("Return ONLY JSON with exactly these fields: "
              "{\"headline\": \"...\", \"post\": \"...\"}\n")
 CARD_RULES = (
@@ -62,7 +71,9 @@ CHECK = (
     "You are a strict fact-checker. Compare the DRAFT to the SOURCE TEXT. "
     "List every factual claim in the DRAFT (names, numbers, dates, events, "
     "quotes, causes) that the SOURCE TEXT does not clearly support or that "
-    "changes its meaning. Ignore tone, hashtags, emojis and the closing "
+    "changes its meaning. The first line of the DRAFT is a card headline: it "
+    "must not claim fan reactions or facts the source does not support. "
+    "Ignore tone, hashtags, emojis and the closing "
     "question. Return ONLY JSON: {\"ok\": true or false, \"problems\": "
     "[\"...\"]}. Use ok=true only if there are no problems.")
 
@@ -162,8 +173,13 @@ def build(story, kind):
             continue
         if post.count("#") < 3:
             post += "\n\n#Entertainment #Hollywood #PopCulture"
-        chk = ask(CHECK + "\n\nSOURCE TEXT:\n" + text + "\n\nDRAFT:\n" + post)
+        if str(d["headline"]).strip().lower() in USED:
+            notes = "\nTHAT HEADLINE WAS ALREADY USED TODAY. Write a different one.\n"
+            continue
+        chk = ask(CHECK + "\n\nSOURCE TEXT:\n" + text + "\n\nDRAFT:\n"
+                  + str(d["headline"]) + "\n" + post)
         if isinstance(chk, dict) and chk.get("ok") is True:
+            USED.add(str(d["headline"]).strip().lower())
             return {"headline": str(d["headline"]).strip(), "post": post,
                     "source": story["source"], "source_url": story["link"],
                     "original_title": story["title"], "kind": kind}
@@ -191,7 +207,9 @@ def main():
         s["text"] = " ".join(text.split()[:1800])
         s["words"] = len(s["text"].split())
         print(s["source"], "|", s["words"], "words |", s["title"][:60])
-    usable = [s for s in stories if s["words"] >= 25]
+    usable = [s for s in stories if s["words"] >= 25
+              and not RISKY.search(s["title"] + " " + s["text"][:1500])
+              and not PROMO.search(s["text"][:3000])]
 
     story_pool = sorted(
         [s for s in usable if not s["thin"] and s["words"] >= 300
