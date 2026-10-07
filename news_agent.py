@@ -30,6 +30,11 @@ SKIP = re.compile(
     r"trump|biden|harris|election\w*|congress|senate|gaza|israel\w*|palestin\w*|"
     r"ukraine|republican\w*|democrat\w*)\b", re.I)
 
+BAD_URL = re.compile(r"(product-recommendations|/shopping/|/deals?/|gift-guide)", re.I)
+RISKY = re.compile(
+    r"\b(rape\w*|sexual(ly)? (assault\w*|abus\w*|misconduct)|molest\w*|"
+    r"trafficking|child abuse|pedophil\w*)\b", re.I)
+
 
 def get(url):
     req = urllib.request.Request(url, headers=UA)
@@ -79,7 +84,8 @@ def read_feed(name, url):
             when = now
         if now - when > timedelta(hours=MAX_AGE_HOURS):
             continue
-        if SKIP.search(title):
+        if (SKIP.search(title) or RISKY.search(title) or BAD_URL.search(link)
+                or re.search(r"\d+% off|shop here", title, re.I)):
             continue
         out.append({"title": title, "link": link, "source": name,
                     "description": strip_html(it.findtext("description")),
