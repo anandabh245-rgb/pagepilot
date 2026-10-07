@@ -19,7 +19,9 @@ WANT_CARDS = 5
 WANT_STORIES = 2
 SENSITIVE = re.compile(
     r"\b(dies|died|death|dead|funeral|suicide|overdose|killed|murder\w*|"
-    r"shooting|cancer|tragic|tragedy|passed away|abuse|assault)\b", re.I)
+    r"shooting|cancer|tragic|tragedy|passed away|abuse|assault|police|"
+    r"warrant|arrest\w*|raid\w*|lawsuit|sued|charged|indict\w*|jail|prison)\b",
+    re.I)
 RISKY = re.compile(
     r"\b(rape\w*|sexual(ly)? (assault\w*|abus\w*|misconduct)|molest\w*|"
     r"trafficking|child abuse|pedophil\w*)\b", re.I)
