@@ -23,7 +23,7 @@ SENSITIVE = re.compile(
     r"warrant|arrest\w*|raid\w*|lawsuit|sued|charged|indict\w*|jail|prison)\b",
     re.I)
 RISKY = re.compile(
-    r"\b(rape\w*|sexual(ly)? (assault\w*|abus\w*|misconduct)|molest\w*|"
+    r"\b(cornell 7|rape\w*|sexual(ly)? (assault\w*|abus\w*|misconduct)|molest\w*|"
     r"trafficking|child abuse|pedophil\w*)\b", re.I)
 PROMO = re.compile(
     r"(prime day|big deal days|promo code|% off|affiliate)", re.I)
@@ -67,8 +67,8 @@ STORY_RULES = (
 SENSITIVE_NOTE = (
     "This story involves a death, crime or tragedy. Use a respectful, gentle "
     "tone, no emojis, no jokes, and do not ask readers about their own loss "
-    "or pain. End with a short respectful line, or a question about the "
-    "person's work or legacy.\n")
+    "or pain. Do not ask a question. End with one short, neutral line, for "
+    "example saying updates will follow.\n")
 CHECK = (
     "You are a strict fact-checker. Compare the DRAFT to the SOURCE TEXT. "
     "List every factual claim in the DRAFT (names, numbers, dates, events, "
