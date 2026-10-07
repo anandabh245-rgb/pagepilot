@@ -1,158 +1,117 @@
+import email.utils
 import json
-import os
 import re
+import urllib.error
 import urllib.request
-import urllib.parse
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from urllib.parse import urlparse, urlunparse
 
-RSS_FEEDS = [
-    "https://news.google.com/rss/search?q=celebrity+news+when:2d&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=Hollywood+news+when:2d&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=TV+show+news+when:2d&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=movie+news+when:2d&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q=reality+TV+news+when:2d&hl=en-US&gl=US&ceid=US:en",
+FEEDS = [
+    ("Variety", "https://variety.com/feed/"),
+    ("The Hollywood Reporter", "https://www.hollywoodreporter.com/feed/"),
+    ("Deadline", "https://deadline.com/feed/"),
+    ("E! News", "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml"),
+    ("Rolling Stone", "https://www.rollingstone.com/feed/"),
+    ("Page Six", "https://pagesix.com/feed/"),
+    ("TMZ", "https://www.tmz.com/rss.xml"),
 ]
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
+MAX_AGE_HOURS = 40
+PER_SOURCE = 4
+POOL = 14
 
-OUTPUT_FILE = "data/stories.json"
+# Shopping, quizzes, explicit content and politics are skipped.
+SKIP = re.compile(
+    r"\b(prime day|big deal days|deals?|on sale|discount\w*|coupon\w*|promo code|"
+    r"gift guide|where to buy|shopping|horoscope|quiz|crossword|wordle|"
+    r"masturbat\w*|nude|naked|porn\w*|sex tape|onlyfans|nipple\w*|"
+    r"trump|biden|harris|election\w*|congress|senate|gaza|israel\w*|palestin\w*|"
+    r"ukraine|republican\w*|democrat\w*)\b", re.I)
 
 
-def clean_text(text):
-    if not text:
-        return ""
-    text = re.sub(r"<[^>]+>", " ", text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
+def get(url):
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=25) as r:
+        return r.read().decode("utf-8", errors="replace")
 
 
-def get_feed(url):
+def strip_html(text):
+    text = re.sub(r"(?s)<[^>]+>", " ", text or "")
+    text = (text.replace("&nbsp;", " ").replace("&amp;", "&")
+            .replace("&#8217;", "'").replace("&#8220;", '"')
+            .replace("&#8221;", '"'))
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def clean_link(link):
+    p = urlparse(link.strip())
+    return urlunparse((p.scheme, p.netloc, p.path, "", "", ""))
+
+
+def posted_keys():
     try:
-        request = urllib.request.Request(
-            url,
-            headers={"User-Agent": "PagePilot/1.0"}
-        )
-
-        with urllib.request.urlopen(request, timeout=20) as response:
-            data = response.read()
-
-        root = ET.fromstring(data)
-
-        stories = []
-
-        for item in root.findall(".//item")[:10]:
-            title = clean_text(
-                item.findtext("title", "")
-            )
-
-            description = clean_text(
-                item.findtext("description", "")
-            )
-
-            link = item.findtext("link", "")
-
-            pub_date = item.findtext(
-                "pubDate",
-                ""
-            )
-
-            if title:
-                stories.append({
-                    "title": title,
-                    "description": description,
-                    "link": link,
-                    "published": pub_date
-                })
-
-        return stories
-
-    except Exception as error:
-        print("Feed error:", error)
-        return []
+        with open("data/posted.json", encoding="utf-8") as f:
+            return {e.get("key") for e in json.load(f) if isinstance(e, dict)}
+    except Exception:
+        return set()
 
 
-def remove_duplicates(stories):
-    seen = set()
-    result = []
-
-    for story in stories:
-        key = story["title"].lower().strip()
-
-        if key not in seen:
-            seen.add(key)
-            result.append(story)
-
-    return result
+def read_feed(name, url):
+    out = []
+    try:
+        root = ET.fromstring(get(url))
+    except Exception as e:
+        print("feed error", name, e)
+        return out
+    now = datetime.now(timezone.utc)
+    for it in root.iter("item"):
+        title = strip_html(it.findtext("title"))
+        link = clean_link(it.findtext("link") or "")
+        if not title or not link:
+            continue
+        try:
+            when = email.utils.parsedate_to_datetime(it.findtext("pubDate") or "")
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=timezone.utc)
+        except Exception:
+            when = now
+        if now - when > timedelta(hours=MAX_AGE_HOURS):
+            continue
+        if SKIP.search(title):
+            continue
+        out.append({"title": title, "link": link, "source": name,
+                    "description": strip_html(it.findtext("description")),
+                    "published": when.isoformat()})
+    return out
 
 
 def main():
-    print("================================")
-    print("       PAGEPILOT NEWS AGENT")
-    print("================================")
-
-    all_stories = []
-
-    for feed in RSS_FEEDS:
-        print("Reading:", feed)
-        all_stories.extend(get_feed(feed))
-
-    all_stories = remove_duplicates(all_stories)
-
-    posted = set()
-    try:
-        with open("data/posted.json", "r", encoding="utf-8") as f:
-            posted = {e.get("key") for e in json.load(f) if isinstance(e, dict)}
-    except Exception:
-        pass
-    all_stories = [s for s in all_stories if s["link"] not in posted]
-
-    import re
-    SKIP = ["shooting", " shot ", "killed", "murder", "suspect", "vandal",
-            "crash", "gaza", "israel", "palestine", "trump", "biden",
-            "quiz", "test your", "nuggets", "readers choose"]
-    seen_topics, unique = set(), []
-    for s in all_stories:
-        t = s["title"].lower()
-        if any(w in t for w in SKIP):
-            continue
-        topic = " ".join(re.findall(r"[a-z]+", t)[:2])
-        if topic in seen_topics:
-            continue
-        seen_topics.add(topic)
-        unique.append(s)
-    all_stories = unique
-
-    # Keep the newest/first 30 stories.
-    all_stories = all_stories[:30]
-
-    os.makedirs("data", exist_ok=True)
-
-    output = {
-        "generated_at": datetime.now(
-            timezone.utc
-        ).isoformat(),
-
-        "story_count": len(all_stories),
-
-        "stories": all_stories
-    }
-
-    with open(
-        OUTPUT_FILE,
-        "w",
-        encoding="utf-8"
-    ) as file:
-
-        json.dump(
-            output,
-            file,
-            indent=2,
-            ensure_ascii=False
-        )
-
-    print()
-    print("Stories collected:", len(all_stories))
-    print("Saved to:", OUTPUT_FILE)
-    print("================================")
+    posted = posted_keys()
+    per_feed = []
+    for name, url in FEEDS:
+        items = [s for s in read_feed(name, url) if s["link"] not in posted]
+        print(name, "usable stories:", len(items))
+        per_feed.append(items[:PER_SOURCE])
+    merged, seen = [], set()
+    for i in range(PER_SOURCE):
+        for items in per_feed:
+            if i < len(items):
+                s = items[i]
+                topic = " ".join(re.findall(r"[a-z]+", s["title"].lower())[:2])
+                if topic in seen:
+                    continue
+                seen.add(topic)
+                merged.append(s)
+    stories = merged[:POOL]
+    with open("data/stories.json", "w", encoding="utf-8") as f:
+        json.dump({"generated_at": datetime.now(timezone.utc).isoformat(),
+                   "story_count": len(stories), "stories": stories},
+                  f, indent=2, ensure_ascii=False)
+    print("Saved", len(stories), "stories")
+    if not stories:
+        raise SystemExit("No stories found")
 
 
 if __name__ == "__main__":
