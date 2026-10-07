@@ -43,8 +43,8 @@ def make_card(headline, path, force=None):
     text = " ".join(text.upper().split())[:90] or "ENTERTAINMENT NEWS"
     mood, label, hook, face = classify(text)
     name = force or pick_layout(label)
-        if not force and CRIME.search(text):
-        name = "neon"
+    if not force and CRIME.search(text):
+      name = "neon"
     if mood in ("somber", "space") or name == "reaction":
         return card_art.make_card(headline, path)
     rnd = random.Random(int(hashlib.md5(text.encode()).hexdigest(), 16))
