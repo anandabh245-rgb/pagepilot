@@ -15,6 +15,10 @@ card_maker.SOMBER_RE = re.compile(
     r"remembering|we lost|we've lost|stars lost|mourn\w*|funeral|tribute|"
     r"heartbreaking|tragic|tragedy|killed|shot dead|suicide|overdose)\b")
 
+CRIME = re.compile(
+    r"\b(police|warrant|arrest\w*|raid\w*|lawsuit|sued|charged|indict\w*|"
+    r"jail|prison|court|trial|verdict|investigat\w*|cops?)\b", re.I)
+
 ORDER = ["reaction", "news", "chat", "popart", "tabloid", "neon", "poster",
          "magazine"]
 FUNCS = {"news": card_news, "chat": card_chat, "popart": card_popart,
@@ -39,6 +43,8 @@ def make_card(headline, path, force=None):
     text = " ".join(text.upper().split())[:90] or "ENTERTAINMENT NEWS"
     mood, label, hook, face = classify(text)
     name = force or pick_layout(label)
+        if not force and CRIME.search(text):
+        name = "neon"
     if mood in ("somber", "space") or name == "reaction":
         return card_art.make_card(headline, path)
     rnd = random.Random(int(hashlib.md5(text.encode()).hexdigest(), 16))
