@@ -1,6 +1,6 @@
 import json, os, subprocess, sys, time
 import urllib.error, urllib.parse, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from PIL import Image
 
@@ -19,6 +19,12 @@ CARD_DIR = "data/preview"
 OUTBOX = "data/outbox"
 REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
 BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
+ENFORCE_GAP = os.environ.get("ENFORCE_GAP", "false").strip().lower() == "true"
+MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "115"))
+DAILY_MAX = int(os.environ.get("DAILY_MAX", "7"))
+# Posting hours in UTC (12 to 04 is 8am to midnight US Eastern).
+ACTIVE_START = int(os.environ.get("ACTIVE_START", "12"))
+ACTIVE_END = int(os.environ.get("ACTIVE_END", "4"))
 GIT = ["git", "-c", "user.name=PagePilot Bot",
        "-c", "user.email=pagepilot@users.noreply.github.com"]
 
@@ -29,6 +35,33 @@ def load(path, default):
             return json.load(f)
     except Exception:
         return default
+
+
+def too_soon(log):
+    """Self-timing: post only if enough time has passed and the daily cap is not hit."""
+    now = datetime.now(timezone.utc)
+    h = now.hour
+    if ACTIVE_START > ACTIVE_END:
+        in_window = h >= ACTIVE_START or h < ACTIVE_END
+    else:
+        in_window = ACTIVE_START <= h < ACTIVE_END
+    if not in_window:
+        return True, "outside posting hours (%d to %d UTC)" % (ACTIVE_START, ACTIVE_END)
+    times = []
+    for e in log:
+        try:
+            times.append(datetime.fromisoformat(e["posted_at"]))
+        except Exception:
+            pass
+    if not times:
+        return False, ""
+    mins = int((now - max(times)).total_seconds() // 60)
+    if mins < MIN_GAP_MIN:
+        return True, "last post was only %d minutes ago" % mins
+    recent = [t for t in times if now - t < timedelta(hours=24)]
+    if len(recent) >= DAILY_MAX:
+        return True, "already %d posts in the last 24 hours" % len(recent)
+    return False, ""
 
 
 def key(p):
@@ -90,6 +123,11 @@ def main():
         raise RuntimeError("Cards are off, refusing to post")
     posts = load(FINAL, [])
     log = load(LOG, [])
+    if ENFORCE_GAP and not DRY:
+        wait, why = too_soon(log)
+        if wait:
+            print("Not time yet:", why)
+            return 0
     done = {e.get("key") for e in log if isinstance(e, dict)}
     todo = [p for p in posts if key(p) and key(p) not in done
             and 40 <= len((p.get("post") or "").strip()) <= 2000]
