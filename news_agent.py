@@ -18,9 +18,9 @@ FEEDS = [
 ]
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
-MAX_AGE_HOURS = 40
-PER_SOURCE = 4
-POOL = 14
+MAX_AGE_HOURS = 72
+PER_SOURCE = 5
+POOL = 16
 
 # Shopping, quizzes, explicit content and politics are skipped.
 SKIP = re.compile(
@@ -30,7 +30,7 @@ SKIP = re.compile(
     r"trump|biden|harris|election\w*|congress|senate|gaza|israel\w*|palestin\w*|"
     r"ukraine|republican\w*|democrat\w*)\b", re.I)
 
-BAD_URL = re.compile(r"(product-recommendations|/shopping/|/deals?/|gift-guide)", re.I)
+BAD_URL = re.compile(r"(product-recommendations|/shopping/|/deals?/|gift-guide|/politics/)", re.I)
 RISKY = re.compile(
     r"\b(rape\w*|sexual(ly)? (assault\w*|abus\w*|misconduct)|molest\w*|"
     r"trafficking|child abuse|pedophil\w*)\b", re.I)
