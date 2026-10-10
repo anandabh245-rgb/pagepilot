@@ -6,7 +6,7 @@ on:
         description: "Type true to really post. Default is a safe dry run."
         default: "false"
   schedule:
-    - cron: "0 1,13,15,17,19,21,23 * * *"
+    - cron: "7,37 * * * *"
 permissions:
   contents: write
 concurrency:
@@ -23,9 +23,8 @@ jobs:
       - name: Publish posts
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
-          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
-          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.live == 'false' && 'true' || 'false' }}
+          ENFORCE_GAP: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
           MAX_POSTS: "1"
         run: python facebook_publisher.py
       - name: Save posted log
