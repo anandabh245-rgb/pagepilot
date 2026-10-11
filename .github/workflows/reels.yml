@@ -1,0 +1,40 @@
+name: PagePilot Reels
+on:
+  workflow_dispatch:
+    inputs:
+      live:
+        description: "Type true to really post a Reel. Default is a safe preview."
+        default: "false"
+#  schedule:
+#    - cron: "22,52 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: pagepilot-reels
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: ffmpeg -version | head -1 || sudo apt-get install -y ffmpeg
+      - name: Make and send Reel
+        env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+          DRY_RUN: ${{ github.event_name == 'schedule' && 'false' || (github.event.inputs.live == 'true' && 'false' || 'true') }}
+          ENFORCE_GAP: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+        run: python reel_publisher.py
+      - name: Save logs
+        if: always()
+        run: |
+          git config user.name "PagePilot Bot"
+          git config user.email "pagepilot@users.noreply.github.com"
+          git add data/reels_posted.json 2>/dev/null || true
+          git add data/reel_preview.mp4 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Update Reel log"
+          git pull --rebase
+          git push
