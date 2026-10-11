@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pillow
-      - run: ffmpeg -version | head -1 || sudo apt-get install -y ffmpeg
+      - run: which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
       - name: Make and send Reel
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
