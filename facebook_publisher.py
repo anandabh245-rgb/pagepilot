@@ -20,6 +20,7 @@ OUTBOX = "data/outbox"
 REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
 BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 ENFORCE_GAP = os.environ.get("ENFORCE_GAP", "false").strip().lower() == "true"
+ONLY_KIND = os.environ.get("ONLY_KIND", "").strip()
 MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "115"))
 DAILY_MAX = int(os.environ.get("DAILY_MAX", "7"))
 # Posting hours in UTC (12 to 04 is 8am to midnight US Eastern).
@@ -131,6 +132,8 @@ def main():
     done = {e.get("key") for e in log if isinstance(e, dict)}
     todo = [p for p in posts if key(p) and key(p) not in done
             and 40 <= len((p.get("post") or "").strip()) <= 2000]
+        if ONLY_KIND:
+        todo = [p for p in todo if p.get("kind") == ONLY_KIND]
     print("New posts:", len(todo), "| limit:", MAX_POSTS)
     fails = 0
     for i, p in enumerate(todo[:MAX_POSTS]):
