@@ -12,8 +12,8 @@ LOG = "data/reels_posted.json"
 WEBHOOK = os.environ.get("MAKE_WEBHOOK_URL", "").strip()
 DRY = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 ENFORCE_GAP = os.environ.get("ENFORCE_GAP", "false").strip().lower() == "true"
-MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "300"))
-DAILY_MAX = int(os.environ.get("DAILY_MAX", "2"))
+MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "130"))
+DAILY_MAX = int(os.environ.get("DAILY_MAX", "5"))
 ACTIVE_START = int(os.environ.get("ACTIVE_START", "12"))
 ACTIVE_END = int(os.environ.get("ACTIVE_END", "4"))
 REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
@@ -93,8 +93,8 @@ def main():
     posts = load(FINAL, [])
     photo_done = {e.get("key") for e in load(POSTED, []) if isinstance(e, dict)}
     reel_done = {e.get("key") for e in log if isinstance(e, dict)}
-    pool = [p for p in posts if key(p) in photo_done and key(p) not in reel_done
-            and len((p.get("post") or "")) >= 150]
+        pool = [p for p in posts if p.get("kind") == "card" and key(p) not in photo_done
+            and key(p) not in reel_done and len((p.get("post") or "")) >= 150]
     pool.sort(key=lambda p: 0 if p.get("kind") == "story" else 1)
     print("Stories ready for a Reel:", len(pool))
     if not pool:
