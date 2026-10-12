@@ -1,8 +1,11 @@
+import hashlib
 import math
+import os
 import re
 import subprocess
 from PIL import Image, ImageDraw, ImageFilter
 from card_layouts_a import *
+import music_maker
 
 DW, DH = 1080, 1920          # design size
 OW, OH = 720, 1280           # output video size
@@ -78,6 +81,21 @@ def with_alpha(im, a):
     return out
 
 
+def get_audio(text, mood, crime, out_dir):
+    """Use a track from the music/ folder if there is one, else make original music."""
+    seed = int(hashlib.md5(text.encode()).hexdigest(), 16) % 100000
+    files = []
+    if os.path.isdir("music"):
+        files = sorted(f for f in os.listdir("music")
+                       if f.lower().endswith((".mp3", ".m4a", ".wav", ".ogg")))
+    if files:
+        return os.path.join("music", files[seed % len(files)])
+    style = "calm" if mood == "somber" else ("news" if crime else "hype")
+    path = os.path.join(out_dir, "music_%d.wav" % seed)
+    music_maker.make_music(style, DURATION, path, seed)
+    return path
+
+
 def make_reel(headline, post, label, mood, face, hook, path):
     facts, question = split_post(post)
     title = " ".join(clean_text(headline).upper().split())[:90] or "ENTERTAINMENT NEWS"
@@ -91,6 +109,7 @@ def make_reel(headline, post, label, mood, face, hook, path):
     else:
         c1, c2, hot, pop, sticker = (92, 12, 150), (136, 26, 196), HOT, (255, 45, 120), face_img(face)
     big = sunburst_big(c1, c2)
+    audio = get_audio(title, mood, crime, os.path.dirname(path) or ".")
 
     # static overlay: vignette + header + footer pill
     vig = Image.radial_gradient("L").resize((DW, DH)).point(lambda v: int(max(0, v - 70) * 1.5))
@@ -138,10 +157,11 @@ def make_reel(headline, post, label, mood, face, hook, path):
     ff = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
          "-s", "%dx%d" % (OW, OH), "-r", str(FPS), "-i", "-",
-         "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
+         "-stream_loop", "-1", "-i", audio,
+         "-map", "0:v", "-map", "1:a", "-af", "afade=t=out:st=13.4:d=1.6",
          "-t", str(DURATION), "-c:v", "libx264", "-preset", "veryfast", "-crf", "27",
          "-maxrate", "1800k", "-bufsize", "3600k", "-pix_fmt", "yuv420p",
-         "-c:a", "aac", "-b:a", "48k", "-movflags", "+faststart", path],
+         "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-movflags", "+faststart", path],
         stdin=subprocess.PIPE)
     for fi in range(total_frames):
         t = fi / FPS
