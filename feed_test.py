@@ -3,17 +3,26 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 FEEDS = {
-    "variety": "https://variety.com/feed/",
-    "hollywoodreporter": "https://www.hollywoodreporter.com/feed/",
-    "deadline": "https://deadline.com/feed/",
-    "eonline": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
-    "rollingstone": "https://www.rollingstone.com/feed/",
-    "pagesix": "https://pagesix.com/feed/",
-    "tmz": "https://www.tmz.com/rss.xml",
+    "screenrant": "https://screenrant.com/feed/",
+    "screenrant_comics": "https://screenrant.com/feed/comics/",
+    "collider": "https://collider.com/feed/",
+    "cbr": "https://www.cbr.com/feed/",
+    "comicbook": "https://comicbook.com/feed/",
+    "comicbook_marvel": "https://comicbook.com/category/marvel/feed/",
+    "comicbook_starwars": "https://comicbook.com/category/starwars/feed/",
+    "slashfilm": "https://feeds.feedburner.com/slashfilm",
+    "denofgeek": "https://www.denofgeek.com/feed/",
+    "bleedingcool": "https://bleedingcool.com/feed/",
+    "gizmodo": "https://gizmodo.com/feed",
 }
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}encoded"
+NICHE = re.compile(r"marvel|mcu|avengers|spider-man|x-men|deadpool|wolverine|iron man|"
+                   r"captain america|black panther|guardians|fantastic four|doctor strange|"
+                   r"star wars|mandalorian|jedi|andor|skywalker|lucasfilm|grogu|darth|ahsoka|"
+                   r"superman|batman|joker|justice league|wonder woman|aquaman|dc studios|"
+                   r"superhero|the boys|invincible|peacemaker", re.I)
 
 
 def get(url):
@@ -30,8 +39,7 @@ def strip(html):
 
 def article_words(html):
     paras = re.findall(r"(?is)<p[^>]*>(.*?)</p>", html)
-    text = " ".join(strip(p) for p in paras)
-    return len(text.split())
+    return len(" ".join(strip(p) for p in paras).split())
 
 
 out = {"tested_at": datetime.now(timezone.utc).isoformat(), "feeds": {}}
@@ -43,12 +51,8 @@ for name, url in FEEDS.items():
         root = ET.fromstring(body)
         items = list(root.iter("item"))
         info["items"] = len(items)
-        d_len, c_len = [], []
-        for it in items[:10]:
-            d_len.append(len(strip(it.findtext("description") or "").split()))
-            c_len.append(len(strip(it.findtext(CONTENT) or "").split()))
-        info["avg_description_words"] = round(sum(d_len) / max(1, len(d_len)))
-        info["avg_full_content_words_in_feed"] = round(sum(c_len) / max(1, len(c_len)))
+        info["niche_items"] = sum(
+            1 for it in items if NICHE.search((it.findtext("title") or "")))
         samples = []
         for it in items[:2]:
             link = (it.findtext("link") or "").strip()
