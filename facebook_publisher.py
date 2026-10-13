@@ -132,7 +132,7 @@ def main():
     done = {e.get("key") for e in log if isinstance(e, dict)}
     todo = [p for p in posts if key(p) and key(p) not in done
             and 40 <= len((p.get("post") or "").strip()) <= 2000]
-        if ONLY_KIND:
+    if ONLY_KIND:
         todo = [p for p in todo if p.get("kind") == ONLY_KIND]
     print("New posts:", len(todo), "| limit:", MAX_POSTS)
     fails = 0
