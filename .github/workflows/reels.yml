@@ -5,8 +5,8 @@ on:
       live:
         description: "Type true to really post a Reel. Default is a safe preview."
         default: "false"
-#  schedule:
-#    - cron: "22,52 * * * *"
+  schedule:
+    - cron: "22,52 * * * *"
 permissions:
   contents: write
 concurrency:
