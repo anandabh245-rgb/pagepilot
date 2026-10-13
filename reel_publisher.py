@@ -92,10 +92,9 @@ def main():
             return 0
     posts = load(FINAL, [])
     photo_done = {e.get("key") for e in load(POSTED, []) if isinstance(e, dict)}
-    reel_done = {e.get("key") for e in log if isinstance(e, dict)}
-        pool = [p for p in posts if p.get("kind") == "card" and key(p) not in photo_done
+        reel_done = {e.get("key") for e in log if isinstance(e, dict)}
+    pool = [p for p in posts if p.get("kind") == "card" and key(p) not in photo_done
             and key(p) not in reel_done and len((p.get("post") or "")) >= 150]
-    pool.sort(key=lambda p: 0 if p.get("kind") == "story" else 1)
     print("Stories ready for a Reel:", len(pool))
     if not pool:
         return 0
