@@ -1,152 +1,194 @@
 {
-  "tested_at": "2026-10-06T20:47:57.470703+00:00",
+  "tested_at": "2026-10-13T13:31:14.805187+00:00",
   "feeds": {
-    "variety": {
-      "url": "https://variety.com/feed/",
+    "screenrant": {
+      "url": "https://screenrant.com/feed/",
       "feed_status": 200,
       "items": 10,
-      "avg_description_words": 56,
-      "avg_full_content_words_in_feed": 0,
+      "niche_items": 1,
       "article_samples": [
         {
-          "title": "Donald Trump Praises Newly Merged Paramount-Warner Bros.: ‘They’re Terrific People, and It",
-          "link": "https://variety.com/2026/tv/news/trump-praises-paramount-warner-bros-skydance-merger-terrific-people-1236903643/",
+          "title": "PlayStation Plus Free Games For November 2026 Lineup Officially Updated",
+          "link": "https://screenrant.com/playstation-plus-gta-5-leaving-november-2026/",
           "page_status": 200,
-          "page_words": 420
+          "page_words": 909
         },
         {
-          "title": "Jessica Chastain Stands By Criticizing Apple for Delaying ‘The Savant’ After Charlie Kirk’",
-          "link": "https://variety.com/2026/tv/news/jessica-chastain-the-savant-delayed-release-apple-mistake-1236903631/",
+          "title": "The Godfather Officially Replaces Michael Corleone & Rewrites The Original Story In 2027",
+          "link": "https://screenrant.com/godfather-michael-corleone-replacement-connie-release-2027/",
           "page_status": 200,
-          "page_words": 479
+          "page_words": 1357
         }
       ]
     },
-    "hollywoodreporter": {
-      "url": "https://www.hollywoodreporter.com/feed/",
+    "screenrant_comics": {
+      "url": "https://screenrant.com/feed/comics/",
       "feed_status": 200,
       "items": 10,
-      "avg_description_words": 24,
-      "avg_full_content_words_in_feed": 0,
+      "niche_items": 6,
       "article_samples": [
         {
-          "title": "Saoirse Ronan Responds to Rumors That Husband Jack Lowden Will Be the Next James Bond",
-          "link": "https://www.hollywoodreporter.com/movies/movie-news/saoirse-ronan-responds-rumors-jack-lowden-james-bond-1236723864/",
+          "title": "Marvel Unveils Gigantic New Hulk, Replacing Bruce Banner",
+          "link": "https://screenrant.com/new-hulk-biggest-pym-particles-muppets/",
           "page_status": 200,
-          "page_words": 767
+          "page_words": 1107
         },
         {
-          "title": "Elemis’ Coveted Cleansing Balm Gets Deepest Discount Ever for October Prime Day",
-          "link": "https://www.hollywoodreporter.com/lifestyle/shopping/elemis-sale-amazon-prime-big-deal-days-october-2026-promo-1236723620/",
+          "title": "Tim Burton’s Alice In Wonderland Confirms A 2027 Return",
+          "link": "https://screenrant.com/tim-burton-disney-alice-in-wonderland-2027-return/",
           "page_status": 200,
-          "page_words": 827
+          "page_words": 1176
         }
       ]
     },
-    "deadline": {
-      "url": "https://deadline.com/feed/",
-      "feed_status": 200,
-      "items": 12,
-      "avg_description_words": 56,
-      "avg_full_content_words_in_feed": 0,
-      "article_samples": [
-        {
-          "title": "Skydance CEOs Pressed On Layoffs & Donald Trump Interference As They Outline Future At Tow",
-          "link": "https://deadline.com/2026/10/skydance-merger-town-hall-donald-trump-layoffs-1237148139/",
-          "page_status": 200,
-          "page_words": 2422
-        },
-        {
-          "title": "Focus Features Takes Global On Ice Cube & Tommy Lee Jones Movie ‘Outside Man’ From Brian H",
-          "link": "https://deadline.com/2026/10/ice-cube-tommy-lee-jones-outside-man-focus-features-1237148230/",
-          "page_status": 200,
-          "page_words": 1860
-        }
-      ]
-    },
-    "eonline": {
-      "url": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
-      "feed_status": 200,
-      "items": 30,
-      "avg_description_words": 33,
-      "avg_full_content_words_in_feed": 0,
-      "article_samples": [
-        {
-          "title": "Raven-Symoné Regrets \"Hastily Done\" Breast Reduction Surgery as a Teen",
-          "link": "https://www.eonline.com/news/1436804/raven-symone-regrets-getting-breast-reduction-surgery-before-puberty?cmpid=rss-syndicate-genericrss-us-top_stories",
-          "page_status": 200,
-          "page_words": 2671
-        },
-        {
-          "title": "EltaMD & Supergoop! Are on Sale—Which SPF Is Right for You?",
-          "link": "https://www.eonline.com/news/1436753/eltamd-supergoop-are-on-sale-which-spf-is-right-for-you?cmpid=rss-syndicate-genericrss-us-top_stories",
-          "page_status": 200,
-          "page_words": 530
-        }
-      ]
-    },
-    "rollingstone": {
-      "url": "https://www.rollingstone.com/feed/",
+    "collider": {
+      "url": "https://collider.com/feed/",
       "feed_status": 200,
       "items": 10,
-      "avg_description_words": 20,
-      "avg_full_content_words_in_feed": 0,
+      "niche_items": 0,
       "article_samples": [
         {
-          "title": "Here’s How to Save On Streaming Services During October Prime Day",
-          "link": "https://www.rollingstone.com/product-recommendations/streaming/best-streaming-deals-discounts-prime-day-2026-1235581568/",
+          "title": "'Ludwig' Season 2 Officially Solidifies BritBox as the Home of Cozy Mysteries | Review",
+          "link": "https://collider.com/ludwig-season-2-review-britbox/",
           "page_status": 200,
-          "page_words": 806
+          "page_words": 1437
         },
         {
-          "title": "Actually, Going to Concerts Alone Is a Top-Tier Human Experience",
-          "link": "https://www.rollingstone.com/music/music-features/going-to-concerts-alone-good-1235638046/",
+          "title": "'9-1-1: Nashville' Season 1 Recap: What To Remember Before the ABC Spin-Off Returns for Se",
+          "link": "https://collider.com/9-1-1-nashville-season-1-recap/",
           "page_status": 200,
-          "page_words": 889
+          "page_words": 1654
         }
       ]
     },
-    "pagesix": {
-      "url": "https://pagesix.com/feed/",
+    "cbr": {
+      "url": "https://www.cbr.com/feed/",
       "feed_status": 200,
-      "items": 9,
-      "avg_description_words": 13,
-      "avg_full_content_words_in_feed": 13,
+      "items": 10,
+      "niche_items": 1,
       "article_samples": [
         {
-          "title": "Keri Russell’s daughter Willa, 13, makes a fashionable splash at Louis Vuitton fashion sho",
-          "link": "https://pagesix.com/2026/10/06/style/keri-russells-daughter-willa-13-makes-a-fashionable-splash-at-louis-vuitton-fashion-show/",
+          "title": "10 Best Anime Like Sword Art Online, But Better",
+          "link": "https://www.cbr.com/best-anime-like-sword-art-online/",
           "page_status": 200,
-          "page_words": 525
+          "page_words": 2236
         },
         {
-          "title": "We found Bethenny Frankel’s favorites on sale starting under $5 for October Prime Day",
-          "link": "https://pagesix.com/style/amazon-prime-big-deal-days-bethenny-frankel-favorites-october-2026/",
+          "title": "Christopher Nolan's $1.7 Billion Fantasy Epic Finally Confirms Physical Release Date",
+          "link": "https://www.cbr.com/the-odyssey-4k-blu-ray-pvod-release-date/",
           "page_status": 200,
-          "page_words": 1681
+          "page_words": 697
         }
       ]
     },
-    "tmz": {
-      "url": "https://www.tmz.com/rss.xml",
+    "comicbook": {
+      "url": "https://comicbook.com/feed/",
+      "feed_status": 200,
+      "items": 50,
+      "niche_items": 22,
+      "article_samples": [
+        {
+          "title": "Marvel Fans Just Realized a Shocking VisionQuest Detail, & It Could Mean Wanda Maximoff’s ",
+          "link": "https://comicbook.com/tv-shows/news/marvel-fans-just-realized-a-shocking-visionquest-detail-it-could-mean-wanda-maximoffs-return/",
+          "page_status": 200,
+          "page_words": 724
+        },
+        {
+          "title": "Before He Took Over the DCU, James Gunn Delivered a Twisted Workplace Horror Thriller (& I",
+          "link": "https://comicbook.com/movies/news/before-he-took-over-the-dcu-james-gunn-delivered-a-twisted-workplace-horror-thriller-its-free-to-stream-this-month/",
+          "page_status": 200,
+          "page_words": 754
+        }
+      ]
+    },
+    "comicbook_marvel": {
+      "url": "https://comicbook.com/category/marvel/feed/",
+      "feed_status": 200,
+      "items": 50,
+      "niche_items": 46,
+      "article_samples": [
+        {
+          "title": "Marvel Fans Just Realized a Shocking VisionQuest Detail, & It Could Mean Wanda Maximoff’s ",
+          "link": "https://comicbook.com/tv-shows/news/marvel-fans-just-realized-a-shocking-visionquest-detail-it-could-mean-wanda-maximoffs-return/",
+          "page_status": 200,
+          "page_words": 724
+        },
+        {
+          "title": "Marvel’s Take on the Absolute Universe Has Already Shown How It’s Different (And It Misses",
+          "link": "https://comicbook.com/comics/feature/marvels-take-on-the-absolute-universe-has-already-shown-how-its-different-and-it-misses-the-point-of-the-original/",
+          "page_status": 200,
+          "page_words": 1145
+        }
+      ]
+    },
+    "comicbook_starwars": {
+      "url": "https://comicbook.com/category/starwars/feed/",
+      "feed_status": 200,
+      "items": 50,
+      "niche_items": 46,
+      "article_samples": [
+        {
+          "title": "This Is the Most Iconic Line in All of Star Wars, But Everyone Remembers it Wrong",
+          "link": "https://comicbook.com/movies/feature/this-is-the-most-iconic-line-in-all-of-star-wars-but-everyone-remembers-it-wrong/",
+          "page_status": 200,
+          "page_words": 1048
+        },
+        {
+          "title": "Ben Affleck Confirms He Turned Down Star Wars: The Force Awakens, And the Real Reason Why",
+          "link": "https://comicbook.com/movies/news/ben-affleck-confirms-he-turned-down-star-wars-the-force-awakens-and-the-real-reason-why/",
+          "page_status": 200,
+          "page_words": 780
+        }
+      ]
+    },
+    "slashfilm": {
+      "url": "https://feeds.feedburner.com/slashfilm",
       "feed_status": 200,
       "items": 20,
-      "avg_description_words": 44,
-      "avg_full_content_words_in_feed": 0,
+      "niche_items": 3,
       "article_samples": [
         {
-          "title": "American Airlines Alleged Masturbator Caught On Video Touching Herself",
-          "link": "https://www.tmz.com/2026/10/06/american-airlines-masturbator-caught-on-video/",
+          "title": "Zach Cregger's Resident Evil Has Way More Visual Effects Than You Realized [Exclusive]",
+          "link": "https://www.slashfilm.com/2284688/zach-cregger-resident-evil-movie-visual-effects-amount/",
           "page_status": 200,
-          "page_words": 905
+          "page_words": 705
         },
         {
-          "title": "Diddy Ordered to Pay NBCUniversal Nearly $500K in Attorneys' Fees",
-          "link": "https://www.tmz.com/2026/10/06/diddy-to-pay-nbc-universal-attorneys-fees-lawsuit/",
+          "title": "Before The Office, Steve Carell Starred In A Short-Lived Sitcom With Tim Curry",
+          "link": "https://www.slashfilm.com/2283521/the-office-steve-carell-tim-curry-sitcom-over-the-top/",
           "page_status": 200,
-          "page_words": 765
+          "page_words": 919
         }
       ]
+    },
+    "denofgeek": {
+      "url": "https://www.denofgeek.com/feed/",
+      "feed_status": 200,
+      "items": 10,
+      "niche_items": 0,
+      "article_samples": [
+        {
+          "title": "16 Awesome Japanese Movies Ruined By The Western Version",
+          "link": "https://www.denofgeek.com/tv/16-awesome-japanese-movies-ruined-by-the-western-version/",
+          "page_status": 200,
+          "page_words": 1005
+        },
+        {
+          "title": "15 Movies Where There’s No Way the Protagonist Has That Job",
+          "link": "https://www.denofgeek.com/msn/15-movies-where-theres-no-way-the-protagonist-has-that-job/",
+          "page_status": 200,
+          "page_words": 980
+        }
+      ]
+    },
+    "bleedingcool": {
+      "url": "https://bleedingcool.com/feed/",
+      "feed_status": 200,
+      "error": "not well-formed (invalid token): line 1, column 0"
+    },
+    "gizmodo": {
+      "url": "https://gizmodo.com/feed",
+      "feed_status": 403
     }
   }
 }
