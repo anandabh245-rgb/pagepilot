@@ -37,7 +37,11 @@ FACTS = (
     "FACTS: Use ONLY facts stated in the SOURCE TEXT. Never invent quotes, "
     "numbers, dates, names, reactions or backstory. For allegations, lawsuits, "
     "arrests or rumors say \"alleged\", \"reportedly\" or \"according to\", and "
-    "never state guilt as fact. Do not copy sentences from the source.\n")
+        "never state guilt as fact. If the source calls something a rumor, leak, "
+    "theory or fan speculation, say so plainly and never present it as "
+    "confirmed. Write for Marvel, Star Wars and superhero fans: excited but "
+    "accurate, using the character, movie and show names. Do not copy "
+    "sentences from the source.\n")
 HEADLINE = (
     "HEADLINE: a punchy 4 to 8 word line for a graphic card. It must name the "
     "main person, show or movie and tease the news, for example \"Costner and "
