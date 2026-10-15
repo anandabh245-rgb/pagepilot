@@ -15,6 +15,34 @@ card_maker.SOMBER_RE = re.compile(
     r"remembering|we lost|we've lost|stars lost|mourn\w*|funeral|tribute|"
     r"heartbreaking|tragic|tragedy|killed|shot dead|suicide|overdose)\b")
 
+_orig_classify = card_maker.classify
+LABEL_RULES = [
+    ("STAR WARS NEWS", re.compile(
+        r"\b(star wars|mandalorian|jedi|andor|skywalker|lucasfilm|grogu|darth|"
+        r"ahsoka|sith|kenobi)\b", re.I)),
+    ("MARVEL NEWS", re.compile(
+        r"\b(marvel|mcu|avengers|spider-man|spidey|x-men|deadpool|wolverine|"
+        r"iron man|captain america|black panther|fantastic four|doctor strange|"
+        r"thor|loki|hulk|daredevil|punisher|moon knight|visionquest)\b", re.I)),
+    ("DC NEWS", re.compile(
+        r"\b(dc studios|dcu|superman|batman|joker|justice league|wonder woman|"
+        r"aquaman|green lantern|supergirl|peacemaker|the flash)\b", re.I)),
+    ("SUPERHERO NEWS", re.compile(r"\b(superhero\w*|the boys|invincible)\b", re.I)),
+]
+
+
+def classify(text):
+    mood, label, hook, face = _orig_classify(text)
+    for name, rx in LABEL_RULES:
+        if rx.search(text):
+            label = name
+            break
+    return mood, label, hook, face
+
+
+card_maker.classify = classify
+card_art.classify = classify
+
 CRIME = re.compile(
     r"\b(police|warrant|arrest\w*|raid\w*|lawsuit|sued|charged|indict\w*|"
     r"jail|prison|court|trial|verdict|investigat\w*|cops?)\b", re.I)
@@ -44,7 +72,7 @@ def make_card(headline, path, force=None):
     mood, label, hook, face = classify(text)
     name = force or pick_layout(label)
     if not force and CRIME.search(text):
-      name = "neon"
+        name = "neon"
     if mood in ("somber", "space") or name == "reaction":
         return card_art.make_card(headline, path)
     rnd = random.Random(int(hashlib.md5(text.encode()).hexdigest(), 16))
