@@ -37,7 +37,7 @@ def _clean(text):
     return re.sub(r"<[^>]+>", "", text or "").strip()
 
 
-def wikimedia_image(query, out_path="bg.jpg"):
+def wikimedia_image(query, out_path="bg.jpg", strict=False):
     """Search Wikimedia Commons for a freely licensed photo.
     Returns (path, credit_text) or (None, None)."""
     params = {
@@ -60,6 +60,8 @@ def wikimedia_image(query, out_path="bg.jpg"):
             continue
         if info.get("width", 0) < 800:
             continue
+        if strict and query.split()[-1].lower() not in p.get("title", "").lower():
+            continue  # file name must contain the person's last name
         url = info.get("thumburl") or info.get("url")
         img = requests.get(url, headers=UA, timeout=60)
         if img.status_code != 200:
@@ -123,4 +125,4 @@ if __name__ == "__main__":
     img, credit = get_image("Chris Hemsworth")
     print(img, credit)
     print(pick_music())
-  
+    
