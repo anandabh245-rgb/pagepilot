@@ -13,7 +13,7 @@ import subprocess
 import requests
 
 MUSIC_DIR = "music"
-UA = {"User-Agent": "MarvelStarWarsPageBot/1.0 (contact: your-email@example.com)"}
+UA = {"User-Agent": "MarvelStarWarsPageBot/1.0 (contact: your-anandexert@gmail.com)"}
 
 # Licenses that are safe to reuse (attribution required for CC BY / CC BY-SA)
 OK_LICENSES = ("cc0", "cc by", "cc-by", "public domain", "pd")
