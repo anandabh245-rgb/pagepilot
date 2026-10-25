@@ -1,10 +1,11 @@
-import json, os, subprocess, sys
+import json, os, re, subprocess, sys
 import urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
 import card_deck  # patches the sad-story word list used by classify()
 from card_maker import classify
 from reel_maker import make_reel
+import media_helpers
 
 FINAL = "data/final_posts.json"
 POSTED = "data/posted.json"
@@ -19,6 +20,11 @@ ACTIVE_END = int(os.environ.get("ACTIVE_END", "4"))
 REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
 GIT = ["git", "-c", "user.name=PagePilot Bot",
        "-c", "user.email=pagepilot@users.noreply.github.com"]
+
+# capitalised words that start headlines but are not names
+STOP = {"The", "This", "That", "These", "Why", "How", "What", "When", "Who", "Where",
+        "After", "Before", "Fans", "Report", "Reports", "Breaking", "Watch", "New",
+        "Just", "Here", "His", "Her", "Their", "Our", "Your", "And", "But", "For"}
 
 
 def load(path, default):
@@ -58,12 +64,34 @@ def key(p):
     return (p.get("source_url") or p.get("headline") or "").strip()
 
 
-def caption(p):
+def caption(p, credit=""):
     text = p["post"].strip()
     host = urllib.parse.urlparse(p.get("source_url", "")).netloc.replace("www.", "")
     if host and "google." not in host:
         text += "\n\nSource: " + host
+    if credit:
+        text += "\n" + credit
     return text
+
+
+def find_photo(headline, mood):
+    """Free-licensed photo for the story. Returns (path, credit) or (None, None)."""
+    out = "data/reel_tmp/photo.jpg"
+    os.makedirs("data/reel_tmp", exist_ok=True)
+    names = re.findall(r"\b[A-Z][a-zA-Z'\-]+(?:\s[A-Z][a-zA-Z'\-]+){1,2}\b", headline)
+    tried = []
+    for n in names:
+        if n.split()[0] in STOP or n in tried:
+            continue
+        tried.append(n)
+        path, credit = media_helpers.wikimedia_image(n, out, strict=True)
+        if path:
+            print("Photo found for:", n)
+            return path, credit
+        if len(tried) >= 3:
+            break
+    theme = "galaxy nebula" if mood == "space" else "red carpet premiere"
+    return media_helpers.get_image(theme, fallback_theme=theme, out_path=out)
 
 
 def host_video(path):
@@ -103,9 +131,19 @@ def main():
     mood, label, hook, face = classify(text)
     print("Making Reel for:", p["headline"])
     os.makedirs("data/reel_tmp", exist_ok=True)
+
+    # real free photo instead of the emoji (skipped for sad stories)
+    photo, credit = None, None
+    if mood != "somber":
+        try:
+            photo, credit = find_photo(p["headline"], mood)
+        except Exception as e:
+            print("Photo search failed, using emoji look:", e)
+    print("Photo credit:", credit or "none (using emoji look)")
+
     name = "reel_%s.mp4" % datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     path = os.path.join("data/reel_tmp", name)
-    make_reel(p["headline"], p["post"], label, mood, face, hook, path)
+    make_reel(p["headline"], p["post"], label, mood, face, hook, path, photo_path=photo)
     print("Video size KB:", os.path.getsize(path) // 1024)
     if DRY:
         os.replace(path, "data/reel_preview.mp4")
@@ -113,7 +151,7 @@ def main():
         return 0
     url = host_video(path)
     print("Video hosted at:", url)
-    payload = {"video_url": url, "caption": caption(p), "title": p["headline"][:90]}
+    payload = {"video_url": url, "caption": caption(p, credit), "title": p["headline"][:90]}
     req = urllib.request.Request(
         WEBHOOK, data=json.dumps(payload).encode("utf-8"), method="POST",
         headers={"Content-Type": "application/json", "User-Agent": "PagePilot/1.0"})
@@ -136,3 +174,4 @@ if __name__ == "__main__":
     except Exception as e:
         print("ERROR:", e)
         sys.exit(1)
+           
