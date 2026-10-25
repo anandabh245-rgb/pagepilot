@@ -1,6 +1,7 @@
 import hashlib
 import math
 import os
+import random
 import re
 import subprocess
 from PIL import Image, ImageDraw, ImageFilter
@@ -14,6 +15,9 @@ DURATION = 15.0
 CRIME = re.compile(
     r"\b(police|warrant|arrest\w*|raid\w*|lawsuit|sued|charged|indict\w*|"
     r"jail|prison|court|trial|verdict|investigat\w*|cops?)\b", re.I)
+
+# photo card size (inner photo + white border)
+_PHW, _PHH, _PHB = 860, 620, 8
 
 
 def ease(x):
@@ -82,21 +86,45 @@ def with_alpha(im, a):
 
 
 def get_audio(text, mood, crime, out_dir):
-    """Use a track from the music/ folder if there is one, else make original music."""
+    """Random track from the music/ folder if there is one, else make original music."""
     seed = int(hashlib.md5(text.encode()).hexdigest(), 16) % 100000
     files = []
     if os.path.isdir("music"):
         files = sorted(f for f in os.listdir("music")
                        if f.lower().endswith((".mp3", ".m4a", ".wav", ".ogg")))
     if files:
-        return os.path.join("music", files[seed % len(files)])
+        pick = random.choice(files)
+        print("Music:", pick)
+        return os.path.join("music", pick)
     style = "calm" if mood == "somber" else ("news" if crime else "hype")
     path = os.path.join(out_dir, "music_%d.wav" % seed)
     music_maker.make_music(style, DURATION, path, seed)
     return path
 
 
-def make_reel(headline, post, label, mood, face, hook, path):
+def load_photo(path):
+    """Open a photo, fill a slightly oversized box (room for slow zoom), bias to the top (faces)."""
+    im = Image.open(path).convert("RGB")
+    bw, bh = 960, 692
+    s = max(bw / im.width, bh / im.height)
+    im = im.resize((int(im.width * s) + 1, int(im.height * s) + 1), Image.LANCZOS)
+    left = (im.width - bw) // 2
+    top = int((im.height - bh) * 0.2)
+    return im.crop((left, top, left + bw, top + bh))
+
+
+def photo_card(base, t, mask, border):
+    """One frame of the photo card: slow zoom, rounded corners, white border."""
+    z = 1.0 + 0.07 * t / DURATION
+    cw, ch = base.width / z, base.height / z
+    l, tp = (base.width - cw) / 2, (base.height - ch) / 2
+    win = base.resize((_PHW, _PHH), Image.BILINEAR, box=(l, tp, l + cw, tp + ch))
+    card = border.copy()
+    card.paste(win, (_PHB, _PHB), mask)
+    return card
+
+
+def make_reel(headline, post, label, mood, face, hook, path, photo_path=None):
     facts, question = split_post(post)
     title = " ".join(clean_text(headline).upper().split())[:90] or "ENTERTAINMENT NEWS"
     crime = bool(CRIME.search(title + " " + post))
@@ -110,6 +138,21 @@ def make_reel(headline, post, label, mood, face, hook, path):
         c1, c2, hot, pop, sticker = (92, 12, 150), (136, 26, 196), HOT, (255, 45, 120), face_img(face)
     big = sunburst_big(c1, c2)
     audio = get_audio(title, mood, crime, os.path.dirname(path) or ".")
+
+    # real photo (replaces the emoji sticker) if one was found
+    photo_base = photo_mask = photo_border = None
+    if photo_path and os.path.exists(photo_path):
+        try:
+            photo_base = load_photo(photo_path)
+            photo_mask = Image.new("L", (_PHW, _PHH), 0)
+            ImageDraw.Draw(photo_mask).rounded_rectangle([0, 0, _PHW - 1, _PHH - 1], radius=32, fill=255)
+            bw_, bh_ = _PHW + 2 * _PHB, _PHH + 2 * _PHB
+            photo_border = Image.new("RGBA", (bw_, bh_), (0, 0, 0, 0))
+            ImageDraw.Draw(photo_border).rounded_rectangle([0, 0, bw_ - 1, bh_ - 1], radius=40,
+                                                          fill=(255, 255, 255, 255))
+        except Exception as e:
+            print("Photo could not be used, keeping emoji look:", e)
+            photo_base = None
 
     # static overlay: vignette + header + footer pill
     vig = Image.radial_gradient("L").resize((DW, DH)).point(lambda v: int(max(0, v - 70) * 1.5))
@@ -131,7 +174,7 @@ def make_reel(headline, post, label, mood, face, hook, path):
     pd.rounded_rectangle([0, 0, pw, 100], radius=50, fill=hot)
     pd.polygon(star_points(52, 50, 20, 8), fill=(20, 10, 30))
     pd.text((90, 24), ptxt, font=pf, fill=(20, 10, 30))
-    sticker_big = sticker.resize((620, 620), Image.LANCZOS) if sticker else None
+    sticker_big = sticker.resize((620, 620), Image.LANCZOS) if (sticker and photo_base is None) else None
     glow_l = Image.new("RGBA", (DW, DH), (0, 0, 0, 0))
     ImageDraw.Draw(glow_l).ellipse([140, 330, 940, 1130], fill=hot + (90,))
     glow_l = glow_l.filter(ImageFilter.GaussianBlur(80))
@@ -169,7 +212,12 @@ def make_reel(headline, post, label, mood, face, hook, path):
         rot = big.rotate(ang, resample=Image.BILINEAR)
         frame = rot.crop(((2300 - DW) // 2, (2300 - DH) // 2, (2300 + DW) // 2, (2300 + DH) // 2)).convert("RGBA")
         frame = Image.alpha_composite(frame, vlayer)
-        if sticker_big:
+        if photo_base is not None:
+            frame = Image.alpha_composite(frame, glow_l)
+            bob = int(8 * math.sin(t * 2 * math.pi / 1.7))
+            card = photo_card(photo_base, t, photo_mask, photo_border)
+            frame.alpha_composite(card, (DW // 2 - card.width // 2, 620 - card.height // 2 + bob))
+        elif sticker_big:
             frame = Image.alpha_composite(frame, glow_l)
             bob = int(22 * math.sin(t * 2 * math.pi / 1.7))
             pop_s = 1.0 + 0.04 * math.sin(t * 2 * math.pi / 1.2)
