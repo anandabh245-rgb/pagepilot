@@ -85,16 +85,44 @@ def with_alpha(im, a):
     return out
 
 
+# words in a music file name -> music type (so existing files need no renaming)
+MUSIC_TAGS = {
+    "sad": ("sad", "emotional", "melanchol"),
+    "calm": ("calm", "lofi", "chill", "ambient"),
+    "cinematic": ("cinematic", "epic", "orchestra"),
+    "trailer": ("trailer", "tension", "dark"),
+    "hype": ("hype", "house", "beat", "energetic", "dance"),
+}
+# story type -> music types that fit it
+MUSIC_BY_MOOD = {
+    "somber": ("sad", "calm"),
+    "crime": ("trailer", "cinematic"),
+    "space": ("cinematic", "trailer"),
+    "default": ("hype", "trailer", "cinematic"),
+}
+
+
+def music_tag(name):
+    n = name.lower()
+    for tag, words in MUSIC_TAGS.items():
+        if any(w in n for w in words):
+            return tag
+    return None
+
+
 def get_audio(text, mood, crime, out_dir):
-    """Random track from the music/ folder if there is one, else make original music."""
+    """Random track from music/ that fits the story; else any track; else made music."""
     seed = int(hashlib.md5(text.encode()).hexdigest(), 16) % 100000
     files = []
     if os.path.isdir("music"):
         files = sorted(f for f in os.listdir("music")
                        if f.lower().endswith((".mp3", ".m4a", ".wav", ".ogg")))
     if files:
-        pick = random.choice(files)
-        print("Music:", pick)
+        key = ("somber" if mood == "somber" else "crime" if crime
+               else "space" if mood == "space" else "default")
+        pool = [f for f in files if music_tag(f) in MUSIC_BY_MOOD[key]]
+        pick = random.choice(pool or files)
+        print("Music:", pick, "| story type:", key, "| matched:", bool(pool))
         return os.path.join("music", pick)
     style = "calm" if mood == "somber" else ("news" if crime else "hype")
     path = os.path.join(out_dir, "music_%d.wav" % seed)
