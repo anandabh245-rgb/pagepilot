@@ -1,6 +1,7 @@
 import json, os, re, subprocess, sys
 import urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 import card_deck  # patches the sad-story word list used by classify()
 from card_maker import classify
@@ -15,8 +16,9 @@ DRY = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 ENFORCE_GAP = os.environ.get("ENFORCE_GAP", "false").strip().lower() == "true"
 MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "130"))
 DAILY_MAX = int(os.environ.get("DAILY_MAX", "5"))
-ACTIVE_START = int(os.environ.get("ACTIVE_START", "12"))
-ACTIVE_END = int(os.environ.get("ACTIVE_END", "4"))
+# Post only in these hours of the day, US Eastern time (handles daylight saving automatically).
+# 7 = morning scroll, 12 = lunch, 14 = early afternoon, 17 = after work, 20 = prime evening
+SLOT_HOURS_ET = {int(x) for x in os.environ.get("SLOT_HOURS_ET", "7,12,14,17,20").split(",") if x.strip()}
 REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
 GIT = ["git", "-c", "user.name=PagePilot Bot",
        "-c", "user.email=pagepilot@users.noreply.github.com"]
@@ -37,13 +39,9 @@ def load(path, default):
 
 def too_soon(log):
     now = datetime.now(timezone.utc)
-    h = now.hour
-    if ACTIVE_START > ACTIVE_END:
-        ok = h >= ACTIVE_START or h < ACTIVE_END
-    else:
-        ok = ACTIVE_START <= h < ACTIVE_END
-    if not ok:
-        return True, "outside posting hours"
+    now_et = now.astimezone(ZoneInfo("America/New_York"))
+    if now_et.hour not in SLOT_HOURS_ET:
+        return True, "outside USA posting slots (now %s ET)" % now_et.strftime("%I:%M %p")
     times = []
     for e in log:
         try:
@@ -174,4 +172,3 @@ if __name__ == "__main__":
     except Exception as e:
         print("ERROR:", e)
         sys.exit(1)
-           
