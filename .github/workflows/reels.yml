@@ -20,13 +20,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pillow requests
-      - name: Install ffmpeg
-        timeout-minutes: 8
-        env:
-          DEBIAN_FRONTEND: noninteractive
+      - name: Install Python packages
+        timeout-minutes: 5
+        run: pip install pillow requests imageio-ffmpeg
+      - name: Set up ffmpeg
+        timeout-minutes: 3
         run: |
-          which ffmpeg || (sudo apt-get update -o Acquire::Retries=5 && sudo apt-get install -y -o Acquire::Retries=5 -o Acquire::http::Timeout=20 ffmpeg)
+          mkdir -p "$HOME/ffbin"
+          ln -sf "$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')" "$HOME/ffbin/ffmpeg"
+          echo "$HOME/ffbin" >> "$GITHUB_PATH"
+          "$HOME/ffbin/ffmpeg" -version | head -1
       - name: Make and send Reel
         timeout-minutes: 12
         env:
