@@ -21,8 +21,14 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pillow requests
-      - run: which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Install ffmpeg
+        timeout-minutes: 8
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          which ffmpeg || (sudo apt-get update -o Acquire::Retries=5 && sudo apt-get install -y -o Acquire::Retries=5 -o Acquire::http::Timeout=20 ffmpeg)
       - name: Make and send Reel
+        timeout-minutes: 12
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
           DRY_RUN: ${{ github.event_name == 'schedule' && 'false' || (github.event.inputs.live == 'true' && 'false' || 'true') }}
