@@ -28,7 +28,7 @@ jobs:
           MAX_POSTS: "1"
           ONLY_KIND: "story"
           MIN_GAP_MIN: "300"
-          DAILY_MAX: "2"
+          DAILY_MAX: "1"
         run: python facebook_publisher.py
       - name: Save posted log
         if: always()
