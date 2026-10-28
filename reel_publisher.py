@@ -9,16 +9,19 @@ from reel_maker import make_reel
 import media_helpers
 
 FINAL = "data/final_posts.json"
+EVERGREEN = "data/evergreen_posts.json"
 POSTED = "data/posted.json"
 LOG = "data/reels_posted.json"
 WEBHOOK = os.environ.get("MAKE_WEBHOOK_URL", "").strip()
 DRY = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 ENFORCE_GAP = os.environ.get("ENFORCE_GAP", "false").strip().lower() == "true"
-MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "130"))
-DAILY_MAX = int(os.environ.get("DAILY_MAX", "5"))
-# Post only in these hours of the day, US Eastern time (handles daylight saving automatically).
-# 7 = morning scroll, 12 = lunch, 14 = early afternoon, 17 = after work, 20 = prime evening
-SLOT_HOURS_ET = {int(x) for x in os.environ.get("SLOT_HOURS_ET", "7,12,14,17,20").split(",") if x.strip()}
+MIN_GAP_MIN = int(os.environ.get("MIN_GAP_MIN", "90"))
+DAILY_MAX = int(os.environ.get("DAILY_MAX", "6"))
+# Post only in these hours of the day, US Eastern time (daylight saving is automatic).
+# 7 and 9 = morning, 12 = lunch, 14 = afternoon, 17 = after work, 20 = prime evening
+SLOT_HOURS_ET = {int(x) for x in os.environ.get("SLOT_HOURS_ET", "7,9,12,14,17,20").split(",") if x.strip()}
+# What kind of Reel goes next (repeats): 3 news, 1 Doomsday, 2 evergreen
+PATTERN = ["news", "doomsday", "news", "evergreen", "news", "evergreen"]
 REPO = os.environ.get("GITHUB_REPOSITORY", "anandabh245-rgb/pagepilot")
 GIT = ["git", "-c", "user.name=PagePilot Bot",
        "-c", "user.email=pagepilot@users.noreply.github.com"]
@@ -59,7 +62,11 @@ def too_soon(log):
 
 
 def key(p):
-    return (p.get("source_url") or p.get("headline") or "").strip()
+    return (p.get("key") or p.get("source_url") or p.get("headline") or "").strip()
+
+
+def is_doom(p):
+    return bool(re.search(r"doomsday", (p.get("headline", "") + " " + p.get("original_title", "")), re.I))
 
 
 def caption(p, credit=""):
@@ -72,11 +79,11 @@ def caption(p, credit=""):
     return text
 
 
-def find_photo(headline, mood):
+def find_photo(headline, mood, hints=()):
     """Free-licensed photo for the story. Returns (path, credit) or (None, None)."""
     out = "data/reel_tmp/photo.jpg"
     os.makedirs("data/reel_tmp", exist_ok=True)
-    names = re.findall(r"\b[A-Z][a-zA-Z'\-]+(?:\s[A-Z][a-zA-Z'\-]+){1,2}\b", headline)
+    names = list(hints) + re.findall(r"\b[A-Z][a-zA-Z'\-]+(?:\s[A-Z][a-zA-Z'\-]+){1,2}\b", headline)
     tried = []
     for n in names:
         if n.split()[0] in STOP or n in tried:
@@ -86,7 +93,7 @@ def find_photo(headline, mood):
         if path:
             print("Photo found for:", n)
             return path, credit
-        if len(tried) >= 3:
+        if len(tried) >= 4:
             break
     theme = "galaxy nebula" if mood == "space" else "red carpet premiere"
     return media_helpers.get_image(theme, fallback_theme=theme, out_path=out)
@@ -105,6 +112,26 @@ def host_video(path):
     return "https://raw.githubusercontent.com/%s/media/%s" % (REPO, name)
 
 
+def choose(log, news, ever_all):
+    """Pick the next story: follow the PATTERN, fall back to whatever is available."""
+    news_doom = [p for p in news if is_doom(p)]
+    news_other = [p for p in news if not is_doom(p)]
+    doom_ever = [p for p in ever_all if p.get("type") == "doomsday"]
+    ever = [p for p in ever_all if p.get("type") != "doomsday"]
+    want = PATTERN[len(log) % len(PATTERN)]
+    first = {"news": [("news", news_other), ("news", news_doom)],
+             "doomsday": [("doomsday", news_doom), ("doomsday", doom_ever)],
+             "evergreen": [("evergreen", ever)]}[want]
+    fallback = [("news", news_other), ("news", news_doom),
+                ("doomsday", doom_ever), ("evergreen", ever)]
+    print("Next slot wants:", want, "| ready: news", len(news_other), "+ Doomsday news",
+          len(news_doom), "| Doomsday facts", len(doom_ever), "| evergreen", len(ever))
+    for kind, pool in first + fallback:
+        if pool:
+            return pool[0], kind
+    return None, ""
+
+
 def main():
     print("Mode:", "DRY RUN (nothing sent)" if DRY else "LIVE")
     print("Make webhook secret:", "yes" if WEBHOOK else "NO")
@@ -119,22 +146,24 @@ def main():
     posts = load(FINAL, [])
     photo_done = {e.get("key") for e in load(POSTED, []) if isinstance(e, dict)}
     reel_done = {e.get("key") for e in log if isinstance(e, dict)}
-    pool = [p for p in posts if p.get("kind") == "card" and key(p) not in photo_done
+    news = [p for p in posts if p.get("kind") == "card" and key(p) not in photo_done
             and key(p) not in reel_done and len((p.get("post") or "")) >= 150]
-    print("Stories ready for a Reel:", len(pool))
-    if not pool:
+    ever_all = [p for p in load(EVERGREEN, []) if isinstance(p, dict) and key(p) not in reel_done
+                and len((p.get("post") or "")) >= 150]
+    p, ptype = choose(log, news, ever_all)
+    if not p:
+        print("Stories ready for a Reel: 0")
         return 0
-    p = pool[0]
     text = " ".join(p["headline"].upper().split())
     mood, label, hook, face = classify(text)
-    print("Making Reel for:", p["headline"])
+    print("Making", ptype, "Reel for:", p["headline"])
     os.makedirs("data/reel_tmp", exist_ok=True)
 
     # real free photo instead of the emoji (skipped for sad stories)
     photo, credit = None, None
     if mood != "somber":
         try:
-            photo, credit = find_photo(p["headline"], mood)
+            photo, credit = find_photo(p["headline"], mood, p.get("photo_queries") or [])
         except Exception as e:
             print("Photo search failed, using emoji look:", e)
     print("Photo credit:", credit or "none (using emoji look)")
@@ -159,7 +188,7 @@ def main():
     except urllib.error.HTTPError as e:
         print("SEND FAILED", e.code, e.read().decode(errors="replace")[:200])
         return 1
-    log.append({"key": key(p), "headline": p["headline"],
+    log.append({"key": key(p), "headline": p["headline"], "type": ptype,
                 "posted_at": datetime.now(timezone.utc).isoformat()})
     with open(LOG, "w", encoding="utf-8") as f:
         json.dump(log, f, indent=2, ensure_ascii=False)
@@ -172,3 +201,4 @@ if __name__ == "__main__":
     except Exception as e:
         print("ERROR:", e)
         sys.exit(1)
+       
