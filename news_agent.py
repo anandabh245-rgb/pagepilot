@@ -74,11 +74,15 @@ def clean_link(link):
 
 
 def posted_keys():
-    try:
-        with open("data/posted.json", encoding="utf-8") as f:
-            return {e.get("key") for e in json.load(f) if isinstance(e, dict)}
-    except Exception:
-        return set()
+    """Stories already used as a photo post OR as a Reel, so they are never made twice."""
+    keys = set()
+    for path in ("data/posted.json", "data/reels_posted.json"):
+        try:
+            with open(path, encoding="utf-8") as f:
+                keys |= {e.get("key") for e in json.load(f) if isinstance(e, dict)}
+        except Exception:
+            pass
+    return keys
 
 
 def tokens(title):
@@ -159,3 +163,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
