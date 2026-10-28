@@ -5,6 +5,9 @@ on:
       live:
         description: "Type true to really post a Reel. Default is a safe preview."
         default: "false"
+      scheduled:
+        description: "Used by the outside timer. Type true to follow the US time slots."
+        default: "false"
   schedule:
     - cron: "7,22,37,52 * * * *"
 permissions:
@@ -35,7 +38,7 @@ jobs:
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
           DRY_RUN: ${{ github.event_name == 'schedule' && 'false' || (github.event.inputs.live == 'true' && 'false' || 'true') }}
-          ENFORCE_GAP: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+          ENFORCE_GAP: ${{ (github.event_name == 'schedule' || github.event.inputs.scheduled == 'true') && 'true' || 'false' }}
         run: python reel_publisher.py
       - name: Save logs
         if: always()
