@@ -68,19 +68,6 @@
     ]
   },
   {
-    "headline": "Black Widow box office and pandemic records",
-    "post": "Let's take a quick trip back to 2021 when Natasha Romanoff finally led her own solo movie in the Marvel Cinematic Universe! Directed by Cate Shortland, this thrilling prequel explored the darker corners of our favorite spy's past.\n\nAlongside an incredible cast including Scarlett Johansson and Florence Pugh, the film made serious waves by grossing over $379 million worldwide and breaking multiple pandemic box office records.\n\nWhat is your favorite moment from this action-packed MCU spy adventure?\n\n#BlackWidow #MarvelStudios #NatashaRomanoff",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Black_Widow_%282021_film%29",
-    "original_title": "Throwback fan trivia about Black Widow (2021 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:black-widow-2021-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Scarlett Johansson"
-    ]
-  },
-  {
     "headline": "Star Wars development and early drafts",
     "post": "George Lucas originally drafted early versions of Star Wars that featured distinct character concepts, including an older general named Luke Skywalker and a green-skinned alien pilot named Han Solo. These initial treatments eventually evolved into the final 1977 theatrical release.\n\nFurther updates will follow as more historical details are shared.\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -144,6 +131,46 @@
     "type": "evergreen",
     "photo_queries": [
       "Scarlett Johansson"
+    ]
+  },
+  {
+    "headline": "Roger Corman's Unreleased Fantastic Four Film",
+    "post": "Did you know that the 2005 Fantastic Four film was not the first live-action attempt to bring the Marvel team to the screen? A previous B movie version was produced by Roger Corman in the 1990s, but it ultimately went unreleased.\n\nWhat is your favorite memory of watching the 2005 movie in theaters?\n\n#FantasticFour #Marvel #ThrowbackTrivia",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Fantastic_Four_%282005_film%29",
+    "original_title": "Throwback fan trivia about Fantastic Four (2005 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:fantastic-four-2005-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Fantastic Four"
+    ]
+  },
+  {
+    "headline": "Wonder Woman (2017) box office milestone",
+    "post": "Did you know that the 2017 superhero film Wonder Woman grossed over $824 million worldwide? Directed by Patty Jenkins and starring Gal Gadot as Diana Prince, it became the tenth highest-grossing film of that year. 🎬✨\n\nWhat is your favorite moment from Diana's journey in this movie?\n\n#WonderWoman #GalGadot #DCFilms",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Wonder_Woman_%282017_film%29",
+    "original_title": "Throwback fan trivia about Wonder Woman (2017 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:wonder-woman-2017-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Gal Gadot"
+    ]
+  },
+  {
+    "headline": "The Empire Strikes Back budget growth",
+    "post": "Did you know that The Empire Strikes Back originally started with an $8 million budget, but costs eventually rose to $30.5 million by the time production wrapped? Released in May 1980 and directed by Irvin Kershner, this iconic chapter faced plenty of challenges during filming in Norway and England before becoming the highest-grossing film that year. 🎬\n\nWhat is your absolute favorite scene from this classic Star Wars movie?\n\n#StarWars #TheEmpireStrikesBack #SciFiHistory",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
+    "original_title": "Throwback fan trivia about The Empire Strikes Back: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-empire-strikes-back:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Harrison Ford"
     ]
   }
 ]
