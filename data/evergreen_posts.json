@@ -66,5 +66,84 @@
     "photo_queries": [
       "Thunderbolts"
     ]
+  },
+  {
+    "headline": "Black Widow box office and pandemic records",
+    "post": "Let's take a quick trip back to 2021 when Natasha Romanoff finally led her own solo movie in the Marvel Cinematic Universe! Directed by Cate Shortland, this thrilling prequel explored the darker corners of our favorite spy's past.\n\nAlongside an incredible cast including Scarlett Johansson and Florence Pugh, the film made serious waves by grossing over $379 million worldwide and breaking multiple pandemic box office records.\n\nWhat is your favorite moment from this action-packed MCU spy adventure?\n\n#BlackWidow #MarvelStudios #NatashaRomanoff",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Black_Widow_%282021_film%29",
+    "original_title": "Throwback fan trivia about Black Widow (2021 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:black-widow-2021-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Scarlett Johansson"
+    ]
+  },
+  {
+    "headline": "Star Wars development and early drafts",
+    "post": "George Lucas originally drafted early versions of Star Wars that featured distinct character concepts, including an older general named Luke Skywalker and a green-skinned alien pilot named Han Solo. These initial treatments eventually evolved into the final 1977 theatrical release.\n\nFurther updates will follow as more historical details are shared.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Star_Wars_%28film%29",
+    "original_title": "Throwback fan trivia about Star Wars (film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:star-wars-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "George Lucas"
+    ]
+  },
+  {
+    "headline": "Logan earns historic Oscar screenplay nomination",
+    "post": "Released in 2017, James Mangold's Logan gave fans a powerful and gritty look at Hugh Jackman's iconic hero alongside an aging Charles Xavier. The film earned widespread critical praise for its incredible performances and emotional depth.\n\nMaking history for the genre, it became the very first live-action superhero film to receive an Academy Award nomination for Best Adapted Screenplay.\n\nWhat is your favorite memory from watching this Neo-Western masterpiece?\n\n#Logan #Wolverine #Marvel",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Logan_%28film%29",
+    "original_title": "Throwback fan trivia about Logan (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:logan-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Hugh Jackman"
+    ]
+  },
+  {
+    "headline": "Robert Downey Jr. received the entire Endgame script",
+    "post": "In Avengers: Endgame, Robert Downey Jr. was the only actor to receive the entire screenplay from directors Joe and Anthony Russo. The 2019 Marvel Cinematic Universe film concluded several main characters' story arcs and featured an ensemble cast attempting to reverse Thanos's actions from Avengers: Infinity War.\n\nWhat was your favorite moment from this massive cinematic event?\n\n#AvengersEndgame #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Endgame",
+    "original_title": "Throwback fan trivia about Avengers: Endgame: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:avengers-endgame:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Avengers Endgame"
+    ]
+  },
+  {
+    "headline": "Blade 1998 box office success",
+    "post": "Did you know that back in 1998, the dark superhero film Blade starring Wesley Snipes became a commercial success at the box office? Released by New Line Cinema, the movie grossed $131 million on a $45 million budget and even topped the North American box office for two weekends.\n\nWhat is your favorite memory of watching this iconic Marvel movie in theaters? 🦇\n\n#Blade #WesleySnipes #MarvelComics",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Blade_%281998_film%29",
+    "original_title": "Throwback fan trivia about Blade (1998 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:blade-1998-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Wesley Snipes"
+    ]
+  },
+  {
+    "headline": "Scarlett Johansson looks back at Black Widow",
+    "post": "Hey Marvel fans! Did you know that Scarlett Johansson's solo movie was set during the events of Captain America: Civil War? It gave us an amazing look at Natasha Romanoff confronting her past as a Russian spy while on the run.\n\nDirector Cate Shortland even put a huge emphasis on the action, making it the most violent film in the MCU so far. What was your favorite fight scene in the movie?\n\n#BlackWidow #ScarlettJohansson #MarvelCinematicUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Black_Widow_%282021_film%29",
+    "original_title": "Throwback fan trivia about Black Widow (2021 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:black-widow-2021-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Scarlett Johansson"
+    ]
   }
 ]
