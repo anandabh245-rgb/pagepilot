@@ -68,20 +68,6 @@
     ]
   },
   {
-    "headline": "Star Wars development and early drafts",
-    "post": "George Lucas originally drafted early versions of Star Wars that featured distinct character concepts, including an older general named Luke Skywalker and a green-skinned alien pilot named Han Solo. These initial treatments eventually evolved into the final 1977 theatrical release.\n\nFurther updates will follow as more historical details are shared.\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Star_Wars_%28film%29",
-    "original_title": "Throwback fan trivia about Star Wars (film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:star-wars-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "George Lucas"
-    ]
-  },
-  {
     "headline": "Logan earns historic Oscar screenplay nomination",
     "post": "Released in 2017, James Mangold's Logan gave fans a powerful and gritty look at Hugh Jackman's iconic hero alongside an aging Charles Xavier. The film earned widespread critical praise for its incredible performances and emotional depth.\n\nMaking history for the genre, it became the very first live-action superhero film to receive an Academy Award nomination for Best Adapted Screenplay.\n\nWhat is your favorite memory from watching this Neo-Western masterpiece?\n\n#Logan #Wolverine #Marvel",
     "source": "Wikipedia",
@@ -171,6 +157,19 @@
     "photo_queries": [
       "Star Wars",
       "Harrison Ford"
+    ]
+  },
+  {
+    "headline": "Millie Bobby Brown auditioned for Logan",
+    "post": "Did you know that before Dafne Keen made her film debut as Laura in the 2017 hit Logan, Millie Bobby Brown actually auditioned for the role? Director James Mangold shared that finding the right young actress for the part was a huge risk, but Keen ultimately stepped in to bring the fierce young mutant to life alongside Hugh Jackman. 🎬\n\nWhich of Laura's action-packed scenes in the movie is your absolute favorite?\n\n#Logan #Wolverine #XMen",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Logan_%28film%29",
+    "original_title": "Throwback fan trivia about Logan (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:logan-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Hugh Jackman"
     ]
   }
 ]
