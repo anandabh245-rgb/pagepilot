@@ -1,19 +1,5 @@
 [
   {
-    "headline": "Avengers: Doomsday brings together universes",
-    "post": "Get ready for an epic crossover as heroes from multiple universes collide! In Avengers: Doomsday, teams like the Avengers, Wakandans, New Avengers, Fantastic Four, and the X-Men converge to face an existential threat from Doctor Doom amidst the collapse of the multiverse. 🌍✨\n\nWhich team are you most excited to see on screen together?\n\n#AvengersDoomsday #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - what has been officially confirmed about the cast. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:solo:what-has-been-officially-confirmed-about-the-cast",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Doomsday",
-      "Russo brothers"
-    ]
-  },
-  {
     "headline": "The Avengers: breaking records in 2012",
     "post": "Back in 2012, The Avengers brought together Earth's mightiest heroes to stop Loki and became the very first Marvel production to cross the massive one billion dollar mark in ticket sales worldwide.\n\nIt is amazing to look back at how that landmark film shaped the entire Marvel Cinematic Universe we know today!\n\nWhat was your favorite moment from the original 2012 movie?\n\n#TheAvengers #MarvelCinematicUniverse #MCU",
     "source": "Wikipedia",
@@ -170,6 +156,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Hugh Jackman"
+    ]
+  },
+  {
+    "headline": "Alan Cumming shares makeup upgrade for Nightcrawler",
+    "post": "Get ready for a massive multiverse crossover when Avengers: Doomsday hits theaters in December 2026! Fans will see heroes from across different franchises unite, including Nightcrawler. Actor Alan Cumming shared that his makeup process for the film was reduced to just an hour-and-a-half compared to the grueling four-and-a-half to five hours it took back on X2.\n\nAre you excited to see these classic X-Men characters return alongside the Avengers? 🎬\n\n#AvengersDoomsday #XMen #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
+    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - who is directing and writing it and why that matters. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:solo:who-is-directing-and-writing-it-and-why-that-matters",
+    "type": "doomsday",
+    "photo_queries": [
+      "Avengers Doomsday",
+      "Russo brothers"
     ]
   }
 ]
