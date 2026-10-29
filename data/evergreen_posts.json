@@ -54,19 +54,6 @@
     ]
   },
   {
-    "headline": "Logan earns historic Oscar screenplay nomination",
-    "post": "Released in 2017, James Mangold's Logan gave fans a powerful and gritty look at Hugh Jackman's iconic hero alongside an aging Charles Xavier. The film earned widespread critical praise for its incredible performances and emotional depth.\n\nMaking history for the genre, it became the very first live-action superhero film to receive an Academy Award nomination for Best Adapted Screenplay.\n\nWhat is your favorite memory from watching this Neo-Western masterpiece?\n\n#Logan #Wolverine #Marvel",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Logan_%28film%29",
-    "original_title": "Throwback fan trivia about Logan (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:logan-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Hugh Jackman"
-    ]
-  },
-  {
     "headline": "Robert Downey Jr. received the entire Endgame script",
     "post": "In Avengers: Endgame, Robert Downey Jr. was the only actor to receive the entire screenplay from directors Joe and Anthony Russo. The 2019 Marvel Cinematic Universe film concluded several main characters' story arcs and featured an ensemble cast attempting to reverse Thanos's actions from Avengers: Infinity War.\n\nWhat was your favorite moment from this massive cinematic event?\n\n#AvengersEndgame #MarvelStudios #MCU",
     "source": "Wikipedia",
@@ -170,6 +157,20 @@
     "photo_queries": [
       "Avengers Doomsday",
       "Russo brothers"
+    ]
+  },
+  {
+    "headline": "Andor Wins Five Emmys",
+    "post": "Star Wars fans have plenty of reasons to celebrate this incredible series! The acclaimed Disney+ show starring Diego Luna as Cassian Andor takes viewers deep into the formative years leading up to Rogue One. Did you know the hit series received twenty-two nominations for Primetime Emmy Awards and won five in 2025 for its second season?\n\nWhat was your favorite moment from the second season?\n\n#Andor #StarWars #DisneyPlus",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Andor",
+    "original_title": "Throwback fan trivia about Andor: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:andor-tv-series:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Diego Luna",
+      "Star Wars"
     ]
   }
 ]
