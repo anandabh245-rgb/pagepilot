@@ -344,5 +344,11 @@
     "headline": "Star Wars and M&Ms strange Leia crossover",
     "type": "news",
     "posted_at": "2026-10-30T13:16:44.020441+00:00"
+  },
+  {
+    "key": "doomsday:the-avengers-2012-film",
+    "headline": "The Avengers: breaking records in 2012",
+    "type": "doomsday",
+    "posted_at": "2026-10-30T16:16:35.954522+00:00"
   }
 ]
