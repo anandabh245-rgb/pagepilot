@@ -40,19 +40,6 @@
     ]
   },
   {
-    "headline": "Blade 1998 box office success",
-    "post": "Did you know that back in 1998, the dark superhero film Blade starring Wesley Snipes became a commercial success at the box office? Released by New Line Cinema, the movie grossed $131 million on a $45 million budget and even topped the North American box office for two weekends.\n\nWhat is your favorite memory of watching this iconic Marvel movie in theaters? 🦇\n\n#Blade #WesleySnipes #MarvelComics",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Blade_%281998_film%29",
-    "original_title": "Throwback fan trivia about Blade (1998 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:blade-1998-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Wesley Snipes"
-    ]
-  },
-  {
     "headline": "Scarlett Johansson looks back at Black Widow",
     "post": "Hey Marvel fans! Did you know that Scarlett Johansson's solo movie was set during the events of Captain America: Civil War? It gave us an amazing look at Natasha Romanoff confronting her past as a Russian spy while on the run.\n\nDirector Cate Shortland even put a huge emphasis on the action, making it the most violent film in the MCU so far. What was your favorite fight scene in the movie?\n\n#BlackWidow #ScarlettJohansson #MarvelCinematicUniverse",
     "source": "Wikipedia",
@@ -171,6 +158,19 @@
     "photo_queries": [
       "Avengers Doomsday",
       "Russo brothers"
+    ]
+  },
+  {
+    "headline": "Chris Evans almost turned down Captain America",
+    "post": "Did you know that Chris Evans initially declined the iconic role of Steve Rogers three times before signing on for the 2011 Marvel Studios film? He admitted that his decision-making process was entirely fear-based at the time, worrying about what might happen if the movie bombed or if it was a massive hit.\n\nCan you imagine the MCU today with a different actor wielding the shield?\n\n#CaptainAmerica #ChrisEvans #MarvelCinematicUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Captain_America%3A_The_First_Avenger",
+    "original_title": "Throwback fan trivia about Captain America: The First Avenger: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:captain-america-the-first-avenger:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Chris Evans"
     ]
   }
 ]
