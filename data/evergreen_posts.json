@@ -1,19 +1,5 @@
 [
   {
-    "headline": "The Avengers: breaking records in 2012",
-    "post": "Back in 2012, The Avengers brought together Earth's mightiest heroes to stop Loki and became the very first Marvel production to cross the massive one billion dollar mark in ticket sales worldwide.\n\nIt is amazing to look back at how that landmark film shaped the entire Marvel Cinematic Universe we know today!\n\nWhat was your favorite moment from the original 2012 movie?\n\n#TheAvengers #MarvelCinematicUniverse #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
-    "original_title": "Throwback fan trivia about The Avengers (2012 film): how The Avengers (2012 film) connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:the-avengers-2012-film",
-    "type": "doomsday",
-    "photo_queries": [
-      "The Avengers",
-      "Joss Whedon"
-    ]
-  },
-  {
     "headline": "Fantastic Four: First Steps and Doomsday connection",
     "post": "Marvel fans know that The Fantastic Four: First Steps is set in the 1960s of a retro-futuristic world and serves as the 37th film in the Marvel Cinematic Universe. In Avengers: Doomsday, this team from Earth-828 converges with other heroes from different universes amidst the collapse of the multiverse to face the existential threat of Doctor Doom.\n\nAre you excited to see these heroes team up across universes? \n\n#MarvelCinematicUniverse #FantasticFour #AvengersDoomsday",
     "source": "Wikipedia",
@@ -171,6 +157,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Benedict Cumberbatch"
+    ]
+  },
+  {
+    "headline": "Avengers: Doomsday brings multiple universes together",
+    "post": "Get ready for the ultimate crossover event as heroes from different universes collide! In Avengers: Doomsday, characters like the Avengers, the Fantastic Four, and the X-Men must team up to face the existential threat of Doctor Doom.\n\nWhich team-up are you most excited to see on the big screen? 🍿\n\n#AvengersDoomsday #MarvelCinematicUniverse #DoctorDoom",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
+    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - the release date and how the release plans changed. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:solo:the-release-date-and-how-the-release-plans-changed",
+    "type": "doomsday",
+    "photo_queries": [
+      "Avengers Doomsday",
+      "Russo brothers"
     ]
   }
 ]
