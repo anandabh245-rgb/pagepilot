@@ -54,19 +54,6 @@
     ]
   },
   {
-    "headline": "Robert Downey Jr. received the entire Endgame script",
-    "post": "In Avengers: Endgame, Robert Downey Jr. was the only actor to receive the entire screenplay from directors Joe and Anthony Russo. The 2019 Marvel Cinematic Universe film concluded several main characters' story arcs and featured an ensemble cast attempting to reverse Thanos's actions from Avengers: Infinity War.\n\nWhat was your favorite moment from this massive cinematic event?\n\n#AvengersEndgame #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Endgame",
-    "original_title": "Throwback fan trivia about Avengers: Endgame: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:avengers-endgame:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Avengers Endgame"
-    ]
-  },
-  {
     "headline": "Blade 1998 box office success",
     "post": "Did you know that back in 1998, the dark superhero film Blade starring Wesley Snipes became a commercial success at the box office? Released by New Line Cinema, the movie grossed $131 million on a $45 million budget and even topped the North American box office for two weekends.\n\nWhat is your favorite memory of watching this iconic Marvel movie in theaters? 🦇\n\n#Blade #WesleySnipes #MarvelComics",
     "source": "Wikipedia",
@@ -171,6 +158,19 @@
     "photo_queries": [
       "Diego Luna",
       "Star Wars"
+    ]
+  },
+  {
+    "headline": "Doctor Strange brings $677 million worldwide",
+    "post": "Back in 2016, Doctor Strange arrived on the big screen as part of Phase Three of the Marvel Cinematic Universe! Benedict Cumberbatch starred as Dr. Stephen Strange alongside an amazing cast including Chiwetel Ejiofor, Rachel McAdams, and Tilda Swinton. The film received positive reviews and grossed an impressive $677.8 million worldwide.\n\nDid you catch this magical superhero film during its original theatrical release?\n\n#DoctorStrange #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
+    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:doctor-strange-2016-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Benedict Cumberbatch"
     ]
   }
 ]
