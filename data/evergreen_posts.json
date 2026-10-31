@@ -1,18 +1,5 @@
 [
   {
-    "headline": "Fantastic Four: First Steps and Doomsday connection",
-    "post": "Marvel fans know that The Fantastic Four: First Steps is set in the 1960s of a retro-futuristic world and serves as the 37th film in the Marvel Cinematic Universe. In Avengers: Doomsday, this team from Earth-828 converges with other heroes from different universes amidst the collapse of the multiverse to face the existential threat of Doctor Doom.\n\nAre you excited to see these heroes team up across universes? \n\n#MarvelCinematicUniverse #FantasticFour #AvengersDoomsday",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Fantastic_Four%3A_First_Steps",
-    "original_title": "Throwback fan trivia about The Fantastic Four: First Steps: how The Fantastic Four: First Steps connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:the-fantastic-four-first-steps",
-    "type": "doomsday",
-    "photo_queries": [
-      "Fantastic Four"
-    ]
-  },
-  {
     "headline": "Alan Cumming shares his Nightcrawler experience",
     "post": "Get ready for the multiverse to collide as heroes from different franchises come together in Avengers: Doomsday! Behind the scenes, Alan Cumming returned as Nightcrawler and shared that the make-up process was reduced to an hour-and-a-half, largely because his tattoos were no longer applied individually by hand.\n\nHe also described working on the film as \"healing\" compared to his experience on X2. Are you excited to see these universes collide on the big screen?\n\n#AvengersDoomsday #Nightcrawler #MCU",
     "source": "Wikipedia",
@@ -37,19 +24,6 @@
     "type": "doomsday",
     "photo_queries": [
       "Thunderbolts"
-    ]
-  },
-  {
-    "headline": "Scarlett Johansson looks back at Black Widow",
-    "post": "Hey Marvel fans! Did you know that Scarlett Johansson's solo movie was set during the events of Captain America: Civil War? It gave us an amazing look at Natasha Romanoff confronting her past as a Russian spy while on the run.\n\nDirector Cate Shortland even put a huge emphasis on the action, making it the most violent film in the MCU so far. What was your favorite fight scene in the movie?\n\n#BlackWidow #ScarlettJohansson #MarvelCinematicUniverse",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Black_Widow_%282021_film%29",
-    "original_title": "Throwback fan trivia about Black Widow (2021 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:black-widow-2021-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Scarlett Johansson"
     ]
   },
   {
@@ -171,6 +145,32 @@
     "type": "evergreen",
     "photo_queries": [
       "Chris Evans"
+    ]
+  },
+  {
+    "headline": "Avengers: Age of Ultron throwback trivia",
+    "post": "Did you know that in Avengers: Age of Ultron, Tony Stark and Bruce Banner created the artificial intelligence known as Ultron? The film was released in 2015 as part of Phase Two of the Marvel Cinematic Universe and grossed over $1.4 billion worldwide.\n\nWhich of your favorite MCU moments from this classic movie stands out the most to you?\n\n#Marvel #AgeOfUltron #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Age_of_Ultron",
+    "original_title": "Throwback fan trivia about Avengers: Age of Ultron: how Avengers: Age of Ultron connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:avengers-age-of-ultron",
+    "type": "doomsday",
+    "photo_queries": [
+      "Avengers Age of Ultron"
+    ]
+  },
+  {
+    "headline": "Captain Marvel passes historic billion dollar mark",
+    "post": "Did you know that Captain Marvel made history as the very first female-led superhero film to pass the billion-dollar mark at the worldwide box office? Brie Larson's incredible journey as Carol Danvers truly soared during Phase Three of the MCU. \n\nWhat was your favorite moment from her explosive 1995 cosmic adventure?\n\n#CaptainMarvel #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Captain_Marvel_%28film%29",
+    "original_title": "Throwback fan trivia about Captain Marvel (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:captain-marvel-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Brie Larson"
     ]
   }
 ]
