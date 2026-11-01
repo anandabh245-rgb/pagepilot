@@ -1,19 +1,5 @@
 [
   {
-    "headline": "Alan Cumming shares his Nightcrawler experience",
-    "post": "Get ready for the multiverse to collide as heroes from different franchises come together in Avengers: Doomsday! Behind the scenes, Alan Cumming returned as Nightcrawler and shared that the make-up process was reduced to an hour-and-a-half, largely because his tattoos were no longer applied individually by hand.\n\nHe also described working on the film as \"healing\" compared to his experience on X2. Are you excited to see these universes collide on the big screen?\n\n#AvengersDoomsday #Nightcrawler #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - the production and filming facts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:solo:the-production-and-filming-facts",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Doomsday",
-      "Russo brothers"
-    ]
-  },
-  {
     "headline": "Avengers: Doomsday and Thunderbolts* Connection Revealed",
     "post": "Did you know that Avengers: Doomsday takes place fourteen months after the events of Thunderbolts*? In both films, characters like Florence Pugh's Yelena Belova and Wyatt Russell's U.S. Agent are part of the team that gets rebranded as the New Avengers. 🎬\n\nHow do you think the New Avengers will handle facing Doctor Doom?\n\n#Thunderbolts #AvengersDoomsday #Marvel",
     "source": "Wikipedia",
@@ -172,6 +158,19 @@
     "photo_queries": [
       "Star Wars",
       "Felicity Jones"
+    ]
+  },
+  {
+    "headline": "Civil War directors returned for Doomsday",
+    "post": "Did you know that Anthony and Joe Russo directed Captain America: Civil War in 2016 before returning to helm Avengers: Doomsday? That earlier film featured a massive split between heroes over international oversight, fracturing the team into opposing factions led by Steve Rogers and Tony Stark.\n\nNow, the MCU is expanding even further as universes collide. Which team rivalry from past Marvel movies is your absolute favorite to rewatch?\n\n#MarvelStudios #CaptainAmerica #AvengersDoomsday",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Captain_America%3A_Civil_War",
+    "original_title": "Throwback fan trivia about Captain America: Civil War: how Captain America: Civil War connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:captain-america-civil-war",
+    "type": "doomsday",
+    "photo_queries": [
+      "Captain America Civil War"
     ]
   }
 ]
