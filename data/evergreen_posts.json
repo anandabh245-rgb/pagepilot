@@ -27,19 +27,6 @@
     ]
   },
   {
-    "headline": "Wonder Woman (2017) box office milestone",
-    "post": "Did you know that the 2017 superhero film Wonder Woman grossed over $824 million worldwide? Directed by Patty Jenkins and starring Gal Gadot as Diana Prince, it became the tenth highest-grossing film of that year. 🎬✨\n\nWhat is your favorite moment from Diana's journey in this movie?\n\n#WonderWoman #GalGadot #DCFilms",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Wonder_Woman_%282017_film%29",
-    "original_title": "Throwback fan trivia about Wonder Woman (2017 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:wonder-woman-2017-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Gal Gadot"
-    ]
-  },
-  {
     "headline": "The Empire Strikes Back budget growth",
     "post": "Did you know that The Empire Strikes Back originally started with an $8 million budget, but costs eventually rose to $30.5 million by the time production wrapped? Released in May 1980 and directed by Irvin Kershner, this iconic chapter faced plenty of challenges during filming in Norway and England before becoming the highest-grossing film that year. 🎬\n\nWhat is your absolute favorite scene from this classic Star Wars movie?\n\n#StarWars #TheEmpireStrikesBack #SciFiHistory",
     "source": "Wikipedia",
@@ -171,6 +158,20 @@
     "type": "evergreen",
     "photo_queries": [
       "The Avengers"
+    ]
+  },
+  {
+    "headline": "Rogue One casting: Tatiana Maslany and Rooney Mara",
+    "post": "Did you know that before Felicity Jones officially secured the lead role as Jyn Erso in Rogue One: A Star Wars Story, several other talented actresses were reportedly assessed for the part?\n\nAccording to reports from January 2015, actresses including Tatiana Maslany and Rooney Mara were also being considered for the movie's main character before Jones entered final talks the following month.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Rogue_One",
+    "original_title": "Throwback fan trivia about Rogue One: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:rogue-one:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Felicity Jones"
     ]
   }
 ]
