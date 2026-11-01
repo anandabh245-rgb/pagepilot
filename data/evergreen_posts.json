@@ -27,19 +27,6 @@
     ]
   },
   {
-    "headline": "Roger Corman's Unreleased Fantastic Four Film",
-    "post": "Did you know that the 2005 Fantastic Four film was not the first live-action attempt to bring the Marvel team to the screen? A previous B movie version was produced by Roger Corman in the 1990s, but it ultimately went unreleased.\n\nWhat is your favorite memory of watching the 2005 movie in theaters?\n\n#FantasticFour #Marvel #ThrowbackTrivia",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Fantastic_Four_%282005_film%29",
-    "original_title": "Throwback fan trivia about Fantastic Four (2005 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:fantastic-four-2005-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Fantastic Four"
-    ]
-  },
-  {
     "headline": "Wonder Woman (2017) box office milestone",
     "post": "Did you know that the 2017 superhero film Wonder Woman grossed over $824 million worldwide? Directed by Patty Jenkins and starring Gal Gadot as Diana Prince, it became the tenth highest-grossing film of that year. 🎬✨\n\nWhat is your favorite moment from Diana's journey in this movie?\n\n#WonderWoman #GalGadot #DCFilms",
     "source": "Wikipedia",
@@ -171,6 +158,19 @@
     "type": "evergreen",
     "photo_queries": [
       "Brie Larson"
+    ]
+  },
+  {
+    "headline": "Mark Ruffalo steps in as Bruce Banner",
+    "post": "Did you know Mark Ruffalo joined Marvel's The Avengers as Bruce Banner after negotiations between Marvel and Edward Norton fell through? Ruffalo described stepping into the role as his generation's Hamlet. 🎬\n\nHe even performed motion capture for the Hulk alongside bodybuilder Steve Romm and provided the Hulk's iconic speaking line himself!\n\nWhat is your favorite memory from watching the 2012 film? \n\n#TheAvengers #MarkRuffalo #MarvelStudios",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
+    "original_title": "Throwback fan trivia about The Avengers (2012 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-avengers-2012-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "The Avengers"
     ]
   }
 ]
