@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "The Empire Strikes Back budget growth",
-    "post": "Did you know that The Empire Strikes Back originally started with an $8 million budget, but costs eventually rose to $30.5 million by the time production wrapped? Released in May 1980 and directed by Irvin Kershner, this iconic chapter faced plenty of challenges during filming in Norway and England before becoming the highest-grossing film that year. 🎬\n\nWhat is your absolute favorite scene from this classic Star Wars movie?\n\n#StarWars #TheEmpireStrikesBack #SciFiHistory",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
-    "original_title": "Throwback fan trivia about The Empire Strikes Back: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-empire-strikes-back:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "Harrison Ford"
-    ]
-  },
-  {
     "headline": "Millie Bobby Brown auditioned for Logan",
     "post": "Did you know that before Dafne Keen made her film debut as Laura in the 2017 hit Logan, Millie Bobby Brown actually auditioned for the role? Director James Mangold shared that finding the right young actress for the part was a huge risk, but Keen ultimately stepped in to bring the fierce young mutant to life alongside Hugh Jackman. 🎬\n\nWhich of Laura's action-packed scenes in the movie is your absolute favorite?\n\n#Logan #Wolverine #XMen",
     "source": "Wikipedia",
@@ -171,6 +157,20 @@
     "type": "doomsday",
     "photo_queries": [
       "Captain America Civil War"
+    ]
+  },
+  {
+    "headline": "Chris Pratt: how he almost missed Star-Lord",
+    "post": "Did you know that Chris Pratt initially turned down the role of Peter Quill in Guardians of the Galaxy? Casting director Sarah Finn arranged a meeting with director James Gunn, who quickly realized Pratt was perfect for the part of Star-Lord. After signing on, Pratt went through a strict training regimen to prepare for the MCU film.\n\nWhat is your favorite moment from the first Guardians of the Galaxy movie? 🚀\n\n#Marvel #GuardiansOfTheGalaxy #StarLord",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
+    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:guardians-of-the-galaxy-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Guardians of the Galaxy",
+      "James Gunn"
     ]
   }
 ]
