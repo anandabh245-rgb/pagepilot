@@ -1,31 +1,5 @@
 [
   {
-    "headline": "Avengers: Doomsday and Thunderbolts* Connection Revealed",
-    "post": "Did you know that Avengers: Doomsday takes place fourteen months after the events of Thunderbolts*? In both films, characters like Florence Pugh's Yelena Belova and Wyatt Russell's U.S. Agent are part of the team that gets rebranded as the New Avengers. 🎬\n\nHow do you think the New Avengers will handle facing Doctor Doom?\n\n#Thunderbolts #AvengersDoomsday #Marvel",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Thunderbolts%2A",
-    "original_title": "Throwback fan trivia about Thunderbolts*: how Thunderbolts* connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:thunderbolts",
-    "type": "doomsday",
-    "photo_queries": [
-      "Thunderbolts"
-    ]
-  },
-  {
-    "headline": "Millie Bobby Brown auditioned for Logan",
-    "post": "Did you know that before Dafne Keen made her film debut as Laura in the 2017 hit Logan, Millie Bobby Brown actually auditioned for the role? Director James Mangold shared that finding the right young actress for the part was a huge risk, but Keen ultimately stepped in to bring the fierce young mutant to life alongside Hugh Jackman. 🎬\n\nWhich of Laura's action-packed scenes in the movie is your absolute favorite?\n\n#Logan #Wolverine #XMen",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Logan_%28film%29",
-    "original_title": "Throwback fan trivia about Logan (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:logan-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Hugh Jackman"
-    ]
-  },
-  {
     "headline": "Alan Cumming shares makeup upgrade for Nightcrawler",
     "post": "Get ready for a massive multiverse crossover when Avengers: Doomsday hits theaters in December 2026! Fans will see heroes from across different franchises unite, including Nightcrawler. Actor Alan Cumming shared that his makeup process for the film was reduced to just an hour-and-a-half compared to the grueling four-and-a-half to five hours it took back on X2.\n\nAre you excited to see these classic X-Men characters return alongside the Avengers? 🎬\n\n#AvengersDoomsday #XMen #MCU",
     "source": "Wikipedia",
@@ -37,20 +11,6 @@
     "photo_queries": [
       "Avengers Doomsday",
       "Russo brothers"
-    ]
-  },
-  {
-    "headline": "Andor Wins Five Emmys",
-    "post": "Star Wars fans have plenty of reasons to celebrate this incredible series! The acclaimed Disney+ show starring Diego Luna as Cassian Andor takes viewers deep into the formative years leading up to Rogue One. Did you know the hit series received twenty-two nominations for Primetime Emmy Awards and won five in 2025 for its second season?\n\nWhat was your favorite moment from the second season?\n\n#Andor #StarWars #DisneyPlus",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Andor",
-    "original_title": "Throwback fan trivia about Andor: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:andor-tv-series:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Diego Luna",
-      "Star Wars"
     ]
   },
   {
@@ -171,6 +131,46 @@
     "photo_queries": [
       "Guardians of the Galaxy",
       "James Gunn"
+    ]
+  },
+  {
+    "headline": "Thor returns to his Infinity War warrior persona",
+    "post": "Marvel fans, get ready for some exciting character connections! In the upcoming Avengers: Doomsday, Chris Hemsworth returns as Thor, and co-director Joe Russo shared that the Asgardian god of thunder goes back to the warrior persona and mindset we last saw in Avengers: Infinity War.\n\nIn this new film, Thor seeks to achieve meaning through battle once again. Are you excited to see this powerful warrior side of Thor return to the big screen? ⚡️🎬\n\n#AvengersDoomsday #Thor #MarvelStudios",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Infinity_War",
+    "original_title": "Throwback fan trivia about Avengers: Infinity War: how Avengers: Infinity War connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:avengers-infinity-war",
+    "type": "doomsday",
+    "photo_queries": [
+      "Avengers Infinity War",
+      "Russo brothers"
+    ]
+  },
+  {
+    "headline": "Early casting choices for 1998 Blade",
+    "post": "Did you know that before Wesley Snipes took on the iconic role of the daywalker in 1998's Blade, studio head Michael De Luca also suggested Denzel Washington and Laurence Fishburne for the lead part? However, writer David S. Goyer always felt Snipes was the absolute perfect choice for the Marvel Comics adaptation.\n\nWhat other classic superhero casting decisions do you think changed comic book history forever?\n\n#Blade #Marvel #WesleySnipes",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Blade_%281998_film%29",
+    "original_title": "Throwback fan trivia about Blade (1998 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:blade-1998-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Wesley Snipes"
+    ]
+  },
+  {
+    "headline": "Marvel Sets The Avengers Box Office Record",
+    "post": "Back in 2012, Marvel's The Avengers brought together Earth's mightiest heroes in Phase One of the MCU to stop Loki from subjugating the planet. Did you know the film featured more than 2,200 visual effects shots and became the first Marvel production to cross $1 billion in ticket sales worldwide? 🎬✨\n\nWhat is your favorite memory from watching this epic team-up in theaters?\n\n#TheAvengers #MarvelCinematicUniverse #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
+    "original_title": "Throwback fan trivia about The Avengers (2012 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-avengers-2012-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "The Avengers"
     ]
   }
 ]
