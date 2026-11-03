@@ -14,19 +14,6 @@
     ]
   },
   {
-    "headline": "Doctor Strange brings $677 million worldwide",
-    "post": "Back in 2016, Doctor Strange arrived on the big screen as part of Phase Three of the Marvel Cinematic Universe! Benedict Cumberbatch starred as Dr. Stephen Strange alongside an amazing cast including Chiwetel Ejiofor, Rachel McAdams, and Tilda Swinton. The film received positive reviews and grossed an impressive $677.8 million worldwide.\n\nDid you catch this magical superhero film during its original theatrical release?\n\n#DoctorStrange #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
-    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:doctor-strange-2016-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Benedict Cumberbatch"
-    ]
-  },
-  {
     "headline": "Avengers: Doomsday brings multiple universes together",
     "post": "Get ready for the ultimate crossover event as heroes from different universes collide! In Avengers: Doomsday, characters like the Avengers, the Fantastic Four, and the X-Men must team up to face the existential threat of Doctor Doom.\n\nWhich team-up are you most excited to see on the big screen? 🍿\n\n#AvengersDoomsday #MarvelCinematicUniverse #DoctorDoom",
     "source": "Wikipedia",
@@ -171,6 +158,19 @@
     "type": "evergreen",
     "photo_queries": [
       "The Avengers"
+    ]
+  },
+  {
+    "headline": "Benedict Cumberbatch lands the Doctor Strange role",
+    "post": "Back in December 2014, Benedict Cumberbatch was officially chosen for the eponymous role in Doctor Strange! This casting decision actually necessitated a schedule change to work around his other commitments, which ultimately gave director Scott Derrickson extra time to work on the script.\n\nIt is so fascinating to look back at how this magical 2016 film came together in the Marvel Cinematic Universe. 🔮\n\nWhat is your favorite spell from the movie?\n\n#DoctorStrange #BenedictCumberbatch #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
+    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:doctor-strange-2016-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Benedict Cumberbatch"
     ]
   }
 ]
