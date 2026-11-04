@@ -28,19 +28,6 @@
     ]
   },
   {
-    "headline": "Chris Evans almost turned down Captain America",
-    "post": "Did you know that Chris Evans initially declined the iconic role of Steve Rogers three times before signing on for the 2011 Marvel Studios film? He admitted that his decision-making process was entirely fear-based at the time, worrying about what might happen if the movie bombed or if it was a massive hit.\n\nCan you imagine the MCU today with a different actor wielding the shield?\n\n#CaptainAmerica #ChrisEvans #MarvelCinematicUniverse",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Captain_America%3A_The_First_Avenger",
-    "original_title": "Throwback fan trivia about Captain America: The First Avenger: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:captain-america-the-first-avenger:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Chris Evans"
-    ]
-  },
-  {
     "headline": "Avengers: Age of Ultron throwback trivia",
     "post": "Did you know that in Avengers: Age of Ultron, Tony Stark and Bruce Banner created the artificial intelligence known as Ultron? The film was released in 2015 as part of Phase Two of the Marvel Cinematic Universe and grossed over $1.4 billion worldwide.\n\nWhich of your favorite MCU moments from this classic movie stands out the most to you?\n\n#Marvel #AgeOfUltron #MCU",
     "source": "Wikipedia",
@@ -171,6 +158,19 @@
     "type": "evergreen",
     "photo_queries": [
       "Benedict Cumberbatch"
+    ]
+  },
+  {
+    "headline": "Wesley Snipes and Blade: shaping superhero cinema",
+    "post": "Did you know that the 1998 Marvel film Blade starring Wesley Snipes was originally envisioned by the studio as almost a spoof before the creative team pushed for a grounded, serious approach? It is awesome to look back at how this project helped pave the way for darker comic book adaptations on screen.\n\nWhat is your favorite moment from the classic Blade movie? #Blade #Marvel #WesleySnipes",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Blade_%281998_film%29",
+    "original_title": "Throwback fan trivia about Blade (1998 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:blade-1998-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Wesley Snipes"
     ]
   }
 ]
