@@ -1,19 +1,5 @@
 [
   {
-    "headline": "Alan Cumming shares makeup upgrade for Nightcrawler",
-    "post": "Get ready for a massive multiverse crossover when Avengers: Doomsday hits theaters in December 2026! Fans will see heroes from across different franchises unite, including Nightcrawler. Actor Alan Cumming shared that his makeup process for the film was reduced to just an hour-and-a-half compared to the grueling four-and-a-half to five hours it took back on X2.\n\nAre you excited to see these classic X-Men characters return alongside the Avengers? 🎬\n\n#AvengersDoomsday #XMen #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - who is directing and writing it and why that matters. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:solo:who-is-directing-and-writing-it-and-why-that-matters",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Doomsday",
-      "Russo brothers"
-    ]
-  },
-  {
     "headline": "Avengers: Doomsday brings multiple universes together",
     "post": "Get ready for the ultimate crossover event as heroes from different universes collide! In Avengers: Doomsday, characters like the Avengers, the Fantastic Four, and the X-Men must team up to face the existential threat of Doctor Doom.\n\nWhich team-up are you most excited to see on the big screen? 🍿\n\n#AvengersDoomsday #MarvelCinematicUniverse #DoctorDoom",
     "source": "Wikipedia",
@@ -38,19 +24,6 @@
     "type": "doomsday",
     "photo_queries": [
       "Avengers Age of Ultron"
-    ]
-  },
-  {
-    "headline": "Captain Marvel passes historic billion dollar mark",
-    "post": "Did you know that Captain Marvel made history as the very first female-led superhero film to pass the billion-dollar mark at the worldwide box office? Brie Larson's incredible journey as Carol Danvers truly soared during Phase Three of the MCU. \n\nWhat was your favorite moment from her explosive 1995 cosmic adventure?\n\n#CaptainMarvel #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Captain_Marvel_%28film%29",
-    "original_title": "Throwback fan trivia about Captain Marvel (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:captain-marvel-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Brie Larson"
     ]
   },
   {
@@ -171,6 +144,34 @@
     "type": "evergreen",
     "photo_queries": [
       "Wesley Snipes"
+    ]
+  },
+  {
+    "headline": "Chris Evans and Avengers: Endgame",
+    "post": "Did you know that Chris Evans returned to the 1940s at the end of Avengers: Endgame to live with Peggy Carter after serving as the leader of the Avengers? This iconic moment gave the super soldier and World War II veteran a definitive ending before the events leading into Avengers: Doomsday.\n\nWhat was your favorite moment from that epic journey? 🎬\n\n#AvengersEndgame #ChrisEvans #MarvelUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Endgame",
+    "original_title": "Throwback fan trivia about Avengers: Endgame: how Avengers: Endgame connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:avengers-endgame",
+    "type": "doomsday",
+    "photo_queries": [
+      "Avengers Endgame",
+      "Russo brothers"
+    ]
+  },
+  {
+    "headline": "StageCraft innovation: behind The Mandalorian sets",
+    "post": "Did you know that Industrial Light & Magic developed special StageCraft technology for The Mandalorian, displaying digital backgrounds on a 360-degree video wall? This amazing setup has since been adopted by other film and television productions!\n\nWhat is your favorite piece of technology or visual effect from across the Star Wars galaxy? 🌌\n\n#TheMandalorian #StarWars #DisneyPlus",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Mandalorian",
+    "original_title": "Throwback fan trivia about The Mandalorian: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-mandalorian:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Pedro Pascal",
+      "Star Wars"
     ]
   }
 ]
