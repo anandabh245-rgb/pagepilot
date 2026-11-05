@@ -27,20 +27,6 @@
     ]
   },
   {
-    "headline": "Rogue One casting: Tatiana Maslany and Rooney Mara",
-    "post": "Did you know that before Felicity Jones officially secured the lead role as Jyn Erso in Rogue One: A Star Wars Story, several other talented actresses were reportedly assessed for the part?\n\nAccording to reports from January 2015, actresses including Tatiana Maslany and Rooney Mara were also being considered for the movie's main character before Jones entered final talks the following month.\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Rogue_One",
-    "original_title": "Throwback fan trivia about Rogue One: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:rogue-one:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "Felicity Jones"
-    ]
-  },
-  {
     "headline": "Civil War directors returned for Doomsday",
     "post": "Did you know that Anthony and Joe Russo directed Captain America: Civil War in 2016 before returning to helm Avengers: Doomsday? That earlier film featured a massive split between heroes over international oversight, fracturing the team into opposing factions led by Steve Rogers and Tony Stark.\n\nNow, the MCU is expanding even further as universes collide. Which team rivalry from past Marvel movies is your absolute favorite to rewatch?\n\n#MarvelStudios #CaptainAmerica #AvengersDoomsday",
     "source": "Wikipedia",
@@ -172,6 +158,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Avengers Endgame"
+    ]
+  },
+  {
+    "headline": "Hugh Jackman's intense 8,000 calorie diet",
+    "post": "Did you know that preparing to play Wolverine in Deadpool & Wolverine meant taking on a vigorous workout routine and eating up to 8,000 calories a day? Hugh Jackman really went all in to bring his iconic Marvel character back to the screen alongside Ryan Reynolds.\n\nWhat is your favorite memory from seeing these two team up in the MCU? #DeadpoolAndWolverine #HughJackman #MarvelCinematicUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Deadpool_%26_Wolverine",
+    "original_title": "Throwback fan trivia about Deadpool & Wolverine: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:deadpool-wolverine:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Hugh Jackman",
+      "Ryan Reynolds"
     ]
   }
 ]
