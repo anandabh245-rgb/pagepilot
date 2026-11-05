@@ -27,19 +27,6 @@
     ]
   },
   {
-    "headline": "Mark Ruffalo steps in as Bruce Banner",
-    "post": "Did you know Mark Ruffalo joined Marvel's The Avengers as Bruce Banner after negotiations between Marvel and Edward Norton fell through? Ruffalo described stepping into the role as his generation's Hamlet. 🎬\n\nHe even performed motion capture for the Hulk alongside bodybuilder Steve Romm and provided the Hulk's iconic speaking line himself!\n\nWhat is your favorite memory from watching the 2012 film? \n\n#TheAvengers #MarkRuffalo #MarvelStudios",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
-    "original_title": "Throwback fan trivia about The Avengers (2012 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-avengers-2012-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "The Avengers"
-    ]
-  },
-  {
     "headline": "Rogue One casting: Tatiana Maslany and Rooney Mara",
     "post": "Did you know that before Felicity Jones officially secured the lead role as Jyn Erso in Rogue One: A Star Wars Story, several other talented actresses were reportedly assessed for the part?\n\nAccording to reports from January 2015, actresses including Tatiana Maslany and Rooney Mara were also being considered for the movie's main character before Jones entered final talks the following month.\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -172,6 +159,19 @@
     "photo_queries": [
       "Pedro Pascal",
       "Star Wars"
+    ]
+  },
+  {
+    "headline": "Avengers: Endgame sets box office history",
+    "post": "Did you know that Avengers: Endgame grossed $2.8 billion worldwide during its initial theatrical run? It surpassed Infinity War's entire theatrical run in just eleven days and even briefly surpassed Avatar to become the highest-grossing film of all time!\n\nWhat was your favorite moment from this epic 2019 Marvel Cinematic Universe conclusion?\n\n#AvengersEndgame #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Endgame",
+    "original_title": "Throwback fan trivia about Avengers: Endgame: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:avengers-endgame:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Avengers Endgame"
     ]
   }
 ]
