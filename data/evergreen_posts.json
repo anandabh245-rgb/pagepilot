@@ -1,19 +1,5 @@
 [
   {
-    "headline": "Avengers: Doomsday brings multiple universes together",
-    "post": "Get ready for the ultimate crossover event as heroes from different universes collide! In Avengers: Doomsday, characters like the Avengers, the Fantastic Four, and the X-Men must team up to face the existential threat of Doctor Doom.\n\nWhich team-up are you most excited to see on the big screen? 🍿\n\n#AvengersDoomsday #MarvelCinematicUniverse #DoctorDoom",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - the release date and how the release plans changed. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:solo:the-release-date-and-how-the-release-plans-changed",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Doomsday",
-      "Russo brothers"
-    ]
-  },
-  {
     "headline": "Avengers: Age of Ultron throwback trivia",
     "post": "Did you know that in Avengers: Age of Ultron, Tony Stark and Bruce Banner created the artificial intelligence known as Ultron? The film was released in 2015 as part of Phase Two of the Marvel Cinematic Universe and grossed over $1.4 billion worldwide.\n\nWhich of your favorite MCU moments from this classic movie stands out the most to you?\n\n#Marvel #AgeOfUltron #MCU",
     "source": "Wikipedia",
@@ -37,20 +23,6 @@
     "type": "doomsday",
     "photo_queries": [
       "Captain America Civil War"
-    ]
-  },
-  {
-    "headline": "Chris Pratt: how he almost missed Star-Lord",
-    "post": "Did you know that Chris Pratt initially turned down the role of Peter Quill in Guardians of the Galaxy? Casting director Sarah Finn arranged a meeting with director James Gunn, who quickly realized Pratt was perfect for the part of Star-Lord. After signing on, Pratt went through a strict training regimen to prepare for the MCU film.\n\nWhat is your favorite moment from the first Guardians of the Galaxy movie? 🚀\n\n#Marvel #GuardiansOfTheGalaxy #StarLord",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
-    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:guardians-of-the-galaxy-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Guardians of the Galaxy",
-      "James Gunn"
     ]
   },
   {
@@ -172,6 +144,33 @@
     "photo_queries": [
       "Hugh Jackman",
       "Ryan Reynolds"
+    ]
+  },
+  {
+    "headline": "X-Men and Avengers: Doomsday Universe Connection",
+    "post": "Did you know that 20th Century Fox produced thirteen live-action films in the X-Men series from 2000 to 2020 before its acquisition by The Walt Disney Company? Now, in the upcoming Avengers: Doomsday, characters from the X-Men film series from Earth-10005 converge from different universes alongside the Avengers and Fantastic Four to face Doctor Doom.\n\nAre you excited to see these different franchises collide on the big screen? 🎬\n\n#AvengersDoomsday #XMen #MarvelCinematicUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/X-Men_%28film_series%29",
+    "original_title": "Throwback fan trivia about X-Men (film series): how X-Men (film series) connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:x-men-film-series",
+    "type": "doomsday",
+    "photo_queries": [
+      "X-Men"
+    ]
+  },
+  {
+    "headline": "Chris Pratt’s journey to Star-Lord",
+    "post": "Did you know Chris Pratt almost missed out on playing Peter Quill in Guardians of the Galaxy? After struggling with auditions for Star Trek and Avatar, he initially turned down the iconic Marvel role. Thankfully, casting director Sarah Finn arranged a meeting with director James Gunn, who instantly knew Pratt was the right fit for the MCU leader! 🚀✨\n\nWhat is your favorite Star-Lord moment from the films?\n\n#GuardiansOfTheGalaxy #ChrisPratt #MarvelStudios",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
+    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:guardians-of-the-galaxy-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Guardians of the Galaxy",
+      "James Gunn"
     ]
   }
 ]
