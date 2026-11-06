@@ -40,19 +40,6 @@
     ]
   },
   {
-    "headline": "Early casting choices for 1998 Blade",
-    "post": "Did you know that before Wesley Snipes took on the iconic role of the daywalker in 1998's Blade, studio head Michael De Luca also suggested Denzel Washington and Laurence Fishburne for the lead part? However, writer David S. Goyer always felt Snipes was the absolute perfect choice for the Marvel Comics adaptation.\n\nWhat other classic superhero casting decisions do you think changed comic book history forever?\n\n#Blade #Marvel #WesleySnipes",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Blade_%281998_film%29",
-    "original_title": "Throwback fan trivia about Blade (1998 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:blade-1998-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Wesley Snipes"
-    ]
-  },
-  {
     "headline": "Marvel Sets The Avengers Box Office Record",
     "post": "Back in 2012, Marvel's The Avengers brought together Earth's mightiest heroes in Phase One of the MCU to stop Loki from subjugating the planet. Did you know the film featured more than 2,200 visual effects shots and became the first Marvel production to cross $1 billion in ticket sales worldwide? 🎬✨\n\nWhat is your favorite memory from watching this epic team-up in theaters?\n\n#TheAvengers #MarvelCinematicUniverse #MCU",
     "source": "Wikipedia",
@@ -171,6 +158,19 @@
     "photo_queries": [
       "Guardians of the Galaxy",
       "James Gunn"
+    ]
+  },
+  {
+    "headline": "Todd Phillips and Silver Crafted Joker",
+    "post": "Back in 2016, director Todd Phillips teamed up with co-writer Scott Silver to develop the psychological thriller Joker, inspired by 1970s character studies like Taxi Driver. Joaquin Phoenix later stepped into the lead role as Arthur Fleck, bringing the dark Gotham City story to life on the big screen.\n\nDid you know that Todd Phillips conceived this unique take after wanting to turn the comic book movie universe on its head?\n\n#Joker #ToddPhillips #DCComics",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Joker_%282019_film%29",
+    "original_title": "Throwback fan trivia about Joker (2019 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:joker-2019-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Joaquin Phoenix"
     ]
   }
 ]
