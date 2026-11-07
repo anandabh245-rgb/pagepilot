@@ -27,32 +27,6 @@
     ]
   },
   {
-    "headline": "Marvel Sets The Avengers Box Office Record",
-    "post": "Back in 2012, Marvel's The Avengers brought together Earth's mightiest heroes in Phase One of the MCU to stop Loki from subjugating the planet. Did you know the film featured more than 2,200 visual effects shots and became the first Marvel production to cross $1 billion in ticket sales worldwide? 🎬✨\n\nWhat is your favorite memory from watching this epic team-up in theaters?\n\n#TheAvengers #MarvelCinematicUniverse #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
-    "original_title": "Throwback fan trivia about The Avengers (2012 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-avengers-2012-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "The Avengers"
-    ]
-  },
-  {
-    "headline": "Benedict Cumberbatch lands the Doctor Strange role",
-    "post": "Back in December 2014, Benedict Cumberbatch was officially chosen for the eponymous role in Doctor Strange! This casting decision actually necessitated a schedule change to work around his other commitments, which ultimately gave director Scott Derrickson extra time to work on the script.\n\nIt is so fascinating to look back at how this magical 2016 film came together in the Marvel Cinematic Universe. 🔮\n\nWhat is your favorite spell from the movie?\n\n#DoctorStrange #BenedictCumberbatch #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
-    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:doctor-strange-2016-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Benedict Cumberbatch"
-    ]
-  },
-  {
     "headline": "Wesley Snipes and Blade: shaping superhero cinema",
     "post": "Did you know that the 1998 Marvel film Blade starring Wesley Snipes was originally envisioned by the studio as almost a spoof before the creative team pushed for a grounded, serious approach? It is awesome to look back at how this project helped pave the way for darker comic book adaptations on screen.\n\nWhat is your favorite moment from the classic Blade movie? #Blade #Marvel #WesleySnipes",
     "source": "Wikipedia",
@@ -172,6 +146,32 @@
     "photo_queries": [
       "Avengers Doomsday",
       "Russo brothers"
+    ]
+  },
+  {
+    "headline": "Casting choices behind Man of Steel",
+    "post": "Did you know that several notable actors were considered for the iconic roles in Man of Steel? Before Henry Cavill stepped into the cape as Clark Kent, stars like Joe Manganiello, Armie Hammer, and Matthew Goode were also considered for the lead role by director Zack Snyder.\n\nMeanwhile, the search for Lois Lane included actresses like Kristen Stewart, Zoe Saldaña, Olivia Wilde, and Mila Kunis before Amy Adams landed the part. Which of these alternate casting choices do you find the most surprising?\n\n#ManOfSteel #Superman #DCComics",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Man_of_Steel_%28film%29",
+    "original_title": "Throwback fan trivia about Man of Steel (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:man-of-steel-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Henry Cavill"
+    ]
+  },
+  {
+    "headline": "Chris Evans declined Captain America three times",
+    "post": "Did you know that Chris Evans originally turned down the iconic role of Steve Rogers in Captain America: The First Avenger three different times before finally signing on? He admitted that his early hesitation was entirely fear-based, worrying about what might happen if the Marvel film bombed or became a massive hit.\n\nIt is wild to imagine the MCU without him leading the way as the First Avenger! 🛡️\n\nWhat is your favorite moment from this Phase One classic?\n\n#CaptainAmerica #ChrisEvans #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Captain_America%3A_The_First_Avenger",
+    "original_title": "Throwback fan trivia about Captain America: The First Avenger: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:captain-america-the-first-avenger:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Chris Evans"
     ]
   }
 ]
