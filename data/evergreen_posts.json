@@ -1,18 +1,5 @@
 [
   {
-    "headline": "Avengers: Age of Ultron throwback trivia",
-    "post": "Did you know that in Avengers: Age of Ultron, Tony Stark and Bruce Banner created the artificial intelligence known as Ultron? The film was released in 2015 as part of Phase Two of the Marvel Cinematic Universe and grossed over $1.4 billion worldwide.\n\nWhich of your favorite MCU moments from this classic movie stands out the most to you?\n\n#Marvel #AgeOfUltron #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Age_of_Ultron",
-    "original_title": "Throwback fan trivia about Avengers: Age of Ultron: how Avengers: Age of Ultron connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:avengers-age-of-ultron",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Age of Ultron"
-    ]
-  },
-  {
     "headline": "Civil War directors returned for Doomsday",
     "post": "Did you know that Anthony and Joe Russo directed Captain America: Civil War in 2016 before returning to helm Avengers: Doomsday? That earlier film featured a massive split between heroes over international oversight, fracturing the team into opposing factions led by Steve Rogers and Tony Stark.\n\nNow, the MCU is expanding even further as universes collide. Which team rivalry from past Marvel movies is your absolute favorite to rewatch?\n\n#MarvelStudios #CaptainAmerica #AvengersDoomsday",
     "source": "Wikipedia",
@@ -171,6 +158,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Joaquin Phoenix"
+    ]
+  },
+  {
+    "headline": "Alan Cumming returns as Nightcrawler in Doomsday",
+    "post": "Get ready for more mutant action on the big screen! In Avengers: Doomsday, Alan Cumming reprises his role as Kurt Wagner, also known as Nightcrawler. He shared that the make-up process was much quicker this time around compared to his earlier work on X2.\n\nAre you excited to see Nightcrawler team up with heroes from across different universes in this epic film?\n\n#AvengersDoomsday #Nightcrawler #Marvel",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
+    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - how earlier Marvel films set this movie up. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:solo:how-earlier-marvel-films-set-this-movie-up",
+    "type": "doomsday",
+    "photo_queries": [
+      "Avengers Doomsday",
+      "Russo brothers"
     ]
   }
 ]
