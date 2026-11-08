@@ -27,19 +27,6 @@
     ]
   },
   {
-    "headline": "Wesley Snipes and Blade: shaping superhero cinema",
-    "post": "Did you know that the 1998 Marvel film Blade starring Wesley Snipes was originally envisioned by the studio as almost a spoof before the creative team pushed for a grounded, serious approach? It is awesome to look back at how this project helped pave the way for darker comic book adaptations on screen.\n\nWhat is your favorite moment from the classic Blade movie? #Blade #Marvel #WesleySnipes",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Blade_%281998_film%29",
-    "original_title": "Throwback fan trivia about Blade (1998 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:blade-1998-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Wesley Snipes"
-    ]
-  },
-  {
     "headline": "Chris Evans and Avengers: Endgame",
     "post": "Did you know that Chris Evans returned to the 1940s at the end of Avengers: Endgame to live with Peggy Carter after serving as the leader of the Avengers? This iconic moment gave the super soldier and World War II veteran a definitive ending before the events leading into Avengers: Doomsday.\n\nWhat was your favorite moment from that epic journey? 🎬\n\n#AvengersEndgame #ChrisEvans #MarvelUniverse",
     "source": "Wikipedia",
@@ -51,20 +38,6 @@
     "photo_queries": [
       "Avengers Endgame",
       "Russo brothers"
-    ]
-  },
-  {
-    "headline": "StageCraft innovation: behind The Mandalorian sets",
-    "post": "Did you know that Industrial Light & Magic developed special StageCraft technology for The Mandalorian, displaying digital backgrounds on a 360-degree video wall? This amazing setup has since been adopted by other film and television productions!\n\nWhat is your favorite piece of technology or visual effect from across the Star Wars galaxy? 🌌\n\n#TheMandalorian #StarWars #DisneyPlus",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Mandalorian",
-    "original_title": "Throwback fan trivia about The Mandalorian: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-mandalorian:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Pedro Pascal",
-      "Star Wars"
     ]
   },
   {
@@ -172,6 +145,34 @@
     "type": "evergreen",
     "photo_queries": [
       "Chris Evans"
+    ]
+  },
+  {
+    "headline": "Hugh Jackman's intense prep for Deadpool and Wolverine",
+    "post": "Did you know Hugh Jackman ate up to 8,000 calories a day to prepare to return as Logan in Deadpool & Wolverine? Director Shawn Levy and the creative team finally settled on their story when Jackman decided to reprise his role from Fox's X-Men film series. \n\nWhich of the many Wolverine variants seen in the film was your favorite? \n\n#DeadpoolAndWolverine #HughJackman #MarvelCinematicUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Deadpool_%26_Wolverine",
+    "original_title": "Throwback fan trivia about Deadpool & Wolverine: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:deadpool-wolverine:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Hugh Jackman",
+      "Ryan Reynolds"
+    ]
+  },
+  {
+    "headline": "Return of the Jedi: Behind the Blue Harvest ruse",
+    "post": "During the pre-production of Return of the Jedi, the film was given the ruse title Blue Harvest with the tagline Horror Beyond Imagination. This disguise was used to hide the production from fans and the press, and to prevent price gouging by service providers.\n\nFurther updates regarding the historical production archive will follow.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
+    "original_title": "Throwback fan trivia about Return of the Jedi: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:return-of-the-jedi:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Mark Hamill"
     ]
   }
 ]
