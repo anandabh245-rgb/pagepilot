@@ -680,5 +680,11 @@
     "headline": "X-Men #94 Hits The Auction Block",
     "type": "news",
     "posted_at": "2026-11-09T01:46:39.242352+00:00"
+  },
+  {
+    "key": "evergreen:avengers-endgame:a-box-office-record-or-release-fact",
+    "headline": "Avengers: Endgame sets box office history",
+    "type": "evergreen",
+    "posted_at": "2026-11-09T12:46:43.880562+00:00"
   }
 ]
