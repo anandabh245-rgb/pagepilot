@@ -41,19 +41,6 @@
     ]
   },
   {
-    "headline": "Avengers: Endgame sets box office history",
-    "post": "Did you know that Avengers: Endgame grossed $2.8 billion worldwide during its initial theatrical run? It surpassed Infinity War's entire theatrical run in just eleven days and even briefly surpassed Avatar to become the highest-grossing film of all time!\n\nWhat was your favorite moment from this epic 2019 Marvel Cinematic Universe conclusion?\n\n#AvengersEndgame #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Endgame",
-    "original_title": "Throwback fan trivia about Avengers: Endgame: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:avengers-endgame:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Avengers Endgame"
-    ]
-  },
-  {
     "headline": "Hugh Jackman's intense 8,000 calorie diet",
     "post": "Did you know that preparing to play Wolverine in Deadpool & Wolverine meant taking on a vigorous workout routine and eating up to 8,000 calories a day? Hugh Jackman really went all in to bring his iconic Marvel character back to the screen alongside Ryan Reynolds.\n\nWhat is your favorite memory from seeing these two team up in the MCU? #DeadpoolAndWolverine #HughJackman #MarvelCinematicUniverse",
     "source": "Wikipedia",
@@ -169,6 +156,20 @@
     "original_title": "Throwback fan trivia about Return of the Jedi: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
     "kind": "card",
     "key": "evergreen:return-of-the-jedi:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Mark Hamill"
+    ]
+  },
+  {
+    "headline": "Return of the Jedi: Directing Choices",
+    "post": "Did you know Steven Spielberg was originally considered to direct Return of the Jedi? However, separate feuds with the Directors Guild of America led to Spielberg being banned from directing the 1983 epic space opera film. George Lucas also approached David Lynch and David Cronenberg before Richard Marquand ultimately signed on to direct the sequel.\n\nUpdates regarding classic film trivia will follow.\n\n#StarWars #ReturnOfTheJedi #MovieTrivia",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
+    "original_title": "Throwback fan trivia about Return of the Jedi: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:return-of-the-jedi:how-the-film-shaped-later-superhero-or-sci-fi-movies",
     "type": "evergreen",
     "photo_queries": [
       "Star Wars",
