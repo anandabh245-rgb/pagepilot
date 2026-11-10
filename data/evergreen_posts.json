@@ -1,18 +1,5 @@
 [
   {
-    "headline": "Civil War directors returned for Doomsday",
-    "post": "Did you know that Anthony and Joe Russo directed Captain America: Civil War in 2016 before returning to helm Avengers: Doomsday? That earlier film featured a massive split between heroes over international oversight, fracturing the team into opposing factions led by Steve Rogers and Tony Stark.\n\nNow, the MCU is expanding even further as universes collide. Which team rivalry from past Marvel movies is your absolute favorite to rewatch?\n\n#MarvelStudios #CaptainAmerica #AvengersDoomsday",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Captain_America%3A_Civil_War",
-    "original_title": "Throwback fan trivia about Captain America: Civil War: how Captain America: Civil War connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:captain-america-civil-war",
-    "type": "doomsday",
-    "photo_queries": [
-      "Captain America Civil War"
-    ]
-  },
-  {
     "headline": "Thor returns to his Infinity War warrior persona",
     "post": "Marvel fans, get ready for some exciting character connections! In the upcoming Avengers: Doomsday, Chris Hemsworth returns as Thor, and co-director Joe Russo shared that the Asgardian god of thunder goes back to the warrior persona and mindset we last saw in Avengers: Infinity War.\n\nIn this new film, Thor seeks to achieve meaning through battle once again. Are you excited to see this powerful warrior side of Thor return to the big screen? ⚡️🎬\n\n#AvengersDoomsday #Thor #MarvelStudios",
     "source": "Wikipedia",
@@ -38,20 +25,6 @@
     "photo_queries": [
       "Avengers Endgame",
       "Russo brothers"
-    ]
-  },
-  {
-    "headline": "Hugh Jackman's intense 8,000 calorie diet",
-    "post": "Did you know that preparing to play Wolverine in Deadpool & Wolverine meant taking on a vigorous workout routine and eating up to 8,000 calories a day? Hugh Jackman really went all in to bring his iconic Marvel character back to the screen alongside Ryan Reynolds.\n\nWhat is your favorite memory from seeing these two team up in the MCU? #DeadpoolAndWolverine #HughJackman #MarvelCinematicUniverse",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Deadpool_%26_Wolverine",
-    "original_title": "Throwback fan trivia about Deadpool & Wolverine: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:deadpool-wolverine:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Hugh Jackman",
-      "Ryan Reynolds"
     ]
   },
   {
@@ -174,6 +147,20 @@
     "photo_queries": [
       "Star Wars",
       "Mark Hamill"
+    ]
+  },
+  {
+    "headline": "Michael Keaton's casting controversy in Batman 1989",
+    "post": "Did you know that bringing Tim Burton's 1989 Batman to the big screen faced major hurdles? When Michael Keaton was cast as the caped crusader, it caused quite a furor. Because he was known as a comedic actor at the time, observers doubted his ability to play a serious role, and 50,000 protest letters were reportedly sent to Warner Bros. offices!\n\nHow do you feel about how Keaton ultimately performed in the iconic role? 🎬🦇\n\n#Batman1989 #Michael Keaton #TimBurton",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Batman_%281989_film%29",
+    "original_title": "Throwback fan trivia about Batman (1989 film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:batman-1989-film:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Tim Burton",
+      "Michael Keaton"
     ]
   }
 ]
