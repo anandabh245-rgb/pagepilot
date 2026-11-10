@@ -704,5 +704,11 @@
     "headline": "MCU star Harry Styles considered for Bond",
     "type": "news",
     "posted_at": "2026-11-09T22:01:54.192121+00:00"
+  },
+  {
+    "key": "doomsday:captain-america-civil-war",
+    "headline": "Civil War directors returned for Doomsday",
+    "type": "doomsday",
+    "posted_at": "2026-11-10T01:01:58.659644+00:00"
   }
 ]
