@@ -41,33 +41,6 @@
     ]
   },
   {
-    "headline": "Chris Pratt’s journey to Star-Lord",
-    "post": "Did you know Chris Pratt almost missed out on playing Peter Quill in Guardians of the Galaxy? After struggling with auditions for Star Trek and Avatar, he initially turned down the iconic Marvel role. Thankfully, casting director Sarah Finn arranged a meeting with director James Gunn, who instantly knew Pratt was the right fit for the MCU leader! 🚀✨\n\nWhat is your favorite Star-Lord moment from the films?\n\n#GuardiansOfTheGalaxy #ChrisPratt #MarvelStudios",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
-    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:guardians-of-the-galaxy-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Guardians of the Galaxy",
-      "James Gunn"
-    ]
-  },
-  {
-    "headline": "Todd Phillips and Silver Crafted Joker",
-    "post": "Back in 2016, director Todd Phillips teamed up with co-writer Scott Silver to develop the psychological thriller Joker, inspired by 1970s character studies like Taxi Driver. Joaquin Phoenix later stepped into the lead role as Arthur Fleck, bringing the dark Gotham City story to life on the big screen.\n\nDid you know that Todd Phillips conceived this unique take after wanting to turn the comic book movie universe on its head?\n\n#Joker #ToddPhillips #DCComics",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Joker_%282019_film%29",
-    "original_title": "Throwback fan trivia about Joker (2019 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:joker-2019-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Joaquin Phoenix"
-    ]
-  },
-  {
     "headline": "Alan Cumming returns as Nightcrawler in Doomsday",
     "post": "Get ready for more mutant action on the big screen! In Avengers: Doomsday, Alan Cumming reprises his role as Kurt Wagner, also known as Nightcrawler. He shared that the make-up process was much quicker this time around compared to his earlier work on X2.\n\nAre you excited to see Nightcrawler team up with heroes from across different universes in this epic film?\n\n#AvengersDoomsday #Nightcrawler #Marvel",
     "source": "Wikipedia",
@@ -161,6 +134,34 @@
     "photo_queries": [
       "Tim Burton",
       "Michael Keaton"
+    ]
+  },
+  {
+    "headline": "Jacob Batalon lost 102 pounds",
+    "post": "In Spider-Man: No Way Home, Jacob Batalon took on his role after losing 102 pounds (46 kg)! The star also revealed that he improvised most of his lines for the film.\n\nDid you spot all of his great improvised moments during the movie?\n\n#SpiderManNoWayHome #JacobBatalon #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Spider-Man%3A_No_Way_Home",
+    "original_title": "Throwback fan trivia about Spider-Man: No Way Home: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:spider-man-no-way-home:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Spider-Man No Way Home",
+      "Tom Holland"
+    ]
+  },
+  {
+    "headline": "X-Men Box Office Success in 2000",
+    "post": "Back in July 2000, the original X-Men film hit theaters in the United States and became a major box office success, grossing $296.3 million worldwide. It finished the year as the ninth-highest-grossing film of 2000 and officially launched a sprawling cinematic series that continues across the Marvel Cinematic Universe today! \n\nWhich character from the 2000 film is your absolute favorite? 🎬\n\n#XMen #Marvel #ThrowbackTrivia",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/X-Men_%28film%29",
+    "original_title": "Throwback fan trivia about X-Men (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:x-men-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "X-Men",
+      "Hugh Jackman"
     ]
   }
 ]
