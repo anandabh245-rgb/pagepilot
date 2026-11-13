@@ -836,5 +836,11 @@
     "headline": "Vader lightsaber breaks Star Wars auction record",
     "type": "news",
     "posted_at": "2026-11-13T17:46:40.216002+00:00"
+  },
+  {
+    "key": "evergreen:batman-1989-film:an-interesting-behind-the-scenes-production-fact",
+    "headline": "Michael Keaton's casting controversy in Batman 1989",
+    "type": "evergreen",
+    "posted_at": "2026-11-13T22:01:44.894652+00:00"
   }
 ]
