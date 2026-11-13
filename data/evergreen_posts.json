@@ -55,20 +55,6 @@
     ]
   },
   {
-    "headline": "Return of the Jedi: Directing Choices",
-    "post": "Did you know Steven Spielberg was originally considered to direct Return of the Jedi? However, separate feuds with the Directors Guild of America led to Spielberg being banned from directing the 1983 epic space opera film. George Lucas also approached David Lynch and David Cronenberg before Richard Marquand ultimately signed on to direct the sequel.\n\nUpdates regarding classic film trivia will follow.\n\n#StarWars #ReturnOfTheJedi #MovieTrivia",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
-    "original_title": "Throwback fan trivia about Return of the Jedi: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:return-of-the-jedi:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "Mark Hamill"
-    ]
-  },
-  {
     "headline": "Michael Keaton's casting controversy in Batman 1989",
     "post": "Did you know that bringing Tim Burton's 1989 Batman to the big screen faced major hurdles? When Michael Keaton was cast as the caped crusader, it caused quite a furor. Because he was known as a comedic actor at the time, observers doubted his ability to play a serious role, and 50,000 protest letters were reportedly sent to Warner Bros. offices!\n\nHow do you feel about how Keaton ultimately performed in the iconic role? 🎬🦇\n\n#Batman1989 #Michael Keaton #TimBurton",
     "source": "Wikipedia",
@@ -175,6 +161,20 @@
     "photo_queries": [
       "Guardians of the Galaxy",
       "James Gunn"
+    ]
+  },
+  {
+    "headline": "Thor: Ragnarok behind-the-scenes production facts",
+    "post": "Did you know that during the making of Thor: Ragnarok, actor Chris Hemsworth had grown a bit bored of playing the character after portraying him four times previously? To mix things up, he wanted to take some risks and experiment with the role, which led to Thor getting shorter hair, wearing a different outfit, losing his hammer Mjolnir, and even losing an eye!\n\nWhat was your favorite moment from this Marvel Cinematic Universe film? 🎬\n\n#ThorRagnarok #Marvel #ChrisHemsworth",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Thor%3A_Ragnarok",
+    "original_title": "Throwback fan trivia about Thor: Ragnarok: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:thor-ragnarok:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Taika Waititi",
+      "Chris Hemsworth"
     ]
   }
 ]
