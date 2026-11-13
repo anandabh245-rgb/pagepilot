@@ -55,34 +55,6 @@
     ]
   },
   {
-    "headline": "Hugh Jackman's intense prep for Deadpool and Wolverine",
-    "post": "Did you know Hugh Jackman ate up to 8,000 calories a day to prepare to return as Logan in Deadpool & Wolverine? Director Shawn Levy and the creative team finally settled on their story when Jackman decided to reprise his role from Fox's X-Men film series. \n\nWhich of the many Wolverine variants seen in the film was your favorite? \n\n#DeadpoolAndWolverine #HughJackman #MarvelCinematicUniverse",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Deadpool_%26_Wolverine",
-    "original_title": "Throwback fan trivia about Deadpool & Wolverine: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:deadpool-wolverine:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Hugh Jackman",
-      "Ryan Reynolds"
-    ]
-  },
-  {
-    "headline": "Return of the Jedi: Behind the Blue Harvest ruse",
-    "post": "During the pre-production of Return of the Jedi, the film was given the ruse title Blue Harvest with the tagline Horror Beyond Imagination. This disguise was used to hide the production from fans and the press, and to prevent price gouging by service providers.\n\nFurther updates regarding the historical production archive will follow.\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
-    "original_title": "Throwback fan trivia about Return of the Jedi: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:return-of-the-jedi:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "Mark Hamill"
-    ]
-  },
-  {
     "headline": "Return of the Jedi: Directing Choices",
     "post": "Did you know Steven Spielberg was originally considered to direct Return of the Jedi? However, separate feuds with the Directors Guild of America led to Spielberg being banned from directing the 1983 epic space opera film. George Lucas also approached David Lynch and David Cronenberg before Richard Marquand ultimately signed on to direct the sequel.\n\nUpdates regarding classic film trivia will follow.\n\n#StarWars #ReturnOfTheJedi #MovieTrivia",
     "source": "Wikipedia",
@@ -163,6 +135,46 @@
     "photo_queries": [
       "Tim Burton",
       "Michael Keaton"
+    ]
+  },
+  {
+    "headline": "Doctor Doom's Classic Origin and Comic History",
+    "post": "Did you know that the iconic supervillain Doctor Doom first appeared in The Fantastic Four #5 back in July 1962, created by writer-editor Stan Lee and artist Jack Kirby? In the comics, he is the monarch of Latveria and a master of both science and sorcery, serving as the ultimate archenemy to Mister Fantastic and the Fantastic Four.\n\nAre you excited to see Robert Downey Jr. take on this complex character in Avengers: Doomsday?\n\n#DoctorDoom #MarvelComics #FantasticFour",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Doctor_Doom",
+    "original_title": "Throwback fan trivia about Doctor Doom: how Doctor Doom connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "doomsday:doctor-doom",
+    "type": "doomsday",
+    "photo_queries": [
+      "Doctor Doom"
+    ]
+  },
+  {
+    "headline": "The Incredible Hulk: Behind the Scenes",
+    "post": "Did you know that Edward Norton rewrote the screenplay for The Incredible Hulk to position the film as a reboot, distancing it from the 2003 movie? Director Louis Leterrier praised Norton for bringing gravitas to the script and approaching the heroes like Greek gods.\n\nWhat is your favorite moment from this Phase One MCU film?\n\n#TheIncredibleHulk #MarvelCinematicUniverse #BruceBanner",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Incredible_Hulk_%28film%29",
+    "original_title": "Throwback fan trivia about The Incredible Hulk (film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-incredible-hulk-film:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Incredible Hulk"
+    ]
+  },
+  {
+    "headline": "Guardians of the Galaxy grossed 773.3 million worldwide",
+    "post": "Guardians of the Galaxy Vol. 1 arrived in US theaters in August 2014 as part of Phase Two of the MCU. The Marvel Studios film became a commercial success, grossing $773.3 million worldwide and ranking as the third-highest-grossing film of that year. \n\nWhich member of the cosmic team is your absolute favorite? 🚀\n\n#MarvelStudios #GuardiansOfTheGalaxy #BoxOffice",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
+    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:guardians-of-the-galaxy-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Guardians of the Galaxy",
+      "James Gunn"
     ]
   }
 ]
