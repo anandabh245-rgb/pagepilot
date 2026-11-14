@@ -848,5 +848,11 @@
     "headline": "DCU Continuity: Who Stays And Who Goes",
     "type": "news",
     "posted_at": "2026-11-14T01:01:48.472759+00:00"
+  },
+  {
+    "key": "doomsday:avengers-infinity-war",
+    "headline": "Thor returns to his Infinity War warrior persona",
+    "type": "doomsday",
+    "posted_at": "2026-11-14T12:01:44.386892+00:00"
   }
 ]
