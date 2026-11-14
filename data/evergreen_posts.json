@@ -41,20 +41,6 @@
     ]
   },
   {
-    "headline": "X-Men Box Office Success in 2000",
-    "post": "Back in July 2000, the original X-Men film hit theaters in the United States and became a major box office success, grossing $296.3 million worldwide. It finished the year as the ninth-highest-grossing film of 2000 and officially launched a sprawling cinematic series that continues across the Marvel Cinematic Universe today! \n\nWhich character from the 2000 film is your absolute favorite? 🎬\n\n#XMen #Marvel #ThrowbackTrivia",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/X-Men_%28film%29",
-    "original_title": "Throwback fan trivia about X-Men (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:x-men-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "X-Men",
-      "Hugh Jackman"
-    ]
-  },
-  {
     "headline": "The Record-Breaking Budget of Superman (1978)",
     "post": "Back in 1978, the iconic superhero film Superman soared into theaters with a massive $55 million budget. At that time, it stood proudly as the most expensive movie ever made.\n\nDirected by Richard Donner and starring Christopher Reeve, this DC Comics classic captured hearts worldwide and earned an impressive $300 million at the box office. \n\nWhat is your favorite moment from this legendary film? #Superman1978 #ChristopherReeve #DCComics",
     "source": "Wikipedia",
@@ -160,6 +146,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Black Panther"
+    ]
+  },
+  {
+    "headline": "Christian Bale's journey in Batman Begins",
+    "post": "Before landing his iconic role as Bruce Wayne in Batman Begins, Christian Bale prepared extensively by studying graphic novels and working with a personal trainer to gain muscle. Director Christopher Nolan praised Bale for having the exact balance of darkness and light needed for the character.\n\nFurther updates regarding behind-the-scenes production trivia will follow.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Batman_Begins",
+    "original_title": "Throwback fan trivia about Batman Begins: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:batman-begins:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Christopher Nolan",
+      "Christian Bale"
     ]
   }
 ]
