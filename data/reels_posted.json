@@ -872,5 +872,11 @@
     "headline": "Star Wars Signed Greedo Photo Sells",
     "type": "news",
     "posted_at": "2026-11-14T19:01:30.791855+00:00"
+  },
+  {
+    "key": "evergreen:x-men-film:a-box-office-record-or-release-fact",
+    "headline": "X-Men Box Office Success in 2000",
+    "type": "evergreen",
+    "posted_at": "2026-11-14T22:16:45.105386+00:00"
   }
 ]
