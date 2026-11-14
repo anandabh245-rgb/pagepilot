@@ -41,20 +41,6 @@
     ]
   },
   {
-    "headline": "Jacob Batalon lost 102 pounds",
-    "post": "In Spider-Man: No Way Home, Jacob Batalon took on his role after losing 102 pounds (46 kg)! The star also revealed that he improvised most of his lines for the film.\n\nDid you spot all of his great improvised moments during the movie?\n\n#SpiderManNoWayHome #JacobBatalon #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Spider-Man%3A_No_Way_Home",
-    "original_title": "Throwback fan trivia about Spider-Man: No Way Home: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:spider-man-no-way-home:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Spider-Man No Way Home",
-      "Tom Holland"
-    ]
-  },
-  {
     "headline": "X-Men Box Office Success in 2000",
     "post": "Back in July 2000, the original X-Men film hit theaters in the United States and became a major box office success, grossing $296.3 million worldwide. It finished the year as the ninth-highest-grossing film of 2000 and officially launched a sprawling cinematic series that continues across the Marvel Cinematic Universe today! \n\nWhich character from the 2000 film is your absolute favorite? 🎬\n\n#XMen #Marvel #ThrowbackTrivia",
     "source": "Wikipedia",
@@ -161,6 +147,19 @@
     "photo_queries": [
       "Tim Burton",
       "Michael Keaton"
+    ]
+  },
+  {
+    "headline": "Black Panther: Early Development and Trivia",
+    "post": "Did you know that Wesley Snipes originally planned to make a Black Panther film back in 1992, though that initial project did not come to fruition? Years later, the groundbreaking 2018 Marvel Cinematic Universe movie brought T'Challa and Wakanda to the big screen in a massive way, breaking numerous box office records and winning three Academy Awards.\n\nWhat is your favorite memory from seeing this iconic film in theaters? 🐾\n\n#BlackPanther #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Black_Panther_%28film%29",
+    "original_title": "Throwback fan trivia about Black Panther (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:black-panther-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Black Panther"
     ]
   }
 ]
