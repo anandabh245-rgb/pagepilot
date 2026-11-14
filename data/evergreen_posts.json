@@ -1,19 +1,5 @@
 [
   {
-    "headline": "Thor returns to his Infinity War warrior persona",
-    "post": "Marvel fans, get ready for some exciting character connections! In the upcoming Avengers: Doomsday, Chris Hemsworth returns as Thor, and co-director Joe Russo shared that the Asgardian god of thunder goes back to the warrior persona and mindset we last saw in Avengers: Infinity War.\n\nIn this new film, Thor seeks to achieve meaning through battle once again. Are you excited to see this powerful warrior side of Thor return to the big screen? ⚡️🎬\n\n#AvengersDoomsday #Thor #MarvelStudios",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Infinity_War",
-    "original_title": "Throwback fan trivia about Avengers: Infinity War: how Avengers: Infinity War connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:avengers-infinity-war",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Infinity War",
-      "Russo brothers"
-    ]
-  },
-  {
     "headline": "Chris Evans and Avengers: Endgame",
     "post": "Did you know that Chris Evans returned to the 1940s at the end of Avengers: Endgame to live with Peggy Carter after serving as the leader of the Avengers? This iconic moment gave the super soldier and World War II veteran a definitive ending before the events leading into Avengers: Doomsday.\n\nWhat was your favorite moment from that epic journey? 🎬\n\n#AvengersEndgame #ChrisEvans #MarvelUniverse",
     "source": "Wikipedia",
@@ -52,20 +38,6 @@
     "photo_queries": [
       "Avengers Doomsday",
       "Russo brothers"
-    ]
-  },
-  {
-    "headline": "Michael Keaton's casting controversy in Batman 1989",
-    "post": "Did you know that bringing Tim Burton's 1989 Batman to the big screen faced major hurdles? When Michael Keaton was cast as the caped crusader, it caused quite a furor. Because he was known as a comedic actor at the time, observers doubted his ability to play a serious role, and 50,000 protest letters were reportedly sent to Warner Bros. offices!\n\nHow do you feel about how Keaton ultimately performed in the iconic role? 🎬🦇\n\n#Batman1989 #Michael Keaton #TimBurton",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Batman_%281989_film%29",
-    "original_title": "Throwback fan trivia about Batman (1989 film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:batman-1989-film:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Tim Burton",
-      "Michael Keaton"
     ]
   },
   {
@@ -175,6 +147,20 @@
     "photo_queries": [
       "Taika Waititi",
       "Chris Hemsworth"
+    ]
+  },
+  {
+    "headline": "Early casting ideas for 1989 Batman film",
+    "post": "Did you know that before Michael Keaton landed the cape and cowl in the 1989 Batman film, numerous leading men were considered for the role? Warner Bros. reportedly weighed A-listers such as Mel Gibson, Kevin Costner, and Harrison Ford, while director Tim Burton also approached Pierce Brosnan before the part ultimately went to Keaton.\n\nCan you picture how different the movie might have looked with one of those other actors? 🤔\n\n#Batman1989 #MichaelKeaton #TimBurton",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Batman_%281989_film%29",
+    "original_title": "Throwback fan trivia about Batman (1989 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:batman-1989-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Tim Burton",
+      "Michael Keaton"
     ]
   }
 ]
