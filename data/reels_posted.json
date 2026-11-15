@@ -884,5 +884,11 @@
     "headline": "Star Wars: The Experience Comes to Philadelphia",
     "type": "news",
     "posted_at": "2026-11-15T01:06:23.224990+00:00"
+  },
+  {
+    "key": "https://comicbook.com/movies/news/new-doomsday-video-reveals-a-major-20th-century-fox-x-men-hero-missing-from-cast-announcements/",
+    "headline": "Avengers: Doomsday teaser hints at Jean Grey",
+    "type": "doomsday",
+    "posted_at": "2026-11-15T12:16:17.860499+00:00"
   }
 ]
