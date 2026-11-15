@@ -41,20 +41,6 @@
     ]
   },
   {
-    "headline": "Batman 1989 Box Office Milestone",
-    "post": "Did you know that Tim Burton's 1989 superhero film Batman was a massive success, earning over $400 million in box office totals? At the time of its release, it held the impressive record of being the sixth-highest-grossing film in history.\n\nFans and critics alike praised the performances, direction, and Danny Elfman's score, proving that this dark take on DC Comics characters could conquer the box office.\n\nWhat is your favorite memory of watching this iconic movie? #Batman #TimBurton #BoxOffice",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Batman_%281989_film%29",
-    "original_title": "Throwback fan trivia about Batman (1989 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:batman-1989-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Tim Burton",
-      "Michael Keaton"
-    ]
-  },
-  {
     "headline": "Doctor Doom's Classic Origin and Comic History",
     "post": "Did you know that the iconic supervillain Doctor Doom first appeared in The Fantastic Four #5 back in July 1962, created by writer-editor Stan Lee and artist Jack Kirby? In the comics, he is the monarch of Latveria and a master of both science and sorcery, serving as the ultimate archenemy to Mister Fantastic and the Fantastic Four.\n\nAre you excited to see Robert Downey Jr. take on this complex character in Avengers: Doomsday?\n\n#DoctorDoom #MarvelComics #FantasticFour",
     "source": "Wikipedia",
@@ -161,6 +147,20 @@
     "photo_queries": [
       "Taika Waititi",
       "Chris Hemsworth"
+    ]
+  },
+  {
+    "headline": "Practical stunts and IMAX filming in The Dark Knight",
+    "post": "Director Christopher Nolan avoided using computer-generated imagery unless necessary during the production of The Dark Knight, insisting instead on practical stunts such as flipping an 18-wheel truck and blowing up a factory. The 2008 film was also notable for being the first major motion picture to be filmed using high-resolution IMAX cameras. Production details and updates will follow.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Dark_Knight",
+    "original_title": "Throwback fan trivia about The Dark Knight: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-dark-knight:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Christopher Nolan",
+      "Christian Bale"
     ]
   }
 ]
