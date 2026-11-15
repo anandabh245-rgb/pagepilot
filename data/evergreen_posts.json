@@ -41,19 +41,6 @@
     ]
   },
   {
-    "headline": "The Record-Breaking Budget of Superman (1978)",
-    "post": "Back in 1978, the iconic superhero film Superman soared into theaters with a massive $55 million budget. At that time, it stood proudly as the most expensive movie ever made.\n\nDirected by Richard Donner and starring Christopher Reeve, this DC Comics classic captured hearts worldwide and earned an impressive $300 million at the box office. \n\nWhat is your favorite moment from this legendary film? #Superman1978 #ChristopherReeve #DCComics",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Superman_%281978_film%29",
-    "original_title": "Throwback fan trivia about Superman (1978 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:superman-1978-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Christopher Reeve"
-    ]
-  },
-  {
     "headline": "Batman 1989 Box Office Milestone",
     "post": "Did you know that Tim Burton's 1989 superhero film Batman was a massive success, earning over $400 million in box office totals? At the time of its release, it held the impressive record of being the sixth-highest-grossing film in history.\n\nFans and critics alike praised the performances, direction, and Danny Elfman's score, proving that this dark take on DC Comics characters could conquer the box office.\n\nWhat is your favorite memory of watching this iconic movie? #Batman #TimBurton #BoxOffice",
     "source": "Wikipedia",
@@ -160,6 +147,20 @@
     "photo_queries": [
       "Christopher Nolan",
       "Christian Bale"
+    ]
+  },
+  {
+    "headline": "Thor: Ragnarok behind the scenes facts",
+    "post": "Did you know that in Thor: Ragnarok, Anthony Hopkins' character Odin was originally intended to be a hobo on the streets of New York City? Director Taika Waititi ultimately changed the sequence to take place in Norway to honor the character's past and be more authentic to his role as a king of Asgard.\n\nIt is so cool to learn about these creative choices that shaped the film! What is your favorite behind-the-scenes detail about the MCU?\n\n#ThorRagnarok #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Thor%3A_Ragnarok",
+    "original_title": "Throwback fan trivia about Thor: Ragnarok: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:thor-ragnarok:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Taika Waititi",
+      "Chris Hemsworth"
     ]
   }
 ]
