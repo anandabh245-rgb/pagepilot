@@ -956,5 +956,11 @@
     "headline": "Green Lantern #87 sells for $1,525",
     "type": "news",
     "posted_at": "2026-11-17T01:31:52.388759+00:00"
+  },
+  {
+    "key": "doomsday:avengers-endgame",
+    "headline": "Chris Evans and Avengers: Endgame",
+    "type": "doomsday",
+    "posted_at": "2026-11-17T12:46:18.100253+00:00"
   }
 ]
