@@ -62,14 +62,16 @@ CARD_RULES = (
     "greeting or stock phrase such as \"Hey fans\", \"Hey Marvel fans\", "
     "\"Did you know\" or \"Fun fact\". Short sentences, one new detail each. "
     "End with ONE question that makes readers pick a side or predict "
-    "what happens, for example \"Right call or a mistake?\". The final line "
+    "what happens. Make it specific to this story and never reuse the same "
+    "wording twice, for example a this-or-that choice. The final line "
     "is exactly 3 relevant hashtags.\n" + HEADLINE + JSON_RULE)
 STORY_RULES = (
     "You edit a popular US entertainment Facebook Page. Write a short "
     "ORIGINAL news story for Facebook about the story below.\n" + FACTS +
     "STYLE: 150 to 200 words in 3 or 4 short paragraphs. Warm and human, like "
     "a friend explaining the news. Vary sentence length. Open with the most "
-    "interesting fact. No clickbait and no filler. At most 2 emojis. Credit "
+    "interesting fact, never a greeting like \"Hey fans\" or \"Hey everyone\". "
+    "No clickbait and no filler. At most 2 emojis. Credit "
     "the publication once, for example \"according to Variety\". Any words "
     "taken from the source must be under 10 words, in quotation marks and "
     "attributed. End with ONE easy question. The final line is exactly 3 "
