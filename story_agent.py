@@ -44,20 +44,26 @@ FACTS = (
     "sentences from the source.\n")
 HEADLINE = (
     "HEADLINE: a punchy 4 to 8 word line for a graphic card. It must name the "
-    "main person, show or movie and tease the news, for example \"Costner and "
+    "main person, show or movie and state the single most surprising fact "
+    "from the source in plain words, so someone who reads only this line "
+    "learns something new, for example \"Costner and "
     "Grimes: the silence\" or \"Apple brings Dolby Atmos to F1\" (never reuse "
     "these exact words). It must be truthful: do not claim what fans or "
     "people think, feel or are doing unless the source says so, and never "
-    "start with \"Fans are\" or \"Wait until\".\n")
+    "start with \"Fans are\", \"Wait until\", \"Hey\" or \"Did you know\".\n")
 JSON_RULE = ("Return ONLY JSON with exactly these fields: "
              "{\"headline\": \"...\", \"post\": \"...\"}\n")
 CARD_RULES = (
     "You edit a popular US entertainment Facebook Page. Write ONE short "
     "original Facebook post about the story below.\n" + FACTS +
     "STYLE: 50 to 90 words in 2 or 3 short paragraphs, warm and "
-    "conversational, plain language, at most 2 emojis. End with ONE easy "
-    "question that invites opinions. The final line is exactly 3 relevant "
-    "hashtags.\n" + HEADLINE + JSON_RULE)
+    "conversational, plain language, at most 2 emojis. The first sentence "
+    "must be the most surprising fact from the source. Never open with a "
+    "greeting or stock phrase such as \"Hey fans\", \"Hey Marvel fans\", "
+    "\"Did you know\" or \"Fun fact\". Short sentences, one new detail each. "
+    "End with ONE question that makes readers pick a side or predict "
+    "what happens, for example \"Right call or a mistake?\". The final line "
+    "is exactly 3 relevant hashtags.\n" + HEADLINE + JSON_RULE)
 STORY_RULES = (
     "You edit a popular US entertainment Facebook Page. Write a short "
     "ORIGINAL news story for Facebook about the story below.\n" + FACTS +
