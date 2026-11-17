@@ -40,20 +40,6 @@
     ]
   },
   {
-    "headline": "Thor: Ragnarok behind-the-scenes production facts",
-    "post": "Did you know that during the making of Thor: Ragnarok, actor Chris Hemsworth had grown a bit bored of playing the character after portraying him four times previously? To mix things up, he wanted to take some risks and experiment with the role, which led to Thor getting shorter hair, wearing a different outfit, losing his hammer Mjolnir, and even losing an eye!\n\nWhat was your favorite moment from this Marvel Cinematic Universe film? 🎬\n\n#ThorRagnarok #Marvel #ChrisHemsworth",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Thor%3A_Ragnarok",
-    "original_title": "Throwback fan trivia about Thor: Ragnarok: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:thor-ragnarok:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Taika Waititi",
-      "Chris Hemsworth"
-    ]
-  },
-  {
     "headline": "Early casting ideas for 1989 Batman film",
     "post": "Did you know that before Michael Keaton landed the cape and cowl in the 1989 Batman film, numerous leading men were considered for the role? Warner Bros. reportedly weighed A-listers such as Mel Gibson, Kevin Costner, and Harrison Ford, while director Tim Burton also approached Pierce Brosnan before the part ultimately went to Keaton.\n\nCan you picture how different the movie might have looked with one of those other actors? 🤔\n\n#Batman1989 #MichaelKeaton #TimBurton",
     "source": "Wikipedia",
@@ -147,6 +133,19 @@
     "type": "evergreen",
     "photo_queries": [
       "Black Panther"
+    ]
+  },
+  {
+    "headline": "Hunter B-15 gender changed after audition",
+    "post": "Hunter B-15 was originally written as a male character before being changed following Wunmi Mosaku's audition. The star pointed out that the character's gender did not alter the essence of the type of role B-15 was meant to be.\n\nDid the change improve the series? #Marvel #Loki #DisneyPlus",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Loki_%28TV_series%29",
+    "original_title": "Throwback fan trivia about Loki (TV series): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:loki-tv-series:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Tom Hiddleston"
     ]
   }
 ]
