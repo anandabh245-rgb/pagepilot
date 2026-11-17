@@ -54,33 +54,6 @@
     ]
   },
   {
-    "headline": "The Incredible Hulk: Behind the Scenes",
-    "post": "Did you know that Edward Norton rewrote the screenplay for The Incredible Hulk to position the film as a reboot, distancing it from the 2003 movie? Director Louis Leterrier praised Norton for bringing gravitas to the script and approaching the heroes like Greek gods.\n\nWhat is your favorite moment from this Phase One MCU film?\n\n#TheIncredibleHulk #MarvelCinematicUniverse #BruceBanner",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Incredible_Hulk_%28film%29",
-    "original_title": "Throwback fan trivia about The Incredible Hulk (film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-incredible-hulk-film:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Incredible Hulk"
-    ]
-  },
-  {
-    "headline": "Guardians of the Galaxy grossed 773.3 million worldwide",
-    "post": "Guardians of the Galaxy Vol. 1 arrived in US theaters in August 2014 as part of Phase Two of the MCU. The Marvel Studios film became a commercial success, grossing $773.3 million worldwide and ranking as the third-highest-grossing film of that year. \n\nWhich member of the cosmic team is your absolute favorite? 🚀\n\n#MarvelStudios #GuardiansOfTheGalaxy #BoxOffice",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
-    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:guardians-of-the-galaxy-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Guardians of the Galaxy",
-      "James Gunn"
-    ]
-  },
-  {
     "headline": "Thor: Ragnarok behind-the-scenes production facts",
     "post": "Did you know that during the making of Thor: Ragnarok, actor Chris Hemsworth had grown a bit bored of playing the character after portraying him four times previously? To mix things up, he wanted to take some risks and experiment with the role, which led to Thor getting shorter hair, wearing a different outfit, losing his hammer Mjolnir, and even losing an eye!\n\nWhat was your favorite moment from this Marvel Cinematic Universe film? 🎬\n\n#ThorRagnarok #Marvel #ChrisHemsworth",
     "source": "Wikipedia",
@@ -161,6 +134,33 @@
     "photo_queries": [
       "Christopher Nolan",
       "Christian Bale"
+    ]
+  },
+  {
+    "headline": "Tom Cruise and the Iron Man movie history",
+    "post": "Did you know that back in 1998, Tom Cruise expressed interest in producing and starring in an Iron Man film before the rights eventually found their way back to Marvel Studios? It is wild to think about how different the Marvel Cinematic Universe might have looked if that early version had happened before Robert Downey Jr. stepped into the metallic suit for the 2008 release.\n\nWhat is your favorite behind-the-scenes fact about the start of the MCU?\n\n#IronMan #TomCruise #MarvelCinematicUniverse",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Iron_Man_%282008_film%29",
+    "original_title": "Throwback fan trivia about Iron Man (2008 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:iron-man-2008-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Iron Man",
+      "Robert Downey Jr"
+    ]
+  },
+  {
+    "headline": "Black Panther box office hits 1.3 billion",
+    "post": "Back in 2018, the Marvel Cinematic Universe film Black Panther captured audiences worldwide. It grossed over $1.3 billion globally and broke numerous box office records during its theatrical run. 🖤\n\nWhat is your favorite memory of watching this milestone superhero movie for the very first time?\n\n#BlackPanther #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Black_Panther_%28film%29",
+    "original_title": "Throwback fan trivia about Black Panther (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:black-panther-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Black Panther"
     ]
   }
 ]
