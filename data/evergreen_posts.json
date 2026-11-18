@@ -40,20 +40,6 @@
     ]
   },
   {
-    "headline": "Early casting ideas for 1989 Batman film",
-    "post": "Did you know that before Michael Keaton landed the cape and cowl in the 1989 Batman film, numerous leading men were considered for the role? Warner Bros. reportedly weighed A-listers such as Mel Gibson, Kevin Costner, and Harrison Ford, while director Tim Burton also approached Pierce Brosnan before the part ultimately went to Keaton.\n\nCan you picture how different the movie might have looked with one of those other actors? 🤔\n\n#Batman1989 #MichaelKeaton #TimBurton",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Batman_%281989_film%29",
-    "original_title": "Throwback fan trivia about Batman (1989 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:batman-1989-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Tim Burton",
-      "Michael Keaton"
-    ]
-  },
-  {
     "headline": "Black Panther: Early Development and Trivia",
     "post": "Did you know that Wesley Snipes originally planned to make a Black Panther film back in 1992, though that initial project did not come to fruition? Years later, the groundbreaking 2018 Marvel Cinematic Universe movie brought T'Challa and Wakanda to the big screen in a massive way, breaking numerous box office records and winning three Academy Awards.\n\nWhat is your favorite memory from seeing this iconic film in theaters? 🐾\n\n#BlackPanther #MarvelStudios #MCU",
     "source": "Wikipedia",
@@ -146,6 +132,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Tom Hiddleston"
+    ]
+  },
+  {
+    "headline": "Spielberg, Lynch, and Cronenberg considered for Jedi",
+    "post": "Steven Spielberg, David Lynch, and David Cronenberg were all considered to direct Return of the Jedi before Richard Marquand ultimately signed on to helm the film. George Lucas also briefly looked at Lamont Johnson for the job during pre-production.\n\nFurther production updates and historical details about the original Star Wars trilogy will follow.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
+    "original_title": "Throwback fan trivia about Return of the Jedi: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:return-of-the-jedi:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Mark Hamill"
     ]
   }
 ]
