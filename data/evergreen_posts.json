@@ -40,33 +40,6 @@
     ]
   },
   {
-    "headline": "Black Panther: Early Development and Trivia",
-    "post": "Did you know that Wesley Snipes originally planned to make a Black Panther film back in 1992, though that initial project did not come to fruition? Years later, the groundbreaking 2018 Marvel Cinematic Universe movie brought T'Challa and Wakanda to the big screen in a massive way, breaking numerous box office records and winning three Academy Awards.\n\nWhat is your favorite memory from seeing this iconic film in theaters? 🐾\n\n#BlackPanther #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Black_Panther_%28film%29",
-    "original_title": "Throwback fan trivia about Black Panther (film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:black-panther-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Black Panther"
-    ]
-  },
-  {
-    "headline": "Christian Bale's journey in Batman Begins",
-    "post": "Before landing his iconic role as Bruce Wayne in Batman Begins, Christian Bale prepared extensively by studying graphic novels and working with a personal trainer to gain muscle. Director Christopher Nolan praised Bale for having the exact balance of darkness and light needed for the character.\n\nFurther updates regarding behind-the-scenes production trivia will follow.\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Batman_Begins",
-    "original_title": "Throwback fan trivia about Batman Begins: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:batman-begins:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Christopher Nolan",
-      "Christian Bale"
-    ]
-  },
-  {
     "headline": "Thor: Ragnarok behind the scenes facts",
     "post": "Did you know that in Thor: Ragnarok, Anthony Hopkins' character Odin was originally intended to be a hobo on the streets of New York City? Director Taika Waititi ultimately changed the sequence to take place in Norway to honor the character's past and be more authentic to his role as a king of Asgard.\n\nIt is so cool to learn about these creative choices that shaped the film! What is your favorite behind-the-scenes detail about the MCU?\n\n#ThorRagnarok #MarvelStudios #MCU",
     "source": "Wikipedia",
@@ -146,6 +119,34 @@
     "photo_queries": [
       "Star Wars",
       "Mark Hamill"
+    ]
+  },
+  {
+    "headline": "Henry Cavill and other stars sought the lead in Batman Begins",
+    "post": "Before Christian Bale secured the lead in Batman Begins, Henry Cavill and several other actors reportedly took interest in playing Bruce Wayne. Director Christopher Nolan ultimately cast Bale after looking for a balance of darkness and light, relying on traditional stunts rather than heavy computer-generated imagery for the 2005 film.\n\nFuture updates will follow as more trivia from the production is shared.\n\n#BatmanBegins #ChristopherNolan #DCComics",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Batman_Begins",
+    "original_title": "Throwback fan trivia about Batman Begins: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:batman-begins:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Christopher Nolan",
+      "Christian Bale"
+    ]
+  },
+  {
+    "headline": "Chris Pratt initially turned down Star-Lord role",
+    "post": "Chris Pratt initially turned down the role of Peter Quill in Guardians of the Galaxy. Casting director Sarah Finn arranged a meeting that convinced director James Gunn he was perfect for the part. Pratt then underwent a strict diet and training regimen to lose 60 pounds in six months.\n\nWould you prefer to see Chris Pratt return as Star-Lord or lead another franchise?\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
+    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:guardians-of-the-galaxy-film:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Guardians of the Galaxy",
+      "James Gunn"
     ]
   }
 ]
