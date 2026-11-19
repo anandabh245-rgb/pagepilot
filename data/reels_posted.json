@@ -1028,5 +1028,11 @@
     "headline": "Ewan McGregor's Padawan Braid Sells For $6,000",
     "type": "news",
     "posted_at": "2026-11-19T12:16:33.727281+00:00"
+  },
+  {
+    "key": "https://comicbook.com/movies/news/robert-downey-jr-breaks-down-his-mcu-return-in-new-avengers-doomsday-video-and-why-hes-back/",
+    "headline": "Robert Downey Jr. Explains His MCU Return",
+    "type": "doomsday",
+    "posted_at": "2026-11-19T14:16:33.607945+00:00"
   }
 ]
