@@ -40,20 +40,6 @@
     ]
   },
   {
-    "headline": "Thor: Ragnarok behind the scenes facts",
-    "post": "Did you know that in Thor: Ragnarok, Anthony Hopkins' character Odin was originally intended to be a hobo on the streets of New York City? Director Taika Waititi ultimately changed the sequence to take place in Norway to honor the character's past and be more authentic to his role as a king of Asgard.\n\nIt is so cool to learn about these creative choices that shaped the film! What is your favorite behind-the-scenes detail about the MCU?\n\n#ThorRagnarok #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Thor%3A_Ragnarok",
-    "original_title": "Throwback fan trivia about Thor: Ragnarok: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:thor-ragnarok:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Taika Waititi",
-      "Chris Hemsworth"
-    ]
-  },
-  {
     "headline": "Practical stunts and IMAX filming in The Dark Knight",
     "post": "Director Christopher Nolan avoided using computer-generated imagery unless necessary during the production of The Dark Knight, insisting instead on practical stunts such as flipping an 18-wheel truck and blowing up a factory. The 2008 film was also notable for being the first major motion picture to be filmed using high-resolution IMAX cameras. Production details and updates will follow.\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -147,6 +133,20 @@
     "photo_queries": [
       "Guardians of the Galaxy",
       "James Gunn"
+    ]
+  },
+  {
+    "headline": "Jon Favreau wrote scripts for four episodes of The Mandalorian before being officially hired",
+    "post": "Jon Favreau wrote scripts for four episodes of The Mandalorian before being officially hired for the project in March 2018. George Lucas had previously developed a live-action series by 2009, but it was considered too expensive to produce. 📺\n\nWould you rather watch more seasons of The Mandalorian on Disney+ or see their ongoing adventures continue exclusively in feature films? \n\n#TheMandalorian #StarWars #DisneyPlus",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Mandalorian",
+    "original_title": "Throwback fan trivia about The Mandalorian: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-mandalorian:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Pedro Pascal",
+      "Star Wars"
     ]
   }
 ]
