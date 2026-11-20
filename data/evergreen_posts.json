@@ -40,20 +40,6 @@
     ]
   },
   {
-    "headline": "Practical stunts and IMAX filming in The Dark Knight",
-    "post": "Director Christopher Nolan avoided using computer-generated imagery unless necessary during the production of The Dark Knight, insisting instead on practical stunts such as flipping an 18-wheel truck and blowing up a factory. The 2008 film was also notable for being the first major motion picture to be filmed using high-resolution IMAX cameras. Production details and updates will follow.\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Dark_Knight",
-    "original_title": "Throwback fan trivia about The Dark Knight: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-dark-knight:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Christopher Nolan",
-      "Christian Bale"
-    ]
-  },
-  {
     "headline": "Tom Cruise and the Iron Man movie history",
     "post": "Did you know that back in 1998, Tom Cruise expressed interest in producing and starring in an Iron Man film before the rights eventually found their way back to Marvel Studios? It is wild to think about how different the Marvel Cinematic Universe might have looked if that early version had happened before Robert Downey Jr. stepped into the metallic suit for the 2008 release.\n\nWhat is your favorite behind-the-scenes fact about the start of the MCU?\n\n#IronMan #TomCruise #MarvelCinematicUniverse",
     "source": "Wikipedia",
@@ -147,6 +133,20 @@
     "photo_queries": [
       "Pedro Pascal",
       "Star Wars"
+    ]
+  },
+  {
+    "headline": "Spider-Man 2002 made history at box office",
+    "post": "Spider-Man became the very first film to reach $100 million in a single weekend when it debuted in 2002. Sam Raimi directed this massive hit starring Tobey Maguire as Peter Parker and Willem Dafoe as the Green Goblin.\n\nDid you prefer seeing Tobey Maguire battle the Green Goblin or face Doc Ock in the sequels?\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Spider-Man_%282002_film%29",
+    "original_title": "Throwback fan trivia about Spider-Man (2002 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:spider-man-2002-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Spider-Man",
+      "Tobey Maguire"
     ]
   }
 ]
