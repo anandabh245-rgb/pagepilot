@@ -27,19 +27,6 @@
     ]
   },
   {
-    "headline": "Black Panther box office hits 1.3 billion",
-    "post": "Back in 2018, the Marvel Cinematic Universe film Black Panther captured audiences worldwide. It grossed over $1.3 billion globally and broke numerous box office records during its theatrical run. 🖤\n\nWhat is your favorite memory of watching this milestone superhero movie for the very first time?\n\n#BlackPanther #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Black_Panther_%28film%29",
-    "original_title": "Throwback fan trivia about Black Panther (film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:black-panther-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Black Panther"
-    ]
-  },
-  {
     "headline": "Hunter B-15 gender changed after audition",
     "post": "Hunter B-15 was originally written as a male character before being changed following Wunmi Mosaku's audition. The star pointed out that the character's gender did not alter the essence of the type of role B-15 was meant to be.\n\nDid the change improve the series? #Marvel #Loki #DisneyPlus",
     "source": "Wikipedia",
@@ -134,6 +121,19 @@
     "photo_queries": [
       "Star Wars",
       "Daisy Ridley"
+    ]
+  },
+  {
+    "headline": "The Avengers grossed over $1.5 billion worldwide",
+    "post": "Marvel's The Avengers grossed over $1.5 billion worldwide and became the first Marvel production to generate $1 billion in ticket sales. Joss Whedon's 2012 film brought together iconic heroes like Iron Man, Captain America, Thor, and the Hulk for the very first time.\n\nDid you prefer Tony Stark or Steve Rogers in this phase one masterpiece?\n\n#TheAvengers #MarvelStudios #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
+    "original_title": "Throwback fan trivia about The Avengers (2012 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-avengers-2012-film:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "The Avengers"
     ]
   }
 ]
