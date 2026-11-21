@@ -1,19 +1,5 @@
 [
   {
-    "headline": "Alan Cumming returns as Nightcrawler in Doomsday",
-    "post": "Get ready for more mutant action on the big screen! In Avengers: Doomsday, Alan Cumming reprises his role as Kurt Wagner, also known as Nightcrawler. He shared that the make-up process was much quicker this time around compared to his earlier work on X2.\n\nAre you excited to see Nightcrawler team up with heroes from across different universes in this epic film?\n\n#AvengersDoomsday #Nightcrawler #Marvel",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-    "original_title": "Throwback fan trivia about Avengers: Doomsday: Avengers: Doomsday - how earlier Marvel films set this movie up. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:solo:how-earlier-marvel-films-set-this-movie-up",
-    "type": "doomsday",
-    "photo_queries": [
-      "Avengers Doomsday",
-      "Russo brothers"
-    ]
-  },
-  {
     "headline": "Doctor Doom's Classic Origin and Comic History",
     "post": "Did you know that the iconic supervillain Doctor Doom first appeared in The Fantastic Four #5 back in July 1962, created by writer-editor Stan Lee and artist Jack Kirby? In the comics, he is the monarch of Latveria and a master of both science and sorcery, serving as the ultimate archenemy to Mister Fantastic and the Fantastic Four.\n\nAre you excited to see Robert Downey Jr. take on this complex character in Avengers: Doomsday?\n\n#DoctorDoom #MarvelComics #FantasticFour",
     "source": "Wikipedia",
@@ -24,19 +10,6 @@
     "type": "doomsday",
     "photo_queries": [
       "Doctor Doom"
-    ]
-  },
-  {
-    "headline": "Hunter B-15 gender changed after audition",
-    "post": "Hunter B-15 was originally written as a male character before being changed following Wunmi Mosaku's audition. The star pointed out that the character's gender did not alter the essence of the type of role B-15 was meant to be.\n\nDid the change improve the series? #Marvel #Loki #DisneyPlus",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Loki_%28TV_series%29",
-    "original_title": "Throwback fan trivia about Loki (TV series): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:loki-tv-series:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Tom Hiddleston"
     ]
   },
   {
@@ -134,6 +107,19 @@
     "type": "evergreen",
     "photo_queries": [
       "The Avengers"
+    ]
+  },
+  {
+    "headline": "Doctor Strange: Benedict Cumberbatch's casting changed the schedule",
+    "post": "Back in 2014, choosing Benedict Cumberbatch for the lead role in Doctor Strange required a production schedule change. This adjustment gave director Scott Derrickson extra time to work on the script himself, leading him to bring on C. Robert Cargill to help.\n\nPrincipal photography eventually began in November 2015 across Nepal and England before wrapping up in New York City. \n\nDid the script changes improve the movie or would you have preferred the earlier version?\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
+    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:doctor-strange-2016-film:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Benedict Cumberbatch"
     ]
   }
 ]
