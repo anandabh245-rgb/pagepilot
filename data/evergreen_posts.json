@@ -1,18 +1,5 @@
 [
   {
-    "headline": "X-Men and Avengers: Doomsday Universe Connection",
-    "post": "Did you know that 20th Century Fox produced thirteen live-action films in the X-Men series from 2000 to 2020 before its acquisition by The Walt Disney Company? Now, in the upcoming Avengers: Doomsday, characters from the X-Men film series from Earth-10005 converge from different universes alongside the Avengers and Fantastic Four to face Doctor Doom.\n\nAre you excited to see these different franchises collide on the big screen? 🎬\n\n#AvengersDoomsday #XMen #MarvelCinematicUniverse",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/X-Men_%28film_series%29",
-    "original_title": "Throwback fan trivia about X-Men (film series): how X-Men (film series) connects to Avengers: Doomsday. Only use connections that are stated in the texts. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "doomsday:x-men-film-series",
-    "type": "doomsday",
-    "photo_queries": [
-      "X-Men"
-    ]
-  },
-  {
     "headline": "Alan Cumming returns as Nightcrawler in Doomsday",
     "post": "Get ready for more mutant action on the big screen! In Avengers: Doomsday, Alan Cumming reprises his role as Kurt Wagner, also known as Nightcrawler. He shared that the make-up process was much quicker this time around compared to his earlier work on X2.\n\nAre you excited to see Nightcrawler team up with heroes from across different universes in this epic film?\n\n#AvengersDoomsday #Nightcrawler #Marvel",
     "source": "Wikipedia",
@@ -37,20 +24,6 @@
     "type": "doomsday",
     "photo_queries": [
       "Doctor Doom"
-    ]
-  },
-  {
-    "headline": "Tom Cruise and the Iron Man movie history",
-    "post": "Did you know that back in 1998, Tom Cruise expressed interest in producing and starring in an Iron Man film before the rights eventually found their way back to Marvel Studios? It is wild to think about how different the Marvel Cinematic Universe might have looked if that early version had happened before Robert Downey Jr. stepped into the metallic suit for the 2008 release.\n\nWhat is your favorite behind-the-scenes fact about the start of the MCU?\n\n#IronMan #TomCruise #MarvelCinematicUniverse",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Iron_Man_%282008_film%29",
-    "original_title": "Throwback fan trivia about Iron Man (2008 film): a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:iron-man-2008-film:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Iron Man",
-      "Robert Downey Jr"
     ]
   },
   {
@@ -147,6 +120,20 @@
     "photo_queries": [
       "Spider-Man",
       "Tobey Maguire"
+    ]
+  },
+  {
+    "headline": "Early Drafts Had Luke Skywalker Appear Midway",
+    "post": "Early drafts for Star Wars: The Force Awakens featured Luke Skywalker arriving midway through the story. The writers found that his presence took over the movie and made the main characters feel less important. They ultimately decided to use him as a plot device instead.\n\nDid the writers make the right call by keeping Luke off-screen until the final scene?\n\n#StarWars #TheForceAwakens #Lucasfilm",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Star_Wars%3A_The_Force_Awakens",
+    "original_title": "Throwback fan trivia about Star Wars: The Force Awakens: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:star-wars-the-force-awakens:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Daisy Ridley"
     ]
   }
 ]
