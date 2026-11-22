@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Spielberg, Lynch, and Cronenberg considered for Jedi",
-    "post": "Steven Spielberg, David Lynch, and David Cronenberg were all considered to direct Return of the Jedi before Richard Marquand ultimately signed on to helm the film. George Lucas also briefly looked at Lamont Johnson for the job during pre-production.\n\nFurther production updates and historical details about the original Star Wars trilogy will follow.\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
-    "original_title": "Throwback fan trivia about Return of the Jedi: a casting story: who else was considered or how the cast got their roles. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:return-of-the-jedi:a-casting-story-who-else-was-considered-or-how-the-cast-got-their-roles",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "Mark Hamill"
-    ]
-  },
-  {
     "headline": "Henry Cavill and other stars sought the lead in Batman Begins",
     "post": "Before Christian Bale secured the lead in Batman Begins, Henry Cavill and several other actors reportedly took interest in playing Bruce Wayne. Director Christopher Nolan ultimately cast Bale after looking for a balance of darkness and light, relying on traditional stunts rather than heavy computer-generated imagery for the 2005 film.\n\nFuture updates will follow as more trivia from the production is shared.\n\n#BatmanBegins #ChristopherNolan #DCComics",
     "source": "Wikipedia",
@@ -120,6 +106,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Benedict Cumberbatch"
+    ]
+  },
+  {
+    "headline": "Benjamin Bratt replaced Jimmy Smits as Bail Organa",
+    "post": "Benjamin Bratt stepped into the role of Imperial senator Bail Organa for the second season of Andor due to scheduling conflicts with previous portrayals. The acclaimed Star Wars series explores the formative years of Cassian Andor and the roots of the Rebel Alliance under the Galactic Empire.\n\nDid Benjamin Bratt or the previous actor fit the role better?\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Andor",
+    "original_title": "Throwback fan trivia about Andor: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:andor-tv-series:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Diego Luna",
+      "Star Wars"
     ]
   }
 ]
