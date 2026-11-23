@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Henry Cavill and other stars sought the lead in Batman Begins",
-    "post": "Before Christian Bale secured the lead in Batman Begins, Henry Cavill and several other actors reportedly took interest in playing Bruce Wayne. Director Christopher Nolan ultimately cast Bale after looking for a balance of darkness and light, relying on traditional stunts rather than heavy computer-generated imagery for the 2005 film.\n\nFuture updates will follow as more trivia from the production is shared.\n\n#BatmanBegins #ChristopherNolan #DCComics",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Batman_Begins",
-    "original_title": "Throwback fan trivia about Batman Begins: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:batman-begins:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Christopher Nolan",
-      "Christian Bale"
-    ]
-  },
-  {
     "headline": "Chris Pratt initially turned down Star-Lord role",
     "post": "Chris Pratt initially turned down the role of Peter Quill in Guardians of the Galaxy. Casting director Sarah Finn arranged a meeting that convinced director James Gunn he was perfect for the part. Pratt then underwent a strict diet and training regimen to lose 60 pounds in six months.\n\nWould you prefer to see Chris Pratt return as Star-Lord or lead another franchise?\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -120,6 +106,20 @@
     "photo_queries": [
       "Diego Luna",
       "Star Wars"
+    ]
+  },
+  {
+    "headline": "Henry Cavill auditioned for Batman Begins",
+    "post": "Before starring as Superman, Henry Cavill was among the actors who took interest in playing Bruce Wayne in Batman Begins. Christian Bale ultimately secured the role after director Christopher Nolan and writer David Goyer pursued a darker and more realistic tone for the 2005 superhero film. Updates will follow regarding future retrospective features on the Batman film series.\n\n#BatmanBegins #ChristopherNolan #DCComics",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Batman_Begins",
+    "original_title": "Throwback fan trivia about Batman Begins: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:batman-begins:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Christopher Nolan",
+      "Christian Bale"
     ]
   }
 ]
