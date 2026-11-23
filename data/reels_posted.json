@@ -1184,5 +1184,11 @@
     "headline": "Charlie Cox was told he was too old for James Bond",
     "type": "news",
     "posted_at": "2026-11-23T19:16:37.013317+00:00"
+  },
+  {
+    "key": "evergreen:the-mandalorian:an-interesting-behind-the-scenes-production-fact",
+    "headline": "Jon Favreau wrote scripts for four episodes of The Mandalorian before being officially hired",
+    "type": "evergreen",
+    "posted_at": "2026-11-23T22:16:36.412248+00:00"
   }
 ]
