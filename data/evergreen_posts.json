@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Spider-Man 2002 made history at box office",
-    "post": "Spider-Man became the very first film to reach $100 million in a single weekend when it debuted in 2002. Sam Raimi directed this massive hit starring Tobey Maguire as Peter Parker and Willem Dafoe as the Green Goblin.\n\nDid you prefer seeing Tobey Maguire battle the Green Goblin or face Doc Ock in the sequels?\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Spider-Man_%282002_film%29",
-    "original_title": "Throwback fan trivia about Spider-Man (2002 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:spider-man-2002-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Spider-Man",
-      "Tobey Maguire"
-    ]
-  },
-  {
     "headline": "Early Drafts Had Luke Skywalker Appear Midway",
     "post": "Early drafts for Star Wars: The Force Awakens featured Luke Skywalker arriving midway through the story. The writers found that his presence took over the movie and made the main characters feel less important. They ultimately decided to use him as a plot device instead.\n\nDid the writers make the right call by keeping Luke off-screen until the final scene?\n\n#StarWars #TheForceAwakens #Lucasfilm",
     "source": "Wikipedia",
@@ -119,6 +105,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Gal Gadot"
+    ]
+  },
+  {
+    "headline": "Jacob Batalon lost 102 pounds for Ned Leeds",
+    "post": "Jacob Batalon lost 102 pounds for his role in Spider-Man: No Way Home. The actor plays Ned Leeds, who is Peter Parker's best friend in the Marvel Cinematic Universe.\n\nDid you prefer Ned's magical sling ring moments or his buddy dynamic with Tom Holland? 🕷️✨\n\n#SpiderManNoWayHome #JacobBatalon #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Spider-Man%3A_No_Way_Home",
+    "original_title": "Throwback fan trivia about Spider-Man: No Way Home: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:spider-man-no-way-home:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Spider-Man No Way Home",
+      "Tom Holland"
     ]
   }
 ]
