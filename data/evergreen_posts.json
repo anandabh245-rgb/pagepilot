@@ -13,34 +13,6 @@
     ]
   },
   {
-    "headline": "Chris Pratt initially turned down Star-Lord role",
-    "post": "Chris Pratt initially turned down the role of Peter Quill in Guardians of the Galaxy. Casting director Sarah Finn arranged a meeting that convinced director James Gunn he was perfect for the part. Pratt then underwent a strict diet and training regimen to lose 60 pounds in six months.\n\nWould you prefer to see Chris Pratt return as Star-Lord or lead another franchise?\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_%28film%29",
-    "original_title": "Throwback fan trivia about Guardians of the Galaxy (film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:guardians-of-the-galaxy-film:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Guardians of the Galaxy",
-      "James Gunn"
-    ]
-  },
-  {
-    "headline": "Jon Favreau wrote scripts for four episodes of The Mandalorian before being officially hired",
-    "post": "Jon Favreau wrote scripts for four episodes of The Mandalorian before being officially hired for the project in March 2018. George Lucas had previously developed a live-action series by 2009, but it was considered too expensive to produce. 📺\n\nWould you rather watch more seasons of The Mandalorian on Disney+ or see their ongoing adventures continue exclusively in feature films? \n\n#TheMandalorian #StarWars #DisneyPlus",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Mandalorian",
-    "original_title": "Throwback fan trivia about The Mandalorian: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-mandalorian:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Pedro Pascal",
-      "Star Wars"
-    ]
-  },
-  {
     "headline": "Spider-Man 2002 made history at box office",
     "post": "Spider-Man became the very first film to reach $100 million in a single weekend when it debuted in 2002. Sam Raimi directed this massive hit starring Tobey Maguire as Peter Parker and Willem Dafoe as the Green Goblin.\n\nDid you prefer seeing Tobey Maguire battle the Green Goblin or face Doc Ock in the sequels?\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -120,6 +92,33 @@
     "photo_queries": [
       "Christopher Nolan",
       "Christian Bale"
+    ]
+  },
+  {
+    "headline": "Cannon once mistook Spider-Man for a werewolf",
+    "post": "Before Sam Raimi directed the 2002 hit film, studio executives at The Cannon Group actually mistook our friendly neighborhood web-slinger for a werewolf-like character! They even hired a writer to transform Peter Parker into a human tarantula for a planned horror movie.\n\nStan Lee thankfully hated the idea and demanded a faithful script instead. Would you have watched a horror version of Spider-Man?\n\n#SpiderMan #SamRaimi #MarvelHistory",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Spider-Man_%282002_film%29",
+    "original_title": "Throwback fan trivia about Spider-Man (2002 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:spider-man-2002-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Spider-Man",
+      "Tobey Maguire"
+    ]
+  },
+  {
+    "headline": "Wonder Woman development hell spanned decades",
+    "post": "Development of a live-action Wonder Woman movie spent years stuck in development hell before Patty Jenkins directed the 2017 hit. Major names like Sandra Bullock, Mariah Carey, and Kate Beckinsale were reportedly considered for the lead role during various stages of the project.\n\nWould you have wanted to see Sandra Bullock or Kate Beckinsale play Diana Prince instead?\n\n#WonderWoman #DCComics #GalGadot",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Wonder_Woman_%282017_film%29",
+    "original_title": "Throwback fan trivia about Wonder Woman (2017 film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:wonder-woman-2017-film:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Gal Gadot"
     ]
   }
 ]
