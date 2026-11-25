@@ -13,19 +13,6 @@
     ]
   },
   {
-    "headline": "The Avengers grossed over $1.5 billion worldwide",
-    "post": "Marvel's The Avengers grossed over $1.5 billion worldwide and became the first Marvel production to generate $1 billion in ticket sales. Joss Whedon's 2012 film brought together iconic heroes like Iron Man, Captain America, Thor, and the Hulk for the very first time.\n\nDid you prefer Tony Stark or Steve Rogers in this phase one masterpiece?\n\n#TheAvengers #MarvelStudios #MCU",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/The_Avengers_%282012_film%29",
-    "original_title": "Throwback fan trivia about The Avengers (2012 film): a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:the-avengers-2012-film:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "The Avengers"
-    ]
-  },
-  {
     "headline": "Doctor Strange: Benedict Cumberbatch's casting changed the schedule",
     "post": "Back in 2014, choosing Benedict Cumberbatch for the lead role in Doctor Strange required a production schedule change. This adjustment gave director Scott Derrickson extra time to work on the script himself, leading him to bring on C. Robert Cargill to help.\n\nPrincipal photography eventually began in November 2015 across Nepal and England before wrapping up in New York City. \n\nDid the script changes improve the movie or would you have preferred the earlier version?\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -118,6 +105,19 @@
     "type": "evergreen",
     "photo_queries": [
       "Black Panther"
+    ]
+  },
+  {
+    "headline": "Benedict Cumberbatch adjusted schedule for Doctor Strange",
+    "post": "Benedict Cumberbatch was chosen for the eponymous role in Doctor Strange in December 2014, necessitating a schedule change to work around his other commitments. This gave director Scott Derrickson time to work on the script himself, for which he brought C. Robert Cargill on to help.\n\nPrincipal photography began in November 2015 in Nepal, before moving to England and wrapping up in New York City in April 2016. The film later grossed $677.8 million worldwide.\n\nDid Cumberbatch's casting make this your favorite Phase Three movie?\n\n#DoctorStrange #BenedictCumberbatch #Marvel",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
+    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:doctor-strange-2016-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Benedict Cumberbatch"
     ]
   }
 ]
