@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Early Drafts Had Luke Skywalker Appear Midway",
-    "post": "Early drafts for Star Wars: The Force Awakens featured Luke Skywalker arriving midway through the story. The writers found that his presence took over the movie and made the main characters feel less important. They ultimately decided to use him as a plot device instead.\n\nDid the writers make the right call by keeping Luke off-screen until the final scene?\n\n#StarWars #TheForceAwakens #Lucasfilm",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Star_Wars%3A_The_Force_Awakens",
-    "original_title": "Throwback fan trivia about Star Wars: The Force Awakens: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:star-wars-the-force-awakens:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Star Wars",
-      "Daisy Ridley"
-    ]
-  },
-  {
     "headline": "The Avengers grossed over $1.5 billion worldwide",
     "post": "Marvel's The Avengers grossed over $1.5 billion worldwide and became the first Marvel production to generate $1 billion in ticket sales. Joss Whedon's 2012 film brought together iconic heroes like Iron Man, Captain America, Thor, and the Hulk for the very first time.\n\nDid you prefer Tony Stark or Steve Rogers in this phase one masterpiece?\n\n#TheAvengers #MarvelStudios #MCU",
     "source": "Wikipedia",
@@ -119,6 +105,19 @@
     "photo_queries": [
       "Spider-Man No Way Home",
       "Tom Holland"
+    ]
+  },
+  {
+    "headline": "Black Panther: Shuri ranked smarter than Tony Stark",
+    "post": "Executive producer Nate Moore stated that Shuri is the smartest person in the world, even surpassing Tony Stark. Chadwick Boseman starred as T'Challa in the 2018 Marvel Cinematic Universe film directed by Ryan Coogler.\n\nDid executive producer Nate Moore make the right call ranking Shuri above Tony Stark?\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Black_Panther_%28film%29",
+    "original_title": "Throwback fan trivia about Black Panther (film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:black-panther-film:an-interesting-behind-the-scenes-production-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Black Panther"
     ]
   }
 ]
