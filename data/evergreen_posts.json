@@ -13,19 +13,6 @@
     ]
   },
   {
-    "headline": "Doctor Strange: Benedict Cumberbatch's casting changed the schedule",
-    "post": "Back in 2014, choosing Benedict Cumberbatch for the lead role in Doctor Strange required a production schedule change. This adjustment gave director Scott Derrickson extra time to work on the script himself, leading him to bring on C. Robert Cargill to help.\n\nPrincipal photography eventually began in November 2015 across Nepal and England before wrapping up in New York City. \n\nDid the script changes improve the movie or would you have preferred the earlier version?\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Doctor_Strange_%282016_film%29",
-    "original_title": "Throwback fan trivia about Doctor Strange (2016 film): an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:doctor-strange-2016-film:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Benedict Cumberbatch"
-    ]
-  },
-  {
     "headline": "Benjamin Bratt replaced Jimmy Smits as Bail Organa",
     "post": "Benjamin Bratt stepped into the role of Imperial senator Bail Organa for the second season of Andor due to scheduling conflicts with previous portrayals. The acclaimed Star Wars series explores the formative years of Cassian Andor and the roots of the Rebel Alliance under the Galactic Empire.\n\nDid Benjamin Bratt or the previous actor fit the role better?\n\n#Entertainment #Hollywood #PopCulture",
     "source": "Wikipedia",
@@ -118,6 +105,20 @@
     "type": "evergreen",
     "photo_queries": [
       "Benedict Cumberbatch"
+    ]
+  },
+  {
+    "headline": "No Way Home grossed 1.921 billion dollars",
+    "post": "Spider-Man: No Way Home grossed $1.921 billion worldwide to become the highest-grossing film released by Sony Pictures at the time. The 2021 blockbuster brought together heroes and villains across multiple cinematic universes 🕷️🎬\n\nDid Andrew Garfield and Tobey Maguire steal the show, or did Tom Holland deliver the ultimate emotional punch? 🕸️\n\n#SpiderMan #NoWayHome #MCU",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Spider-Man%3A_No_Way_Home",
+    "original_title": "Throwback fan trivia about Spider-Man: No Way Home: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:spider-man-no-way-home:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Spider-Man No Way Home",
+      "Tom Holland"
     ]
   }
 ]
