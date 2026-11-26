@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Benjamin Bratt replaced Jimmy Smits as Bail Organa",
-    "post": "Benjamin Bratt stepped into the role of Imperial senator Bail Organa for the second season of Andor due to scheduling conflicts with previous portrayals. The acclaimed Star Wars series explores the formative years of Cassian Andor and the roots of the Rebel Alliance under the Galactic Empire.\n\nDid Benjamin Bratt or the previous actor fit the role better?\n\n#Entertainment #Hollywood #PopCulture",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Andor",
-    "original_title": "Throwback fan trivia about Andor: an interesting behind-the-scenes production fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:andor-tv-series:an-interesting-behind-the-scenes-production-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Diego Luna",
-      "Star Wars"
-    ]
-  },
-  {
     "headline": "Henry Cavill auditioned for Batman Begins",
     "post": "Before starring as Superman, Henry Cavill was among the actors who took interest in playing Bruce Wayne in Batman Begins. Christian Bale ultimately secured the role after director Christopher Nolan and writer David Goyer pursued a darker and more realistic tone for the 2005 superhero film. Updates will follow regarding future retrospective features on the Batman film series.\n\n#BatmanBegins #ChristopherNolan #DCComics",
     "source": "Wikipedia",
@@ -119,6 +105,20 @@
     "photo_queries": [
       "Spider-Man No Way Home",
       "Tom Holland"
+    ]
+  },
+  {
+    "headline": "The Empire Strikes Back budget jumped to $30.5M",
+    "post": "The Empire Strikes Back initially had an $8 million budget that eventually climbed to $30.5 million by the conclusion of the project. Production difficulties during the filming in Norway and England included actor injuries, illnesses, fires, and problems securing additional financing as costs rose.\n\nDid the darker and more mature themes make this the best film in the Star Wars series, or do you prefer the lighter predecessor?\n\n#StarWars #TheEmpireStrikesBack #SciFiHistory",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
+    "original_title": "Throwback fan trivia about The Empire Strikes Back: how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-empire-strikes-back:how-the-film-shaped-later-superhero-or-sci-fi-movies",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Harrison Ford"
     ]
   }
 ]
