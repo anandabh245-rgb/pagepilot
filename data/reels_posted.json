@@ -1292,5 +1292,11 @@
     "headline": "Peter Berg: Will Smith sent Hancock 2 script",
     "type": "news",
     "posted_at": "2026-11-26T22:01:30.337152+00:00"
+  },
+  {
+    "key": "evergreen:batman-begins:a-box-office-record-or-release-fact",
+    "headline": "Henry Cavill auditioned for Batman Begins",
+    "type": "evergreen",
+    "posted_at": "2026-11-27T01:01:49.961799+00:00"
   }
 ]
