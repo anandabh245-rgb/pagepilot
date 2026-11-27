@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Henry Cavill auditioned for Batman Begins",
-    "post": "Before starring as Superman, Henry Cavill was among the actors who took interest in playing Bruce Wayne in Batman Begins. Christian Bale ultimately secured the role after director Christopher Nolan and writer David Goyer pursued a darker and more realistic tone for the 2005 superhero film. Updates will follow regarding future retrospective features on the Batman film series.\n\n#BatmanBegins #ChristopherNolan #DCComics",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Batman_Begins",
-    "original_title": "Throwback fan trivia about Batman Begins: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:batman-begins:a-box-office-record-or-release-fact",
-    "type": "evergreen",
-    "photo_queries": [
-      "Christopher Nolan",
-      "Christian Bale"
-    ]
-  },
-  {
     "headline": "Cannon once mistook Spider-Man for a werewolf",
     "post": "Before Sam Raimi directed the 2002 hit film, studio executives at The Cannon Group actually mistook our friendly neighborhood web-slinger for a werewolf-like character! They even hired a writer to transform Peter Parker into a human tarantula for a planned horror movie.\n\nStan Lee thankfully hated the idea and demanded a faithful script instead. Would you have watched a horror version of Spider-Man?\n\n#SpiderMan #SamRaimi #MarvelHistory",
     "source": "Wikipedia",
@@ -119,6 +105,20 @@
     "photo_queries": [
       "Star Wars",
       "Harrison Ford"
+    ]
+  },
+  {
+    "headline": "Return of the Jedi used Blue Harvest",
+    "post": "Steven Spielberg was considered to direct Return of the Jedi before Richard Marquand signed on to the project. Steven Spielberg was banned from directing due to separate feuds with the Directors Guild of America.\n\nUpdates will follow.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Return_of_the_Jedi",
+    "original_title": "Throwback fan trivia about Return of the Jedi: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:return-of-the-jedi:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Star Wars",
+      "Mark Hamill"
     ]
   }
 ]
