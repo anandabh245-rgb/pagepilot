@@ -13,20 +13,6 @@
     ]
   },
   {
-    "headline": "Cannon once mistook Spider-Man for a werewolf",
-    "post": "Before Sam Raimi directed the 2002 hit film, studio executives at The Cannon Group actually mistook our friendly neighborhood web-slinger for a werewolf-like character! They even hired a writer to transform Peter Parker into a human tarantula for a planned horror movie.\n\nStan Lee thankfully hated the idea and demanded a faithful script instead. Would you have watched a horror version of Spider-Man?\n\n#SpiderMan #SamRaimi #MarvelHistory",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Spider-Man_%282002_film%29",
-    "original_title": "Throwback fan trivia about Spider-Man (2002 film): how the film shaped later superhero or sci-fi movies. Pick ONE specific fact from the text. Do not present it as breaking news.",
-    "kind": "card",
-    "key": "evergreen:spider-man-2002-film:how-the-film-shaped-later-superhero-or-sci-fi-movies",
-    "type": "evergreen",
-    "photo_queries": [
-      "Spider-Man",
-      "Tobey Maguire"
-    ]
-  },
-  {
     "headline": "Wonder Woman development hell spanned decades",
     "post": "Development of a live-action Wonder Woman movie spent years stuck in development hell before Patty Jenkins directed the 2017 hit. Major names like Sandra Bullock, Mariah Carey, and Kate Beckinsale were reportedly considered for the lead role during various stages of the project.\n\nWould you have wanted to see Sandra Bullock or Kate Beckinsale play Diana Prince instead?\n\n#WonderWoman #DCComics #GalGadot",
     "source": "Wikipedia",
@@ -119,6 +105,20 @@
     "photo_queries": [
       "Star Wars",
       "Mark Hamill"
+    ]
+  },
+  {
+    "headline": "The Dark Knight: First IMAX blockbuster",
+    "post": "The Dark Knight was the first major motion picture to be filmed with high-resolution IMAX cameras. Christopher Nolan avoided using computer-generated imagery unless necessary, insisting on practical stunts.\n\nUpdates will follow.\n\n#Entertainment #Hollywood #PopCulture",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Dark_Knight",
+    "original_title": "Throwback fan trivia about The Dark Knight: a box office, record or release fact. Pick ONE specific fact from the text. Do not present it as breaking news.",
+    "kind": "card",
+    "key": "evergreen:the-dark-knight:a-box-office-record-or-release-fact",
+    "type": "evergreen",
+    "photo_queries": [
+      "Christopher Nolan",
+      "Christian Bale"
     ]
   }
 ]
